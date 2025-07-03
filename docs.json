@@ -16,6 +16,7 @@
           {
             "group": "Basiseinstellungen",
             "pages": [
+              "de/user-erstellen",
               "index",
               "quickstart",
               "development"
