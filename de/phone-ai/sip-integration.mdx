@@ -5,112 +5,78 @@ description: "Technische Voraussetzungen und Anforderungen für die Einrichtung 
 
 # Phone AI als SIP-Telefon einrichten
 
-Die Phone AI kann nahtlos als SIP-Endgerät in Ihre bestehende Telefonanlage integriert werden. Diese Integrationsmethode bietet die beste Sprachqualität und ermöglicht kostenfreie Weiterleitungen an Ihr Team.
-
-## Vorteile der SIP-Integration
+Die Phone AI wird als SIP-Endgerät in Ihre bestehende Telefonanlage integriert.
 
 <CardGroup cols={2}>
   <Card title="Nahtlose Integration" icon="plug">
-    Die Phone AI wird wie ein reguläres SIP-Endgerät in Ihre Telefonanlage eingebunden
+    Einbindung wie ein reguläres SIP-Endgerät
   </Card>
   <Card title="Kostenfreie Weiterleitungen" icon="phone-arrow-right">
-    Weiterleitungen der Phone AI an Ihr Team sind kostenfrei
+    Transfers an Ihr Team ohne Zusatzkosten
   </Card>
   <Card title="Beste Sprachqualität" icon="microphone">
-    Direkte SIP-Verbindung gewährleistet optimale Audioqualität
+    Direkte SIP-Verbindung für optimale Audioqualität
   </Card>
   <Card title="Volle Kontrolle" icon="sliders">
-    Das Routing bleibt vollständig in Ihrer Telefonanlage
+    Routing bleibt in Ihrer Telefonanlage
   </Card>
 </CardGroup>
 
-## Technische Voraussetzungen
+## Was wir von Ihnen benötigen
 
 <Note>
-  Ihre Telefonanlage muss SIP-fähig sein und erlauben, dass sich die Phone AI über das Internet anmeldet.
+  Ihre Telefonanlage muss SIP-fähig sein und Anmeldungen über das Internet erlauben.
 </Note>
-
-### Was wir von Ihnen benötigen
 
 <Steps>
   <Step title="SIP-Account einrichten">
-    Richten Sie in Ihrer Telefonanlage einen separaten SIP-Account speziell für die Phone AI ein.
+    Separater Account speziell für die Phone AI
   </Step>
   <Step title="Zugangsdaten bereitstellen">
-    Teilen Sie uns die vollständigen SIP-Zugangsdaten mit (siehe unten).
+    Vollständige SIP-Zugangsdaten (siehe unten)
   </Step>
-  <Step title="Interne Kurzwahlen mitteilen">
-    Geben Sie uns die internen Kurzwahlen für Weiterleitungen an Mitarbeiter/Abteilungen.
+  <Step title="Interne Kurzwahlen">
+    Für Weiterleitungen an Mitarbeiter/Abteilungen
   </Step>
   <Step title="Erreichbarkeit sicherstellen">
-    Bei lokalen Telefonanlagen: Stellen Sie sicher, dass der SIP-Endpoint aus dem Internet erreichbar ist.
+    Bei lokalen Anlagen: Internet-Erreichbarkeit des SIP-Endpoints
   </Step>
 </Steps>
 
 ## Benötigte SIP-Zugangsdaten
 
-### Immer erforderlich:
-- **Username** (ohne Leerzeichen)
-- **Passwort**
-- **Endpoint** (URL oder IP-Adresse)
-- **Port**
+**Immer erforderlich:**
+- Username (ohne Leerzeichen)
+- Passwort
+- Endpoint (URL oder IP-Adresse)
+- Port
 
-### Falls vorhanden:
-- **Proxy** (URL oder IP-Adresse)
-
-<Warning>
-  Bitte stellen Sie sicher, dass alle Zugangsdaten korrekt sind, bevor Sie sie an uns übermitteln. Fehlerhafte Daten können die Einrichtung verzögern.
-</Warning>
+**Falls vorhanden:**
+- Proxy (URL oder IP-Adresse)
 
 ## Zusätzliche Anforderungen
 
-### Für lokale Telefonanlagen
+### Lokale Telefonanlagen
+
+Sie benötigen **eine** der folgenden Optionen:
+- **Feste IP-Adresse** (IPv4 oder IPv6)
+- **Dynamic DNS** (mögliche Unterbrechungen beim IP-Wechsel)
 
 <Info>
-  Bei einer Cloud-Telefonanlage ist die Erreichbarkeit bereits durch Ihren Anbieter gewährleistet.
+  Cloud-Telefonanlagen sind bereits über das Internet erreichbar.
 </Info>
-
-Sie benötigen **eine der folgenden Optionen**:
-
-1. **Feste IP-Adresse** (IPv4 oder IPv6)
-   - Der SIP-Endpoint muss aus dem Internet erreichbar sein
-   
-2. **Dynamic DNS**
-   - Beachten Sie: Beim Wechsel der IP-Adresse kann es zu Verbindungsunterbrechungen von mehreren Minuten kommen
-   - Diese Wechsel finden üblicherweise nachts statt
 
 ### Interne Weiterleitungen
 
-<Note>
-  Das Routing von Anrufen bleibt weiterhin in Ihrer Kontrolle und wird über Ihre Telefonanlage konfiguriert.
-</Note>
-
 Bitte teilen Sie uns mit:
-- Interne Kurzwahlen für verschiedene Abteilungen
-- Spezielle Durchwahlen für Notfälle oder VIP-Gäste
-- Zeitbasierte Weiterleitungsregeln (falls vorhanden)
-
-## Checkliste für die Einrichtung
-
-<AccordionGroup>
-  <Accordion title="✓ SIP-Account erstellt">
-    Ein separater SIP-Account wurde speziell für die Phone AI in der Telefonanlage angelegt.
-  </Accordion>
-  <Accordion title="✓ Alle Zugangsdaten notiert">
-    Username, Passwort, Endpoint, Port und ggf. Proxy wurden dokumentiert.
-  </Accordion>
-  <Accordion title="✓ Internetverbindung geprüft">
-    Bei lokalen Anlagen: Der SIP-Endpoint ist aus dem Internet erreichbar (feste IP oder DynDNS).
-  </Accordion>
-  <Accordion title="✓ Interne Kurzwahlen definiert">
-    Alle relevanten internen Kurzwahlen für Weiterleitungen wurden festgelegt.
-  </Accordion>
-</AccordionGroup>
+- Kurzwahlen für Abteilungen
+- Spezielle Durchwahlen (Notfälle, VIP)
+- Zeitbasierte Weiterleitungsregeln
 
 ## Nächste Schritte
 
-Sobald Sie alle erforderlichen Informationen bereitgestellt haben, richten wir die Phone AI für Sie ein. Die Einrichtung dauert in der Regel 1-2 Werktage.
-
 <Card title="Kontaktieren Sie uns" icon="envelope" href="mailto:support@dialogshift.com">
-  Senden Sie uns die gesammelten Informationen per E-Mail an support@dialogshift.com
-</Card> 
+  Senden Sie die Zugangsdaten an support@dialogshift.com
+</Card>
+
+Einrichtungsdauer: 1-2 Werktage nach Erhalt aller Informationen. 
