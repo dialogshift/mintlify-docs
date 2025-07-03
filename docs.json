@@ -17,21 +17,7 @@
             "group": "Basiseinstellungen",
             "pages": [
               "de/user-erstellen",
-              "de/passwort-vergessen-de",
-              "index",
-              "quickstart",
-              "development"
-            ]
-          },
-          {
-            "group": "Essentials",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/settings",
-              "essentials/navigation",
-              "essentials/reusable-snippets"
+              "de/passwort-vergessen-de"
             ]
           }
         ]
@@ -42,16 +28,30 @@
           {
             "group": "API Documentation",
             "pages": [
-              "api-reference/introduction"
+              "old/api-reference/introduction",
+              "index",
+              "quickstart",
+              "development"
             ]
           },
           {
             "group": "Endpoint Examples",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "old/api-reference/endpoint/get",
+              "old/api-reference/endpoint/create",
+              "old/api-reference/endpoint/delete",
+              "old/api-reference/endpoint/webhook"
+            ]
+          },
+          {
+            "group": "Essentials",
+            "pages": [
+              "old/essentials/markdown",
+              "old/essentials/code",
+              "old/essentials/images",
+              "old/essentials/settings",
+              "old/essentials/navigation",
+              "old/essentials/reusable-snippets"
             ]
           }
         ]
