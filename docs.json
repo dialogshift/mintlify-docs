@@ -17,6 +17,7 @@
             "group": "Basiseinstellungen",
             "pages": [
               "de/user-erstellen",
+              "de/passwort-vergessen-de",
               "index",
               "quickstart",
               "development"
