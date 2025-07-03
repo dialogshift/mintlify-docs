@@ -1,4 +1,12 @@
-# Mintlify Starter Kit
+# DialogShift Support Documentation
+
+This repository contains the support documentation for DialogShift, built using Mintlify.
+
+## 📚 Documentation Guidelines
+
+**For AI models and developers:** Please read the [MINTLIFY_GUIDELINES.md](./MINTLIFY_GUIDELINES.md) file for comprehensive instructions on how to work with this Mintlify documentation repository.
+
+## 🚀 Quick Start
 
 Click on `Use this template` to copy the Mintlify starter kit. The starter kit contains examples including
 
