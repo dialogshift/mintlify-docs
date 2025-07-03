@@ -4,8 +4,8 @@
   "name": "DialogShift Support Dokumente",
   "colors": {
     "primary": "#4887F0",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "light": "#4887F0",
+    "dark": "#4887F0"
   },
   "favicon": "/favicon.svg",
   "navigation": {
