@@ -19,6 +19,13 @@
               "de/user-erstellen",
               "de/passwort-vergessen-de"
             ]
+          },
+          {
+            "group": "Phone AI",
+            "pages": [
+              "de/phone-ai/sip-integration",
+              "de/phone-ai/anrufweiterleitung-integration"
+            ]
           }
         ]
       },
