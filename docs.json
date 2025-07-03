@@ -64,13 +64,8 @@
           "icon": "book-open-cover"
         },
         {
-          "anchor": "Community",
-          "href": "https://mintlify.com/community",
-          "icon": "slack"
-        },
-        {
           "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
+          "href": "https://www.dialogshift.com/blog/blog-i",
           "icon": "newspaper"
         }
       ]
@@ -90,7 +85,7 @@
     "primary": {
       "type": "button",
       "label": "DialogShift App",
-      "href": "https://add.dialogshift.com"
+      "href": "https://app.dialogshift.com"
     }
   },
   "footer": {
