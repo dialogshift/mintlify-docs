@@ -42,6 +42,7 @@
                   "de/chat-ai/whatsapp/telefonnummer-auswahl",
                   "de/chat-ai/whatsapp/nummer-trennen",
                   "de/chat-ai/whatsapp/business-verifizierung",
+                  "de/chat-ai/whatsapp/meta-unternehmensverifizierung",
                   "de/chat-ai/whatsapp/einbindung-darstellung"
                 ]
               }
@@ -56,12 +57,22 @@
           },
           {
             "group": "Email AI",
-            "pages": []
+            "pages": [
+              "de/email-ai/firefox-browser-plugin"
+            ]
           },
           {
             "group": "Compliance",
             "pages": [
               "de/compliance/barrierefreiheitserklarung"
+            ]
+          },
+          {
+            "group": "Technischer Setup",
+            "pages": [
+              "de/technischer-setup/tracking-pixel",
+              "de/technischer-setup/url-parameter-tracking",
+              "de/technischer-setup/snippet-einbindung-pruefen"
             ]
           }
         ]
