@@ -23,6 +23,21 @@
             ]
           },
           {
+            "group": "Chat AI",
+            "pages": []
+          },
+          {
+            "group": "Phone AI",
+            "pages": [
+              "de/phone-ai/sip-integration",
+              "de/phone-ai/anrufweiterleitung-integration"
+            ]
+          },
+          {
+            "group": "Email AI",
+            "pages": []
+          },
+          {
             "group": "Live Chat",
             "pages": [
               "de/live-chat/live-chat-modi",
@@ -33,13 +48,6 @@
             "group": "Compliance",
             "pages": [
               "de/compliance/barrierefreiheitserklarung"
-            ]
-          },
-          {
-            "group": "Phone AI",
-            "pages": [
-              "de/phone-ai/sip-integration",
-              "de/phone-ai/anrufweiterleitung-integration"
             ]
           }
         ]
