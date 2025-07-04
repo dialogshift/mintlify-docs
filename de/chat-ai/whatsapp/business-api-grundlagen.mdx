@@ -5,19 +5,19 @@ description: 'Allgemeine Informationen zur professionellen WhatsApp-Nutzung für
 
 # WhatsApp Business API im Hoteleinsatz
 
-Mit der WhatsApp Business API können Hotels über den beliebten Messenger-Dienst mit ihren Gästen kommunizieren. Der DialogShift Chatbot automatisiert bis zu 90% der Anfragen und übergibt bei Bedarf an Ihre Mitarbeiter.
+Mit der WhatsApp Business API können Hotels über den beliebten Messenger-Dienst mit ihren Gästen kommunizieren. Der DialogShift Chatbot automatisiert bis zu 95% der Anfragen und übergibt bei Bedarf an Ihre Mitarbeiter.
 
 ## Hauptvorteile für Hotels
 
 <CardGroup cols={3}>
   <Card title="Vertrauter Kanal" icon="heart">
-    Über 2 Milliarden aktive Nutzer weltweit
+    Gäste nutzen ihren Lieblings-Messenger für die Hotelkommunikation
   </Card>
-  <Card title="Hohe Erreichbarkeit" icon="user-check">
-    98% Öffnungsrate bei WhatsApp-Nachrichten
+  <Card title="Höchste Erreichbarkeit" icon="user-check">
+    Persönliche Identifizierung und 98% Öffnungsrate
   </Card>
   <Card title="DSGVO-konform" icon="shield-check">
-    Datenschutzkonforme Kommunikation möglich
+    Datenschutzkonforme Kommunikation garantiert
   </Card>
 </CardGroup>
 
@@ -43,14 +43,14 @@ Die WhatsApp Business Platform (früher Business API) ist speziell für mittlere
 ## Wie erreichen Gäste Ihr Hotel über WhatsApp?
 
 <Tabs>
-  <Tab title="QR-Code">
-    QR-Codes auf Website, im Hotel oder auf Printmaterialien
+  <Tab title="QR-Code Website">
+    QR-Code auf Ihrer Hotel-Website zum Scannen (siehe Video-Beispiel)
+  </Tab>
+  <Tab title="QR-Code vor Ort">
+    QR-Codes im Hotel oder auf Marketing-Printmaterialien
   </Tab>
   <Tab title="Click-to-Chat Link">
-    Direkter WhatsApp-Link (wa.me/Ihre-Nummer)
-  </Tab>
-  <Tab title="WhatsApp Button">
-    Integration eines WhatsApp-Buttons auf Ihrer Website
+    Direkter Link für WhatsApp Web-Nutzer (seltener genutzt)
   </Tab>
   <Tab title="Click-to-WhatsApp Ads">
     Facebook/Instagram Werbeanzeigen mit WhatsApp-Integration
@@ -58,34 +58,36 @@ Die WhatsApp Business Platform (früher Business API) ist speziell für mittlere
 </Tabs>
 
 <Warning>
-**Wichtig:** WhatsApp erlaubt keine unaufgeforderte Erstansprache. Der Gast muss immer die erste Nachricht senden (Opt-in erforderlich).
+**Wichtig:** WhatsApp erlaubt aus Privacy-Gründen keine initiale Begrüßung durch Unternehmen. Der Gast muss immer die erste Nachricht senden. Mit DialogShift wird diese Nachricht beim QR-Code-Scannen bereits in die Eingabezeile vorausgefüllt.
 </Warning>
 
-## Verfügbare Nachrichtentypen
+## Verfügbare Chat-Funktionen
 
 ### Innerhalb des 24-Stunden-Fensters:
-- ✅ Freitext-Nachrichten
-- ✅ Bilder, Videos, Dokumente
-- ✅ Standort-Nachrichten
-- ✅ Interaktive Buttons (max. 3)
-- ✅ Listen-Nachrichten
-- ✅ Produkt-Nachrichten (mit Katalog)
+- ✅ **Textnachrichten** - Freie Kommunikation möglich
+- ✅ **Schnellantwort-Buttons** - Max. 3 Buttons, Beschriftung wird nach 20 Zeichen abgeschnitten
+- ✅ **Medien** - Bilder und Videos senden und empfangen
+- ✅ **Sprachnachrichten** - Hotels können diese empfangen (nicht senden)
+- ✅ **Standort-Nachrichten** - Für Wegbeschreibungen
+- ✅ **Listen-Nachrichten** - Für strukturierte Auswahloptionen
 
-### Template-Nachrichten (außerhalb 24h):
-- ✅ Vordefinierte, genehmigte Nachrichten
-- ✅ Personalisierbare Variablen
-- ✅ Medien-Anhänge möglich
-- ✅ Call-to-Action Buttons
+### Karussell-Darstellung in WhatsApp
 
 <Note>
-**Karussells:** WhatsApp unterstützt keine nativen Karussells. DialogShift wandelt diese automatisch in strukturierte Nachrichten um.
+**Wichtig:** WhatsApp unterstützt bislang keine native Karussell-Funktion. DialogShift wandelt Karussells automatisch in vereinfachte Textnachrichten mit jeweils 3 Buttons um.
 </Note>
 
-## 24-Stunden-Regel verstehen
+## 24-Stunden-Regel und proaktive Nachrichten
 
 <Info>
-Nach der letzten Nachricht eines Gastes haben Sie 24 Stunden Zeit für freie Antworten. Danach sind nur noch genehmigte Template-Nachrichten möglich.
+**24-Stunden-Fenster:** Nachdem ein Gast das Hotel kontaktiert, kann das Hotel in den nächsten 24 Stunden frei mit dem Gast chatten. Danach sind nur noch genehmigte Template-Nachrichten möglich.
 </Info>
+
+### Proaktive Kommunikation:
+- WhatsApp verbietet prinzipiell proaktive Nachrichten von Firmen (Spam-Schutz)
+- Nur mit speziellen, von WhatsApp genehmigten Templates möglich
+- Aktuell mit DialogShift Live Chat App noch nicht verfügbar (geplant für 2024)
+- Nach Gastkontakt: 24 Stunden freie Kommunikation
 
 ### Template-Kategorien:
 - **Utility:** Service-Updates, Buchungsbestätigungen
@@ -95,56 +97,60 @@ Nach der letzten Nachricht eines Gastes haben Sie 24 Stunden Zeit für freie Ant
 ## Technische Voraussetzungen
 
 <Steps>
-  <Step title="Meta Business Account">
-    Verifizierter Facebook Business Manager für Ihr Hotel
+  <Step title="Facebook Business Manager">
+    Konto für das Hotel, das WhatsApp nutzen möchte
   </Step>
-  <Step title="WhatsApp Business Account (WABA)">
-    Wird während des Onboardings erstellt
+  <Step title="Verifizierung des Hotelbetreibers">
+    Bei Facebook/Meta (kann nachgeholt werden)
   </Step>
-  <Step title="Telefonnummer">
-    Dedizierte Nummer für WhatsApp (nicht bereits in WhatsApp genutzt)
+  <Step title="Dedizierte Telefonnummer">
+    Festnetz oder Mobil, die Verifizierungsanrufe empfangen kann
   </Step>
-  <Step title="Business-Verifizierung">
-    Nachweis Ihrer Geschäftstätigkeit bei Meta
+  <Step title="Anruf-Empfang">
+    Bei IVR: 15-Min-Fenster abschaltbar oder Anrufe aus UK/USA aussortierbar
   </Step>
 </Steps>
 
 ## Wichtige Richtlinien
 
-### Telefonnummer-Anforderungen
+### Eine Nummer für mehrere Hotels?
 
 <Warning>
-**Eine Nummer pro Standort:** Jeder physische Hotel-Standort benötigt eine eigene WhatsApp-Nummer. Multi-Property-Nummern sind nicht erlaubt.
+**Grundsätzlich möglich, aber mit Einschränkungen:**
+- Der angezeigte WhatsApp-Name muss markenrechtlich existieren
+- Nachweisliche Zugehörigkeit zum Betreiber erforderlich
+- Eine Website zur Marke muss existieren
+- Facebook Business Manager muss dies korrekt abbilden
 </Warning>
 
-Erlaubte Nummerntypen:
-- ✅ Festnetznummern
-- ✅ Mobilfunknummern  
-- ✅ Gebührenfreie Nummern (z.B. 0800)
-- ❌ Kurznummern nicht unterstützt
-
-### Migration bestehender Nummern
+### Migration bestehender WhatsApp-Nummern
 
 Bei Übernahme einer bereits genutzten WhatsApp-Nummer:
 
 <Tabs>
   <Tab title="Was geht verloren">
-    - Chat-Verläufe auf dem alten Gerät
-    - Gespeicherte Kontakte
-    - Mediendateien aus alten Chats
-    - WhatsApp Business App Einstellungen
+    - ❌ Alle bisherigen Chats und Kontakte
+    - ❌ Proaktive Anschreibemöglichkeit
+    - ❌ Bisherige WhatsApp App nicht mehr nutzbar
+    - ❌ Gespeicherte Medien
   </Tab>
   <Tab title="Was Sie gewinnen">
-    - Professionelle API-Integration
-    - Multi-Agent Support
-    - Automatisierung mit Chatbot
-    - Detaillierte Analytics
-    - CRM/PMS Integration
+    - ✅ Chatbot beantwortet automatisch (95% Automatisierung)
+    - ✅ Zentrale Live Chat Bearbeitung in DialogShift
+    - ✅ DSGVO-konforme Lösung
+    - ✅ Multi-Agent Support
+    - ✅ Detaillierte Analytics
   </Tab>
 </Tabs>
 
+### Kontinuität für Ihre Gäste
+
 <Tip>
-**Für Ihre Gäste ändert sich nichts!** Sie behalten ihren Chat-Verlauf und können wie gewohnt kommunizieren.
+**Für Gäste ändert sich nichts:**
+- Hotel bleibt normaler WhatsApp-Kontakt
+- Alle Chats bleiben beim Gast bestehen
+- Gäste können das Hotel immer wieder anschreiben
+- Nummer kann gespeichert werden wie gewohnt
 </Tip>
 
 ## Messaging-Limits und Qualität
@@ -164,6 +170,18 @@ WhatsApp überwacht:
 <Warning>
 Bei schlechter Qualitätsbewertung können Ihre Messaging-Limits reduziert oder Ihr Account gesperrt werden.
 </Warning>
+
+## Onboarding & Antragsprozess
+
+<Info>
+**Meta-Zertifizierung:** Die Nutzung von WhatsApp für Unternehmen muss bei Meta beantragt werden. Als autorisierter Dienstleister führt DialogShift gemeinsam mit zertifizierten Telekommunikationspartnern den Setup-Prozess durch.
+</Info>
+
+Der Prozess erfordert verschiedene Schritte und Mitwirkung des Hotels:
+- Antragstellung über DialogShift
+- Verifizierung bei Meta/Facebook
+- Telefonnummer-Aktivierung
+- DialogShift unterstützt bis zur finalen Genehmigung
 
 ## Kosten und Abrechnung
 
@@ -185,20 +203,21 @@ Die ersten 1.000 Service-Konversationen pro Monat sind kostenlos. Preise variier
 ## Best Practices für Hotels
 
 <CardGroup cols={2}>
-  <Card title="Automatisierung nutzen" icon="robot">
-    Chatbot für FAQ, Buchungen, Concierge-Services
+  <Card title="Automatisierung maximieren" icon="robot">
+    95% Automatisierungsgrad mit DialogShift Chatbot erreichen
   </Card>
-  <Card title="Persönlich bleiben" icon="users">
-    Nahtloser Übergang zu menschlichen Agenten
+  <Card title="Schnelle Reaktion" icon="clock">
+    24-Stunden-Fenster optimal nutzen
   </Card>
-  <Card title="Templates optimieren" icon="file-lines">
-    Relevante, personalisierte Nachrichten
+  <Card title="Klare Erwartungen" icon="info">
+    Antwortzeiten und Verfügbarkeit kommunizieren
   </Card>
-  <Card title="Compliance beachten" icon="shield">
-    DSGVO, Opt-in/Opt-out respektieren
+  <Card title="DSGVO beachten" icon="shield">
+    Datenschutzkonforme Prozesse sicherstellen
   </Card>
 </CardGroup>
 
 ## Nächste Schritte
 
-Bereit für WhatsApp in Ihrem Hotel? DialogShift unterstützt Sie beim kompletten Setup und der Integration in Ihre bestehenden Systeme. 
+Bereit für WhatsApp in Ihrem Hotel? DialogShift begleitet Sie durch den kompletten Antragsprozess und unterstützt Sie bei der Integration in Ihre bestehenden Systeme.
+
