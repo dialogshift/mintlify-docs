@@ -19,7 +19,20 @@
               "de/basis/user-erstellen",
               "de/basis/passwort-vergessen-de",
               "de/basis/neuen-nutzer-einladen",
-              "de/basis/live-chat-modi"
+              "de/basis/benachrichtigungsoptionen"
+            ]
+          },
+          {
+            "group": "Live Chat",
+            "pages": [
+              "de/live-chat/live-chat-modi",
+              "de/live-chat/live-chats-beantworten"
+            ]
+          },
+          {
+            "group": "Compliance",
+            "pages": [
+              "de/compliance/barrierefreiheitserklarung"
             ]
           },
           {
