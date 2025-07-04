@@ -16,8 +16,9 @@
           {
             "group": "Basiseinstellungen",
             "pages": [
-              "de/user-erstellen",
-              "de/passwort-vergessen-de"
+              "de/basis/user-erstellen",
+              "de/basis/passwort-vergessen-de",
+              "de/basis/neuen-nutzer-einladen"
             ]
           },
           {
