@@ -11,7 +11,7 @@ Mit der WhatsApp Business API können Hotels über den beliebten Messenger-Diens
 
 <CardGroup cols={3}>
   <Card title="Vertrauter Kanal" icon="heart">
-    Gäste nutzen ihre gewohnte Messaging-App
+    Über 2 Milliarden aktive Nutzer weltweit
   </Card>
   <Card title="Hohe Erreichbarkeit" icon="user-check">
     98% Öffnungsrate bei WhatsApp-Nachrichten
@@ -23,10 +23,10 @@ Mit der WhatsApp Business API können Hotels über den beliebten Messenger-Diens
 
 ## Technische Details
 
-**Verwendetes Produkt:** [WhatsApp Business Platform API](https://business.whatsapp.com/products/business-platform)
+**Verwendetes Produkt:** [WhatsApp Business Platform](https://business.whatsapp.com/products/business-platform)
 
 <Info>
-Die WhatsApp Business API ist speziell für mittlere und große Unternehmen konzipiert, die automatisiert und in großem Umfang mit Kunden kommunizieren möchten.
+Die WhatsApp Business Platform (früher Business API) ist speziell für mittlere und große Unternehmen konzipiert, die automatisiert und in großem Umfang mit Kunden kommunizieren möchten.
 </Info>
 
 ### Demo-Video: WhatsApp für Hotels in der Praxis
@@ -43,141 +43,162 @@ Die WhatsApp Business API ist speziell für mittlere und große Unternehmen konz
 ## Wie erreichen Gäste Ihr Hotel über WhatsApp?
 
 <Tabs>
-  <Tab title="QR-Code Website">
-    QR-Code auf Ihrer Hotel-Website zum Scannen mit dem Smartphone
-  </Tab>
-  <Tab title="QR-Code vor Ort">
-    QR-Codes im Hotel (Rezeption, Zimmer, Restaurant) oder auf Printmaterialien
+  <Tab title="QR-Code">
+    QR-Codes auf Website, im Hotel oder auf Printmaterialien
   </Tab>
   <Tab title="Click-to-Chat Link">
-    Direkter WhatsApp-Link für Desktop- und Mobile-Nutzer
+    Direkter WhatsApp-Link (wa.me/Ihre-Nummer)
   </Tab>
   <Tab title="WhatsApp Button">
     Integration eines WhatsApp-Buttons auf Ihrer Website
   </Tab>
+  <Tab title="Click-to-WhatsApp Ads">
+    Facebook/Instagram Werbeanzeigen mit WhatsApp-Integration
+  </Tab>
 </Tabs>
 
 <Warning>
-**Wichtig:** WhatsApp erlaubt keine proaktive Erstansprache. Der Gast muss immer die erste Nachricht senden (Opt-in).
+**Wichtig:** WhatsApp erlaubt keine unaufgeforderte Erstansprache. Der Gast muss immer die erste Nachricht senden (Opt-in erforderlich).
 </Warning>
 
-## Verfügbare Chat-Funktionen
+## Verfügbare Nachrichtentypen
 
-### Unterstützte Nachrichtentypen:
-- ✅ Text-Nachrichten
-- ✅ Sprachnachrichten 
-- ✅ Bilder und Videos
-- ✅ Dokumente (PDFs, etc.)
-- ✅ Standort-Sharing
-- ✅ Interaktive Buttons (max. 3 pro Nachricht, je max. 20 Zeichen)
-- ✅ Listen-Nachrichten (für Menüs und Auswahloptionen)
+### Innerhalb des 24-Stunden-Fensters:
+- ✅ Freitext-Nachrichten
+- ✅ Bilder, Videos, Dokumente
+- ✅ Standort-Nachrichten
+- ✅ Interaktive Buttons (max. 3)
+- ✅ Listen-Nachrichten
+- ✅ Produkt-Nachrichten (mit Katalog)
 
-### Karussell-Darstellung
+### Template-Nachrichten (außerhalb 24h):
+- ✅ Vordefinierte, genehmigte Nachrichten
+- ✅ Personalisierbare Variablen
+- ✅ Medien-Anhänge möglich
+- ✅ Call-to-Action Buttons
 
 <Note>
-WhatsApp unterstützt aktuell keine nativen Karussells wie andere Plattformen. DialogShift wandelt Karussells automatisch in strukturierte Textnachrichten mit Buttons um.
+**Karussells:** WhatsApp unterstützt keine nativen Karussells. DialogShift wandelt diese automatisch in strukturierte Nachrichten um.
 </Note>
 
-## 24-Stunden-Regel und Template-Nachrichten
+## 24-Stunden-Regel verstehen
 
 <Info>
-**24-Stunden Service Window:** Nach dem letzten Gastkontakt können Sie 24 Stunden lang frei antworten. Danach sind nur noch vorab genehmigte Template-Nachrichten möglich.
+Nach der letzten Nachricht eines Gastes haben Sie 24 Stunden Zeit für freie Antworten. Danach sind nur noch genehmigte Template-Nachrichten möglich.
 </Info>
 
-### Template-Nachrichten ermöglichen:
-- Buchungsbestätigungen
-- Check-in Erinnerungen
-- Feedback-Anfragen nach dem Aufenthalt
-- Service-Updates (z.B. Zimmerverfügbarkeit)
-
-<Tip>
-Template-Nachrichten müssen von WhatsApp genehmigt werden (üblicherweise innerhalb von 24 Stunden).
-</Tip>
+### Template-Kategorien:
+- **Utility:** Service-Updates, Buchungsbestätigungen
+- **Authentication:** Verifizierungen, Login-Codes  
+- **Marketing:** Angebote, Newsletter (mit Opt-out)
 
 ## Technische Voraussetzungen
 
 <Steps>
   <Step title="Meta Business Account">
-    Ein verifizierter Facebook Business Manager Account für Ihr Hotel
+    Verifizierter Facebook Business Manager für Ihr Hotel
+  </Step>
+  <Step title="WhatsApp Business Account (WABA)">
+    Wird während des Onboardings erstellt
+  </Step>
+  <Step title="Telefonnummer">
+    Dedizierte Nummer für WhatsApp (nicht bereits in WhatsApp genutzt)
   </Step>
   <Step title="Business-Verifizierung">
-    Ihr Unternehmen muss bei Meta verifiziert sein
-  </Step>
-  <Step title="Dedizierte Telefonnummer">
-    Eine Telefonnummer ausschließlich für WhatsApp Business (Festnetz oder Mobil)
-  </Step>
-  <Step title="Nummer-Verifizierung">
-    Die Nummer muss SMS oder Anrufe für die Verifizierung empfangen können
+    Nachweis Ihrer Geschäftstätigkeit bei Meta
   </Step>
 </Steps>
 
 ## Wichtige Richtlinien
 
-### Eine Nummer pro Hotel-Standort
+### Telefonnummer-Anforderungen
 
 <Warning>
-**Aktuelle WhatsApp-Richtlinie:** Jeder Hotel-Standort benötigt eine eigene WhatsApp Business-Nummer. Eine Nummer für mehrere Hotels oder Standorte ist nicht erlaubt.
+**Eine Nummer pro Standort:** Jeder physische Hotel-Standort benötigt eine eigene WhatsApp-Nummer. Multi-Property-Nummern sind nicht erlaubt.
 </Warning>
 
-Dies bedeutet:
-- ✅ Hotel Berlin: +49 30 12345678
-- ✅ Hotel München: +49 89 87654321
-- ❌ Beide Hotels über eine Nummer
+Erlaubte Nummerntypen:
+- ✅ Festnetznummern
+- ✅ Mobilfunknummern  
+- ✅ Gebührenfreie Nummern (z.B. 0800)
+- ❌ Kurznummern nicht unterstützt
 
-### Übernahme bestehender WhatsApp-Nummern
+### Migration bestehender Nummern
 
-Bei der Migration einer existierenden WhatsApp-Nummer zur Business API:
+Bei Übernahme einer bereits genutzten WhatsApp-Nummer:
 
-**Verluste:**
-- ❌ Alle bisherigen Chat-Verläufe auf dem alten Gerät
-- ❌ Kontaktliste vom alten WhatsApp
-- ❌ Mediendateien aus alten Chats
-
-**Vorteile:**
-- ✅ Professionelle Chatbot-Integration
-- ✅ Multi-Agent Unterstützung
-- ✅ Zentrale Verwaltung aller Chats
-- ✅ Detaillierte Analytics
-- ✅ DSGVO-konforme Datenverwaltung
-- ✅ API-Integration mit PMS und anderen Systemen
-
-### Kontinuität für Ihre Gäste
+<Tabs>
+  <Tab title="Was geht verloren">
+    - Chat-Verläufe auf dem alten Gerät
+    - Gespeicherte Kontakte
+    - Mediendateien aus alten Chats
+    - WhatsApp Business App Einstellungen
+  </Tab>
+  <Tab title="Was Sie gewinnen">
+    - Professionelle API-Integration
+    - Multi-Agent Support
+    - Automatisierung mit Chatbot
+    - Detaillierte Analytics
+    - CRM/PMS Integration
+  </Tab>
+</Tabs>
 
 <Tip>
-**Gute Nachricht:** Für Ihre Gäste ändert sich nichts! Sie behalten:
-- Ihren Chat-Verlauf mit Ihrem Hotel
-- Die gespeicherte Nummer in ihren Kontakten
-- Die gewohnte WhatsApp-Oberfläche
+**Für Ihre Gäste ändert sich nichts!** Sie behalten ihren Chat-Verlauf und können wie gewohnt kommunizieren.
 </Tip>
 
-## Qualitätsrichtlinien
+## Messaging-Limits und Qualität
 
-Um eine hohe Zustellrate und gute Performance zu gewährleisten:
+### Initiale Limits:
+- **Unverified Business:** 250 eindeutige Kontakte/24h
+- **Verified Business:** 1.000 eindeutige Kontakte/24h
+- **Nach 7 Tagen:** Automatische Erhöhung möglich
 
-- Senden Sie nur relevante, personalisierte Nachrichten
-- Respektieren Sie die Kommunikationspräferenzen der Gäste
-- Vermeiden Sie Spam oder zu häufige Nachrichten
-- Reagieren Sie zeitnah auf Gästeanfragen
-- Nutzen Sie Templates nur für ihren vorgesehenen Zweck
+### Qualitätsbewertung:
+WhatsApp überwacht:
+- Blockierungsrate
+- Meldungen von Nutzern
+- Antwortzeiten
+- Template-Performance
 
-<Note>
-WhatsApp überwacht die Qualität Ihrer Nachrichten. Bei zu vielen Beschwerden oder Blockierungen kann Ihre Nummer eingeschränkt werden.
-</Note>
+<Warning>
+Bei schlechter Qualitätsbewertung können Ihre Messaging-Limits reduziert oder Ihr Account gesperrt werden.
+</Warning>
 
 ## Kosten und Abrechnung
 
-Die WhatsApp Business API wird pro Konversation abgerechnet:
-- **User-initiated:** Gast startet die Konversation
-- **Business-initiated:** Hotel startet mit Template-Nachricht
-
 <Info>
-Die ersten 1.000 Konversationen pro Monat sind kostenlos. Die genauen Preise variieren je nach Land und Konversationstyp.
+**Konversationsbasierte Abrechnung:** Sie zahlen pro 24-Stunden-Konversation, nicht pro Nachricht.
 </Info>
+
+### Konversationstypen:
+1. **Service-Konversationen:** Vom Nutzer initiiert (günstiger)
+2. **Business-Initiated:** 
+   - Utility (Service-Updates)
+   - Authentication (Verifizierung)
+   - Marketing (Werbung)
+
+<Note>
+Die ersten 1.000 Service-Konversationen pro Monat sind kostenlos. Preise variieren je nach Land des Empfängers.
+</Note>
 
 ## Best Practices für Hotels
 
-1. **Klare Erwartungen setzen:** Informieren Sie über Antwortzeiten
-2. **Mehrsprachigkeit:** Bieten Sie Support in den Sprachen Ihrer Hauptmärkte
-3. **Quick Replies nutzen:** Vordefinierte Antworten für häufige Fragen
-4. **Integration mit PMS:** Automatische Buchungsbestätigungen und Updates
-5. **Feedback einholen:** Nutzen Sie WhatsApp für Gästebewertungen 
+<CardGroup cols={2}>
+  <Card title="Automatisierung nutzen" icon="robot">
+    Chatbot für FAQ, Buchungen, Concierge-Services
+  </Card>
+  <Card title="Persönlich bleiben" icon="users">
+    Nahtloser Übergang zu menschlichen Agenten
+  </Card>
+  <Card title="Templates optimieren" icon="file-lines">
+    Relevante, personalisierte Nachrichten
+  </Card>
+  <Card title="Compliance beachten" icon="shield">
+    DSGVO, Opt-in/Opt-out respektieren
+  </Card>
+</CardGroup>
+
+## Nächste Schritte
+
+Bereit für WhatsApp in Ihrem Hotel? DialogShift unterstützt Sie beim kompletten Setup und der Integration in Ihre bestehenden Systeme. 

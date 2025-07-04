@@ -1,57 +1,215 @@
 ---
-title: 'WhatsApp - Einbindung und Darstellung'
-description: 'Wie Sie WhatsApp als Chat-Kanal auf Ihrer Website und in E-Mails integrieren'
+title: 'WhatsApp Integration & Darstellung'
+description: 'WhatsApp als Chat-Kanal auf Website und in E-Mails einbinden'
 ---
 
-# WhatsApp - Einbindung und Darstellung
+# WhatsApp Integration & Darstellung
 
-## Generelles
+Nach der Aktivierung Ihrer WhatsApp Business API können Sie den Kanal auf verschiedene Arten in Ihre Gästekommunikation integrieren.
 
-WhatsApp wird als weiterer Kanal dem Chatbot hinzugefügt. Der Chatbot beantwortet Fragen und bietet Antwortbuttons an. Live Chats werden zentral in der DialogShift Live Chat App bearbeitet.
+## Integration in DialogShift
 
-## Website-Integration
-
-Der WhatsApp Kanal kann auf zwei Arten geöffnet werden:
+WhatsApp wird nahtlos als zusätzlicher Kanal in Ihre bestehende DialogShift-Umgebung integriert:
 
 <CardGroup cols={2}>
-  <Card title="QR-Code" icon="qrcode">
-    Abscannen des QR-Codes auf der Website
+  <Card title="Einheitliche Inbox" icon="inbox">
+    Alle WhatsApp-Chats neben anderen Kanälen
   </Card>
-  <Card title="Click-to-Chat" icon="mouse-pointer">
-    Direkter Klick wenn WhatsApp auf dem Computer installiert ist
+  <Card title="Chatbot-Integration" icon="robot">
+    Automatische Antworten über alle Kanäle
+  </Card>
+  <Card title="Team-Kollaboration" icon="users">
+    Mehrere Agenten können gleichzeitig arbeiten
+  </Card>
+  <Card title="Analytics" icon="chart-bar">
+    Kanalübergreifende Auswertungen
   </Card>
 </CardGroup>
 
-### Einbindungsoptionen
+## Website-Integration
+
+### 1. QR-Code Integration
+
+<Info>
+QR-Codes sind ideal für:
+- Hotel-Website
+- Rezeptionsbereich
+- Zimmerkarten
+- Restaurant-Tische
+- Printmaterialien
+</Info>
+
+**So funktioniert's:**
+1. Gast scannt QR-Code mit Smartphone-Kamera
+2. WhatsApp öffnet sich automatisch
+3. Vorgefertigte Nachricht kann gesendet werden
+
+### 2. Click-to-Chat Button
 
 <Tabs>
-  <Tab title="Standard WhatsApp Button">
-    Klassischer grüner WhatsApp Button in Originalfarben
+  <Tab title="Standard Grün">
+    Der klassische WhatsApp-Button in Corporate Green
+    - Hohe Wiedererkennung
+    - Offizielles WhatsApp-Branding
+    - Ideal für prominente Platzierung
   </Tab>
-  <Tab title="Schwarz/Weiß Button">
-    Dezente schwarz-weiße Variante für minimalistisches Design
+  
+  <Tab title="Schwarz/Weiß">
+    Dezente Variante für minimalistisches Design
+    - Passt sich ans Corporate Design an
+    - Weniger aufdringlich
+    - Für elegante Hotel-Websites
   </Tab>
-  <Tab title="Slide-out Button">
-    Animierter Button der von der Seite einschwebt (in beiden Farbvarianten verfügbar)
+  
+  <Tab title="Animiert">
+    Slide-out Button mit Animation
+    - Zieht Aufmerksamkeit auf sich
+    - In beiden Farbvarianten verfügbar
+    - Moderne User Experience
   </Tab>
 </Tabs>
 
-## WhatsApp in Journey E-Mails
-
-<Info>
-WhatsApp Click-to-Chat Buttons können in Buchungsbestätigungen und Pre-Arrival E-Mails integriert werden.
-</Info>
-
-WhatsApp stellt eigene Button-Designs zur Verfügung. Kontaktieren Sie unseren Support für die Integration in Ihre Hotel-E-Mails.
-
-## WhatsApp im Webchat
-
-<Warning>
-Diese Funktion befindet sich noch in der Beta-Phase.
-</Warning>
-
-Der WhatsApp Button kann direkt im Webchat eingebunden werden, um Nutzern jederzeit den Wechsel zu WhatsApp zu ermöglichen. 
+### 3. Chat-Widget Integration
 
 <Note>
-Kontaktieren Sie den Support für die Aktivierung dieser Beta-Funktion.
-</Note> 
+**Beta-Feature:** Der WhatsApp-Button kann direkt in Ihr bestehendes DialogShift Chat-Widget integriert werden. Kontaktieren Sie den Support zur Aktivierung.
+</Note>
+
+Vorteile:
+- Ein Widget für alle Kanäle
+- Gast wählt bevorzugten Kanal
+- Einheitliches Design
+- Zentrale Konfiguration
+
+## E-Mail Integration
+
+### Click-to-Chat in E-Mails
+
+Integrieren Sie WhatsApp-Links in Ihre Hotel-E-Mails:
+
+<Steps>
+  <Step title="Link generieren">
+    Format: `https://wa.me/49XXXXXXXXX?text=Hallo%20Hotel`
+  </Step>
+  <Step title="Button erstellen">
+    WhatsApp stellt offizielle Button-Grafiken zur Verfügung
+  </Step>
+  <Step title="In E-Mails einbinden">
+    - Buchungsbestätigungen
+    - Pre-Arrival E-Mails  
+    - Post-Stay Feedback
+    - Newsletter
+  </Step>
+</Steps>
+
+### Best Practices für E-Mail-Integration
+
+<CardGroup cols={2}>
+  <Card title="Klarer Call-to-Action" icon="hand-pointer">
+    "Fragen zur Buchung? Schreiben Sie uns auf WhatsApp!"
+  </Card>
+  <Card title="Kontext mitgeben" icon="message">
+    Vorgefertigte Nachricht mit Buchungsnummer
+  </Card>
+  <Card title="Alternative bieten" icon="envelope">
+    Auch E-Mail/Telefon als Option anbieten
+  </Card>
+  <Card title="Erwartungen setzen" icon="clock">
+    Antwortzeiten kommunizieren
+  </Card>
+</CardGroup>
+
+## Technische Implementierung
+
+### URL-Parameter für Click-to-Chat
+
+```
+https://wa.me/[Telefonnummer]?text=[URL-encodierter Text]
+```
+
+**Beispiel:**
+```
+https://wa.me/4989123456789?text=Hallo%20Hotel%20Seeblick%2C%20ich%20habe%20eine%20Frage%20zu%20meiner%20Buchung%20%23123456
+```
+
+### QR-Code Best Practices
+
+- **Größe:** Mindestens 3x3 cm für Print
+- **Kontrast:** Hoher Kontrast zum Hintergrund
+- **Testing:** Mit verschiedenen Geräten testen
+- **Call-to-Action:** "Scannen für WhatsApp-Chat"
+
+## Platzierung & Sichtbarkeit
+
+### Empfohlene Positionen auf der Website
+
+1. **Header/Navigation:** Immer sichtbar
+2. **Kontaktseite:** Bei anderen Kontaktoptionen
+3. **Buchungsprozess:** Für schnelle Fragen
+4. **Footer:** Als Standard-Kontaktoption
+5. **Floating Button:** Rechts unten (Mobile-friendly)
+
+### Vor-Ort Platzierung
+
+<AccordionGroup>
+  <Accordion title="Rezeption">
+    - Aufsteller am Check-in
+    - Digital Signage Displays
+    - Visitenkarten mit QR-Code
+  </Accordion>
+  
+  <Accordion title="Hotelzimmer">
+    - Infokarte auf dem Nachttisch
+    - QR-Code für Zimmerservice
+    - TV-Willkommensbildschirm
+  </Accordion>
+  
+  <Accordion title="Restaurant/Bar">
+    - Tischaufsteller
+    - Speisekarte
+    - Feedback-Karten
+  </Accordion>
+  
+  <Accordion title="Weitere Bereiche">
+    - Aufzüge
+    - Parkplatz
+    - Spa/Wellness
+    - Konferenzräume
+  </Accordion>
+</AccordionGroup>
+
+## Messaging-Strategie
+
+### Erstansprache optimieren
+
+Die erste Nachricht des Gastes ist entscheidend:
+
+<Tip>
+**Vorgefertigte Nachrichten nutzen:**
+- "Hallo, ich bin Gast im Hotel und habe eine Frage"
+- "Ich möchte einen Tisch reservieren"
+- "Brauche Hilfe beim Check-in"
+</Tip>
+
+### Multi-Channel-Strategie
+
+<Info>
+WhatsApp sollte Teil Ihrer Gesamtstrategie sein:
+- Website-Chat für anonyme Anfragen
+- WhatsApp für persönliche Betreuung
+- E-Mail für formelle Kommunikation
+- Telefon für dringende Fälle
+</Info>
+
+## Erfolgsmessung
+
+Wichtige KPIs für WhatsApp:
+- Anzahl initiierter Chats
+- Response Time
+- Conversation Resolution Rate
+- Gästezufriedenheit
+- Conversion Rate (Buchungen via WhatsApp)
+
+<Warning>
+**Datenschutz beachten:** Stellen Sie sicher, dass Ihre WhatsApp-Nutzung DSGVO-konform ist und informieren Sie Gäste über die Datenverarbeitung.
+</Warning> 

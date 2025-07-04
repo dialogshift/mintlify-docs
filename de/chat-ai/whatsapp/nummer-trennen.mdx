@@ -5,45 +5,143 @@ description: 'So lösen Sie eine Telefonnummer von einem bestehenden WhatsApp Ko
 
 # WhatsApp Nummer trennen
 
-Viele Unternehmen starten mit der Consumer- oder Business-App auf dem Smartphone. Für den professionellen Einsatz mit Chatbots benötigen Sie jedoch WhatsApp Business API.
+Bevor Sie eine Telefonnummer für WhatsApp Business API nutzen können, muss diese von allen bestehenden WhatsApp-Konten getrennt werden.
 
 <Warning>
-WhatsApp erlaubt NICHT die gleichzeitige Nutzung derselben Telefonnummer für App und Business API.
+**⚠️ WICHTIGER HINWEIS:**  
+Beim Trennen werden ALLE Daten auf dem ursprünglichen Gerät unwiderruflich gelöscht:
+- Alle Chat-Verläufe
+- Gespeicherte Medien
+- Kontakte und Gruppen
+- Backup-Daten
+
+**Für Ihre Kontakte ändert sich nichts** - sie behalten ihren Chatverlauf mit Ihrer Nummer.
 </Warning>
 
-## Wichtige Hinweise
-
-<Note>
-- **Beim Löschen des Kontos gehen ALLE Daten verloren!**
-- **Proaktive Nachrichten sind bei Business API aus Spam-Schutz eingeschränkt**
-</Note>
-
-## Nummer freimachen
-
-### WhatsApp Business App
+## Vorbereitungen
 
 <Steps>
-  <Step title="Business Manager öffnen">
-    Rufen Sie die Unternehmenseinstellungen auf
+  <Step title="Backup erstellen">
+    Sichern Sie wichtige Chats und Medien, falls benötigt
   </Step>
-  <Step title="Zu Telefonnummern navigieren">
-    Einstellungen > Business-Einstellungen > WhatsApp-Konten > WhatsApp Manager > Telefonnummern
+  <Step title="Kontakte informieren">
+    Informieren Sie wichtige Kontakte über die Umstellung
   </Step>
-  <Step title="Nummer löschen">
-    Klicken Sie auf das Papierkorbsymbol bei der zu löschenden Nummer
+  <Step title="Alternative vorbereiten">
+    Richten Sie ggf. eine alternative WhatsApp-Nummer ein
   </Step>
 </Steps>
 
-<Card title="Facebook Dokumentation" icon="book" href="https://developers.facebook.com/docs/whatsapp/phone-numbers#migrate">
-  Offizielle Anleitung von Facebook (Englisch)
-</Card>
+## Nummer trennen - je nach App-Typ
 
-### Consumer WhatsApp
+<Tabs>
+  <Tab title="WhatsApp Business App">
+    ### Option 1: Über Facebook Business Manager (empfohlen)
+    
+    <Steps>
+      <Step title="Business Manager öffnen">
+        Gehen Sie zu [business.facebook.com](https://business.facebook.com)
+      </Step>
+      <Step title="Navigation">
+        Einstellungen → Business-Einstellungen → WhatsApp-Konten → WhatsApp Manager
+      </Step>
+      <Step title="Telefonnummern">
+        Klicken Sie auf "Telefonnummern" in der linken Seitenleiste
+      </Step>
+      <Step title="Nummer löschen">
+        Klicken Sie auf das Papierkorb-Symbol neben der zu löschenden Nummer
+      </Step>
+      <Step title="Bestätigen">
+        Bestätigen Sie die Löschung im Dialog
+      </Step>
+    </Steps>
+    
+    ### Option 2: In der App selbst
+    
+    <Steps>
+      <Step title="App öffnen">
+        Öffnen Sie WhatsApp Business auf Ihrem Telefon
+      </Step>
+      <Step title="Einstellungen">
+        Menü → Einstellungen → Account
+      </Step>
+      <Step title="Account löschen">
+        "Meinen Account löschen" wählen
+      </Step>
+      <Step title="Nummer eingeben">
+        Geben Sie Ihre Telefonnummer zur Bestätigung ein
+      </Step>
+      <Step title="Löschen bestätigen">
+        Tippen Sie auf "MEINEN ACCOUNT LÖSCHEN"
+      </Step>
+    </Steps>
+    
+    <Card title="Offizielle Anleitung" icon="book" href="https://developers.facebook.com/docs/whatsapp/phone-numbers#migrate">
+      Facebook Developer Dokumentation
+    </Card>
+  </Tab>
+  
+  <Tab title="WhatsApp (Consumer)">
+    <Steps>
+      <Step title="WhatsApp öffnen">
+        Öffnen Sie die normale WhatsApp-App
+      </Step>
+      <Step title="Einstellungen">
+        Menü → Einstellungen → Account
+      </Step>
+      <Step title="Account löschen">
+        "Meinen Account löschen" wählen
+      </Step>
+      <Step title="Grund auswählen">
+        Wählen Sie optional einen Grund für die Löschung
+      </Step>
+      <Step title="Nummer bestätigen">
+        Geben Sie Ihre Telefonnummer im vollständigen Format ein
+      </Step>
+      <Step title="Löschen">
+        Tippen Sie auf "MEINEN ACCOUNT LÖSCHEN"
+      </Step>
+    </Steps>
+    
+    <Card title="WhatsApp FAQ" icon="question" href="https://faq.whatsapp.com/605464643328528">
+      Offizielle WhatsApp-Hilfe
+    </Card>
+  </Tab>
+</Tabs>
 
-<Card title="WhatsApp FAQ" icon="question" href="https://faq.whatsapp.com/605464643328528/?cms_platform=android">
-  Folgen Sie den Schritten in der offiziellen WhatsApp-Anleitung
-</Card>
+## Nach der Trennung
+
+<Info>
+**Was passiert als nächstes?**
+- Die Nummer ist sofort für WhatsApp Business API verfügbar
+- Ihre Kontakte sehen weiterhin Ihren Namen und bisherigen Chat
+- Sie können über die API wieder mit allen Kontakten kommunizieren
+- Neue Features wie Chatbot und Multi-Agent werden verfügbar
+</Info>
+
+## Häufige Probleme
+
+<AccordionGroup>
+  <Accordion title="Nummer wird als 'bereits verwendet' angezeigt">
+    - Warten Sie 5-10 Minuten nach der Löschung
+    - Stellen Sie sicher, dass die Nummer von ALLEN Geräten getrennt wurde
+    - Prüfen Sie auch verknüpfte Geräte (WhatsApp Web, Desktop)
+  </Accordion>
+  
+  <Accordion title="Kann meine alte Nummer nicht löschen">
+    - Stellen Sie sicher, dass Sie Internetzugang haben
+    - Die eingegebene Nummer muss exakt übereinstimmen
+    - Bei 2-Faktor-Authentifizierung: PIN bereithalten
+  </Accordion>
+  
+  <Accordion title="Was ist mit meinen Kontakten?">
+    Ihre Kontakte:
+    - Behalten ihren Chatverlauf mit Ihnen
+    - Können Ihnen weiterhin schreiben
+    - Sehen keinen Unterschied (außer ggf. Business-Features)
+  </Accordion>
+</AccordionGroup>
 
 <Tip>
-Sichern Sie wichtige Chats bevor Sie das Konto löschen - alle Daten gehen unwiderruflich verloren!
+**Tipp:** Planen Sie die Trennung außerhalb Ihrer Hauptgeschäftszeiten, um Unterbrechungen zu minimieren.
 </Tip> 

@@ -5,48 +5,119 @@ description: 'Wichtige Überlegungen bei der Auswahl der Telefonnummer für What
 
 # WhatsApp Telefonnummer auswählen
 
-## Grundsätzliche Möglichkeiten
+Die Wahl der richtigen Telefonnummer ist ein wichtiger Schritt für Ihren WhatsApp Business Account.
+
+## Verfügbare Optionen
 
 <CardGroup cols={2}>
   <Card title="Hauptnummer" icon="building">
-    Viele Hotels nutzen ihre Hauptnummer auch für WhatsApp
+    **Hotelhauptnummer nutzen**
+    - Gäste kennen diese bereits
+    - Einheitliche Kommunikation
+    - Beachten: Keine normale Telefonie mehr möglich
   </Card>
-  <Card title="Separate Nummer" icon="mobile">
-    Eigene Mobilfunknummer (oft kostenlos vom Anbieter)
+  <Card title="Neue Nummer" icon="phone">
+    **Separate Nummer einrichten**
+    - Trennung von Telefonie und WhatsApp
+    - Flexibler Einsatz
+    - Oft kostenlos vom Provider
   </Card>
 </CardGroup>
 
-## Wichtige Überlegungen
+## Technische Anforderungen
 
-### 1. Bereits genutzte Nummern
+### Unterstützte Nummerntypen:
+- ✅ **Mobilfunknummern** (empfohlen)
+- ✅ **Festnetznummern**
+- ✅ **Gebührenfreie Nummern** (0800, etc.)
+- ✅ **Internationale Nummern**
+- ❌ **Kurznummern** (nicht unterstützt)
+
+### Wichtige Einschränkungen:
 
 <Warning>
-**Nummer bereits in Verwendung?**
-Wenn die Nummer bereits mit einem WhatsApp Konto verbunden ist (privat oder Business App), muss sie VOR dem Setup getrennt werden. **Alle Daten gehen dabei verloren!**
+**Nummer bereits in WhatsApp?**  
+Nummern, die bereits mit WhatsApp oder WhatsApp Business App verbunden sind, müssen ZUERST getrennt werden.
+[Anleitung: Nummer trennen →](/de/chat-ai/whatsapp/nummer-trennen)
 </Warning>
 
-<Card title="Anleitung: Nummer trennen" icon="unlink" href="/de/chat-ai/whatsapp/nummer-trennen">
-  So trennen Sie eine Telefonnummer von einem bestehenden WhatsApp Konto
-</Card>
+<Info>
+**Eine Nummer pro Standort**  
+Jeder physische Hotelstandort benötigt eine eigene WhatsApp-Nummer. Eine Nummer für mehrere Hotels ist nicht erlaubt.
+</Info>
 
-### 2. Verifizierungsanforderungen
+## Verifizierungsprozess
 
-Die Telefonnummer wird von WhatsApp verifiziert:
+Die gewählte Nummer muss verifiziert werden:
 
 <Tabs>
-  <Tab title="SMS-fähige Nummer">
-    - Verifizierungscode wird per SMS verschickt
-    - Einfachster und schnellster Weg
-    - Keine Terminvereinbarung nötig
+  <Tab title="SMS-Verifizierung ⭐">
+    **Empfohlen für:**
+    - Mobilfunknummern
+    - SMS-fähige Festnetznummern
+    
+    **Vorteile:**
+    - Sofortige Verifizierung
+    - Kein Termin nötig
+    - Automatischer Prozess
+    
+    **Ablauf:**
+    1. Code per SMS empfangen
+    2. An DialogShift weiterleiten
+    3. Automatische Aktivierung
   </Tab>
-  <Tab title="Nicht SMS-fähige Nummer">
-    - Verifizierung per Anruf in 10-Minuten-Fenster
-    - Englische Stimme liest 6-stelligen Code vor
-    - IVR muss dafür deaktiviert werden
-    - Termin muss vereinbart werden
+  
+  <Tab title="Anruf-Verifizierung">
+    **Notwendig für:**
+    - Reine Festnetznummern
+    - Nummern ohne SMS-Empfang
+    
+    **Beachten:**
+    - Termin erforderlich
+    - IVR/Anrufbeantworter deaktivieren
+    - Person muss verfügbar sein
+    - Englische Ansage
+    
+    **Ablauf:**
+    1. Termin vereinbaren
+    2. Anruf entgegennehmen
+    3. 6-stelligen Code notieren
   </Tab>
 </Tabs>
 
+## Best Practices
+
+<Steps>
+  <Step title="Prüfen Sie die Verfügbarkeit">
+    Stellen Sie sicher, dass die Nummer nicht bereits für WhatsApp verwendet wird
+  </Step>
+  <Step title="Wählen Sie SMS-fähig">
+    SMS-fähige Nummern beschleunigen den Verifizierungsprozess erheblich
+  </Step>
+  <Step title="Informieren Sie Ihr Team">
+    Bei Nutzung der Hauptnummer: Team über Änderungen informieren
+  </Step>
+  <Step title="Planen Sie voraus">
+    Bei Festnetznummern: IVR-Abschaltung und Terminplanung berücksichtigen
+  </Step>
+</Steps>
+
+## Häufige Fragen
+
+<AccordionGroup>
+  <Accordion title="Kann ich meine Nummer später ändern?">
+    Ja, aber der Wechsel erfordert eine neue Verifizierung und alle Gäste müssen über die neue Nummer informiert werden.
+  </Accordion>
+  
+  <Accordion title="Was passiert mit eingehenden Anrufen?">
+    Bei Nutzung Ihrer Hauptnummer für WhatsApp sind normale Telefonate auf dieser Nummer nicht mehr möglich.
+  </Accordion>
+  
+  <Accordion title="Kann ich eine ausländische Nummer nutzen?">
+    Ja, internationale Nummern sind möglich. Beachten Sie aber, dass Gäste ggf. internationale Gebühren zahlen.
+  </Accordion>
+</AccordionGroup>
+
 <Tip>
-Wählen Sie wenn möglich eine SMS-fähige Nummer für einen reibungsloseren Verifizierungsprozess.
+**Empfehlung:** Nutzen Sie eine separate Mobilfunknummer für maximale Flexibilität und schnelle Einrichtung.
 </Tip> 

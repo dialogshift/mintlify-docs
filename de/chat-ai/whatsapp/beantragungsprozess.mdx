@@ -1,65 +1,134 @@
 ---
 title: 'WhatsApp Beantragungsprozess'
-description: 'Schritte zur Bereitstellung von DialogShift Chatbots & Livechat in WhatsApp'
+description: 'Schritte zur Aktivierung von WhatsApp Business API'
 ---
 
 # WhatsApp Beantragungsprozess
 
-Die Bereitstellung von DialogShift Chatbots & Livechat in WhatsApp erfordert mehrere Schritte mit verschiedenen beteiligten Parteien.
+Die Aktivierung von WhatsApp Business API erfolgt in mehreren Schritten. DialogShift begleitet Sie durch den gesamten Prozess.
 
-<Note>
-Beteiligt sind: Hotelkette/Hotel, DialogShift, Infrastruktur-Dienstleister tyntec und WhatsApp (Facebook, Inc.)
-</Note>
-
-## 1. Benötigte Basisinformationen
-
-<Card title="Informationen einreichen" icon="form" href="https://forms.gle/VgtgqL5NK12Sryti6">
-  Tragen Sie Ihre Informationen hier ein
-</Card>
-
-### Erforderliche Angaben:
-
-- **Facebook Business Manager ID** ([Anleitung](https://www.tyntec.com/docs/faq-whatsapp-business-onboarding-how-can-i-find-my-facebook-business-manager-id))
-- **Name der juristischen Person** (Hotel oder Kette)
-- **WABA Name** - Name in Ihrem WhatsApp Business Account
-- **WhatsApp-Telefonnummer** (internationales Format)
-- **WhatsApp Profil-Informationen** (Imagebild, Adresse, Kundentelefon, Beschreibung)
-
-## 2. Business-Verifizierung
+## Übersicht des Prozesses
 
 <Steps>
-  <Step title="Facebook Business Sicherheitscenter öffnen">
-    Gehen Sie zum Sicherheitscenter und klicken Sie auf "Verifizierung starten"
+  <Step title="Vorbereitung">
+    Informationen sammeln und Business Manager vorbereiten
   </Step>
-  <Step title="Automatische Prüfung abwarten">
-    Facebook/WhatsApp verifiziert Marke und Anzeigenname - keine Aktion erforderlich
+  <Step title="Antrag einreichen">
+    Formular mit Basisdaten ausfüllen
+  </Step>
+  <Step title="Business-Verifizierung">
+    Meta überprüft Ihr Unternehmen
+  </Step>
+  <Step title="Nummer aktivieren">
+    Telefonnummer verifizieren und freischalten
   </Step>
 </Steps>
 
-## 3. Rufnummer-Verifizierung
+## 1. Vorbereitung
+
+<Card title="Checkliste" icon="clipboard-check">
+  - Meta Business Manager Account
+  - Handelsregisterauszug
+  - Offizielle Telefonnummer
+  - Unternehmenswebsite
+  - Logo (min. 640x640px)
+</Card>
+
+## 2. Antrag einreichen
+
+<Card title="DialogShift Onboarding-Formular" icon="form" href="https://forms.gle/VgtgqL5NK12Sryti6">
+  Starten Sie hier Ihren WhatsApp-Antrag
+</Card>
+
+### Benötigte Informationen:
+- **Facebook Business Manager ID** ([So finden Sie Ihre ID](https://www.tyntec.com/docs/faq-whatsapp-business-onboarding-how-can-i-find-my-facebook-business-manager-id))
+- **Rechtlicher Unternehmensname** (wie im Handelsregister)
+- **WABA Name** (Anzeigename für WhatsApp)
+- **Telefonnummer** (im internationalen Format: +49...)
+- **Unternehmensprofil** (Beschreibung, Adresse, Website)
+
+<Warning>
+Alle Angaben müssen mit Ihren offiziellen Dokumenten übereinstimmen!
+</Warning>
+
+## 3. Business-Verifizierung
+
+Nach Einreichung prüft Meta Ihr Unternehmen. Dies kann 1-5 Werktage dauern.
 
 <Info>
-Nach Genehmigung (Status: "Ready for activation") erfolgt die Nummer-Verifizierung
+**Bereits verifiziert?** Wenn Ihr Business Manager bereits für andere Meta-Services verifiziert ist, entfällt dieser Schritt.
 </Info>
+
+Details zur Verifizierung: [Meta Unternehmensverifizierung →](/de/chat-ai/whatsapp/meta-unternehmensverifizierung)
+
+## 4. Telefonnummer aktivieren
+
+Nach erfolgreicher Prüfung erhalten Sie den Status "Ready for activation".
 
 ### Verifizierungsoptionen:
 
 <Tabs>
-  <Tab title="SMS-Verifizierung">
-    - Verifizierungscode wird per SMS gesendet
-    - Code an onboarding@tyntec.com weiterleiten
-    - Keine Terminierung erforderlich
+  <Tab title="SMS (empfohlen)">
+    **Ablauf:**
+    1. Sie erhalten einen 6-stelligen Code per SMS
+    2. Code an onboarding@tyntec.com weiterleiten
+    3. Aktivierung innerhalb weniger Stunden
+    
+    **Vorteile:**
+    - Schnellste Option
+    - Kein Termin nötig
+    - Automatischer Prozess
   </Tab>
-  <Tab title="Anruf-Verifizierung">
-    - Für nicht SMS-fähige Nummern
-    - Termin vereinbaren unter: [Verifizierungsanruf planen](https://www.tyntec.com/form-whatsapp-schedule-whatsapp-phone-number-verification)
+  
+  <Tab title="Sprachanruf">
+    **Ablauf:**
+    1. [Termin vereinbaren](https://www.tyntec.com/form-whatsapp-schedule-whatsapp-phone-number-verification)
+    2. Automatischer Anruf zur vereinbarten Zeit
+    3. Englische Ansage mit 6-stelligem Code
+    4. Code notieren und übermitteln
+    
+    **Wichtig:**
+    - IVR/Anrufbeantworter deaktivieren
+    - Person muss Anruf entgegennehmen
+    - 10-Minuten-Zeitfenster
   </Tab>
 </Tabs>
 
-## 4. Aktivierung & Go-Live
+## 5. Finaler Go-Live
 
-Nach Übermittlung des Codes an tyntec führt DialogShift die finalen Schritte zum Go-Live durch.
+Nach erfolgreicher Verifizierung:
+- DialogShift konfiguriert Ihren Account
+- Integration in Ihre DialogShift-Umgebung
+- Testphase und Schulung
+- Produktivschaltung
 
 <Tip>
-Der gesamte Prozess erfordert Ihre aktive Mitwirkung. DialogShift unterstützt Sie bis zur finalen Genehmigung.
-</Tip> 
+**Gesamtdauer:** Der komplette Prozess dauert in der Regel 3-7 Werktage, abhängig von der Business-Verifizierung.
+</Tip>
+
+## Häufige Probleme
+
+<AccordionGroup>
+  <Accordion title="Verifizierung abgelehnt">
+    - Prüfen Sie die Übereinstimmung aller Daten
+    - Stellen Sie sicher, dass Ihre Website vollständig ist
+    - Handelsregisterauszug muss aktuell sein
+  </Accordion>
+  
+  <Accordion title="SMS kommt nicht an">
+    - Nummer im internationalen Format angeben
+    - SMS-Empfang muss möglich sein
+    - Ggf. auf Sprachanruf wechseln
+  </Accordion>
+  
+  <Accordion title="Nummer bereits in Verwendung">
+    Die Nummer muss zuerst von WhatsApp getrennt werden.
+    [Anleitung →](/de/chat-ai/whatsapp/nummer-trennen)
+  </Accordion>
+</AccordionGroup>
+
+## Support
+
+Bei Fragen zum Prozess steht Ihnen das DialogShift-Team zur Verfügung:
+- Email: support@dialogshift.com
+- Telefon: +49 89 244 128 700 
