@@ -1,0 +1,96 @@
+---
+title: "PBX Konfiguration"
+description: "Technische Dokumentation: Konfiguration des DialogShift Trunk in der Hotel PBX"
+---
+
+Damit die Dialog Shift SIP Phone AI in der Lage ist, Anrufe an Nebenstellen innerhalb der Hotel-PBX weiterzuleiten, müssen einige Konfigurationen sichergestellt werden. 
+
+<Note>
+  Vorraussetzung: DialogShift Phone AI ist erfolgreich in der PBX angemeldet.
+</Note>
+
+Die Phone AI leitet einen Anruf weiter, indem sie einen neuen Anruf innerhalb der PBX initiiert und danach den Anruf des Gastes mit der neuen Strecke verbindet.
+
+Hier die von der Phone AI gesendete SIP Invite:
+
+```log [expandable]
+
+<--- Transmitting SIP request (1262 bytes) to UDP:37.120.180.223:5060 --->
+INVITE sip:11@intermar.starface-cloud.com:5060 SIP/2.0
+Via: SIP/2.0/UDP 167.235.196.85:5071;rport;branch=z9hG4bKPj70b977ae-2263-4456-8119-29c9ef4fa01c
+From: <sip:DialogShift@intermar.starface-cloud.com>;tag=1e5d8c21-fee0-4c9c-b0c1-9fcc589fdfcd
+To: <sip:11@intermar.starface-cloud.com>
+Contact: <sip:DialogShift@167.235.196.85:5071>
+Call-ID: 0bb7622b-7946-46ec-aed9-8f398638c611
+CSeq: 19950 INVITE
+Allow: OPTIONS, REGISTER, SUBSCRIBE, NOTIFY, PUBLISH, INVITE, ACK, BYE, CANCEL, UPDATE, MESSAGE, INFO, REFER
+Supported: replaces, norefersub, histinfo
+P-Asserted-Identity: "493057710060" <sip:493057710060@intermar.starface-cloud.com>
+Remote-Party-ID: "493057710060" <sip:493057710060@intermar.starface-cloud.com>
+Max-Forwards: 70
+User-Agent: DialogShift Phone AI Node 1
+Authorization: Digest username="DialogShift", realm="STARFACE", nonce="0df98eb4", uri="sip:11@intermar.starface-cloud.com:5060", response="5826fa8a1ccd7aa58025cc2f0e71626a", algorithm=MD5
+Content-Type: application/sdp
+Content-Length:   237
+
+v=0
+o=- 1420236124 1420236124 IN IP4 167.235.196.85
+s=VoIP
+c=IN IP4 167.235.196.85
+t=0 0
+m=audio 16068 RTP/AVP 8 101
+a=rtpmap:8 PCMA/8000
+a=rtpmap:101 telephone-event/8000
+a=fmtp:101 0-16
+a=ptime:20
+a=maxptime:140
+a=sendrecv
+```
+
+Damit die empfangende Nebenstelle die Rufnummer des anrufenden Gastes anzeigt, muss der Trunk von Dialogshift mit dem entsprechenden "Trust" ausgestattet werden. 
+
+## Checkliste für PBX Konfiguration
+
+#### **1. Vertrauensstatus für P-Asserted-Identity (PAI) aktivieren**
+
+Die Telefonanlage muss so konfiguriert sein, dass sie den von unserem Trunk gesendeten SIP-Headern vertraut. Nur wenn der Trunk als vertrauenswürdige Quelle (Trusted Source) gilt, wird die Anlage die darin enthaltene P-Asserted-Identity (PAI) für die weitere Anrufsignalisierung verwenden.
+
+- **Zu prüfende Einstellung:** Suchen Sie in den Trunk-Einstellungen nach Optionen wie:
+  - Trust PAI / PAI vertrauen
+  - Trust RPID/PAI
+  - Vertrauenswürdige Identität
+  - Connected Line ID / PAI annehmen
+- **Aktion:** Aktivieren Sie diese Einstellung für den SIP-Trunk von Dialog Shift.
+
+#### **2. Regeln für Anrufweiterleitung prüfen**
+
+Die Telefonanlage entscheidet, welche Rufnummer bei einer Weiterleitung signalisiert wird. Diese Logik ist oft pro Nebenstelle oder global einstellbar.
+
+- **Zu prüfende Einstellung:** Überprüfen Sie die Regeln zur Anrufbehandlung oder Weiterleitung. Oft gibt es hier eine Auswahlmöglichkeit:
+  - Ursprünglichen Anrufer anzeigen (oder "Original Caller") \<-- **Dies ist das gewünschte Verhalten.**
+  - Weiterleitenden Teilnehmer anzeigen (oder "Forwarding Party") \<-- Dies ist wahrscheinlich die aktuelle Einstellung.
+- **Aktion:** Stellen Sie sicher, dass die Regelung die Anzeige des ursprünglichen Anrufers vorsieht.
+
+#### **3. Rufnummern-Übernahme (Passthrough) sicherstellen**
+
+Einige Systeme haben eine globale Einstellung, die es erlaubt, die eingehende Anrufer-ID für ausgehende Anrufe (wie bei einer Weiterleitung) zu übernehmen.
+
+- **Zu prüfende Einstellung:** Suchen Sie nach Begriffen wie:
+  - Passthrough Caller ID
+  - Rufnummernübernahme bei Weiterleitung
+  - Ursprungsrufnummer verwenden
+- **Aktion:** Aktivieren Sie diese Funktion, falls vorhanden.
+
+#### **4. Konfiguration der ausgehenden Anrufrouten prüfen**
+
+Ein weitergeleiteter Anruf nutzt eine ausgehende Route der Telefonanlage. Wenn auf dieser Route eine feste Rufnummer (Outbound CallerID) konfiguriert ist, überschreibt diese alle anderen Informationen.
+
+- **Zu prüfende Einstellung:** Überprüfen Sie die ausgehende Route, die für die Weiterleitung genutzt wird.
+- **Aktion:** Stellen Sie sicher, dass das Feld für die "Outbound CallerID" auf dieser Route **leer** ist oder explizit so eingestellt ist, dass es die Rufnummer vom anrufenden Kanal übernimmt und keine feste Nummer erzwingt.
+
+#### **5. Unterstützung für Diversion-Header prüfen**
+
+Wir signalisieren eine Weiterleitung standardmäßig über den Diversion-Header, wie es in älteren RFCs spezifiziert ist. Moderne Systeme nutzen oft den History-Info-Header (RFC 7044).
+
+- **Zu prüfende Einstellung:** Prüfen Sie, ob Ihre Telefonanlage eine Präferenz für History-Info gegenüber Diversion hat.
+- **Aktion:** Falls die PBX den Diversion-Header ignoriert, klären Sie bitte, ob sie stattdessen den History-Info-Header verarbeiten würde, um die Anrufkette korrekt zu interpretieren.
