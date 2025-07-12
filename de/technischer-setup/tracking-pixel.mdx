@@ -94,28 +94,14 @@ https://ibe.prod.co25.net/pixel?clientid=${clientid}&conversionType=${conversion
 
 ### Implementation
 
-<Tabs>
-  <Tab title="Custom HTML Tag">
-    ```javascript
-    <script>
-    var pixel = document.createElement("img"); 
-    pixel.src = "https://ibe.prod.co25.net/pixel?clientid=IHRE_CLIENT_ID&conversionType=ibe&amount={{TotalCost}}&currency={{SelectedCurrCode}}&rooms={{RmQty}}&nights={{nights}}"; 
-    pixel.style = "display: none;"; 
-    document.body.appendChild(pixel);
-    </script>
-    ```
-  </Tab>
-  <Tab title="Mit eigenen Variablen">
-    ```javascript
-    <script>
-    var pixel = document.createElement("img"); 
-    pixel.src = "https://ibe.prod.co25.net/pixel?clientid=IHRE_CLIENT_ID&conversionType=ibe&amount={{bookingTotal}}&currency={{currencyCode}}&rooms={{roomCount}}&nights={{stayNights}}"; 
-    pixel.style = "display: none;"; 
-    document.body.appendChild(pixel);
-    </script>
-    ```
-  </Tab>
-</Tabs>
+```javascript
+<script>
+var pixel = document.createElement("img"); 
+pixel.src = "https://ibe.prod.co25.net/pixel?clientid=IHRE_CLIENT_ID&conversionType=ibe&amount={{TotalCost}}&currency={{SelectedCurrCode}}&rooms={{RmQty}}&nights={{nights}}"; 
+pixel.style = "display: none;"; 
+document.body.appendChild(pixel);
+</script>
+```
 
 <Warning>
 Ersetzen Sie `IHRE_CLIENT_ID` mit Ihrer tatsächlichen DialogShift Client-ID
