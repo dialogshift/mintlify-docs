@@ -68,6 +68,13 @@
             ]
           },
           {
+            "group": "Plattform",
+            "pages": [
+              "de/platform/new-faq-de",
+              "de/platform/urls-pdfs-wissen-hinzufugen"
+            ]
+          },
+          {
             "group": "Technischer Setup",
             "pages": [
               "de/technischer-setup/tracking-pixel",
