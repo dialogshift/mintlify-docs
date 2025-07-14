@@ -1,0 +1,133 @@
+# Cursor Rules for Mintlify Documentation
+
+This repository contains documentation for DialogShift built with Mintlify. These rules help maintain consistency and quality when working with the codebase.
+
+## Project Overview
+
+- **Framework**: Mintlify documentation platform
+- **Languages**: German (primary) and English
+- **Structure**: Multi-language documentation with organized feature sections
+- **Purpose**: User documentation for DialogShift platform features
+
+## File Structure Guidelines
+
+### Content Organization
+- `/de/` - German language documentation (primary)
+- `/Deutscher-Support/` - Legacy German support documentation
+- Root level files: Core documentation and configuration
+- Images stored in `/images/` and `/logo/` directories
+
+### File Naming Conventions
+- Use kebab-case for file names: `new-faq-de.mdx`
+- Include language suffix when appropriate: `-de.mdx`
+- Keep names descriptive and concise
+- Use `.mdx` extension for all documentation files
+
+## Content Guidelines
+
+### Writing Standards
+- **Primary Language**: German - maintain consistency in terminology
+- **Tone**: Professional, helpful, and clear, uses the informal "Du" 
+- **Target Audience**: End users of DialogShift platform
+- **Format**: Step-by-step guides with clear headings
+
+### MDX Best Practices
+- Use proper frontmatter for each document
+- Include descriptive titles and descriptions
+- Use consistent heading hierarchy (H1 for titles, H2 for main sections)
+- Include code examples in appropriate language blocks
+- Use callouts and admonitions for important information
+
+### Image Guidelines
+- Store images in `/images/` directory
+- Use descriptive file names
+- Optimize images for web (reasonable file sizes)
+- Include alt text for accessibility
+
+## Technical Guidelines
+
+### Mintlify Configuration
+- Main config in `docs.json`
+- Follow Mintlify's documentation structure
+- Test navigation and linking after changes
+- Ensure proper sidebar organization
+
+### File Management
+- Keep documentation up-to-date with product changes
+- Remove outdated content from `/old/` directory when confirmed obsolete
+- Maintain consistent cross-references between documents
+- Update related documents when making changes
+
+### Development Workflow
+- Test documentation locally before committing
+- Check for broken links and references
+- Validate MDX syntax
+- Review navigation structure in sidebar
+
+## Content Types
+
+### Feature Documentation
+- **Chat-AI**: Live chat, WhatsApp integration, chatbot features
+- **Email-AI**: Email integration and automation
+- **Phone-AI**: Phone integration and call handling
+- **Platform**: Core platform features and settings
+- **Compliance**: Legal and accessibility requirements
+- **Technical Setup**: Integration guides and technical configuration
+
+### Document Templates
+- Use existing documents as templates for consistency
+- Follow established patterns for step-by-step guides
+- Include prerequisites, steps, and verification sections
+- Add troubleshooting information where relevant
+
+### Accessibility
+- Use descriptive headings
+- Include alt text for images
+- Ensure proper contrast
+- Follow WCAG guidelines
+- Test with screen readers when possible
+
+## Common Patterns
+
+### Frontmatter Structure
+```yaml
+---
+title: "Descriptive Title"
+description: "Clear description of the content"
+---
+```
+
+### Code Blocks
+- Use appropriate language identifiers
+- Include comments for clarity
+- Show complete, working examples
+- Highlight important lines when helpful
+
+### Cross-References
+- Use relative paths for internal links
+- Maintain consistency in link text
+- Update references when moving or renaming files
+- Check for broken links regularly
+
+## Maintenance
+
+### Regular Tasks
+- Review and update outdated content
+- Check for broken links
+- Update screenshots and images
+- Sync with product feature updates
+- Monitor user feedback and update accordingly
+
+### Legacy Content
+- `/Deutscher-Support/` contains legacy documentation
+- Gradually migrate relevant content to new structure
+- Archive or remove truly obsolete content
+- Maintain redirects for moved content when possible
+
+## Notes
+
+- This is a documentation-focused repository
+- Changes should improve user experience and clarity
+- Maintain consistency with existing content style
+- Test thoroughly in Mintlify environment
+- Consider translation needs for any new English content 
