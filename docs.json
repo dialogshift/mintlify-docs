@@ -50,6 +50,7 @@
           {
             "group": "Phone AI",
             "pages": [
+              "de/phone-ai/stimmen-auswahl",
               "de/phone-ai/sip-integration",
               "de/phone-ai/anrufweiterleitung-integration",
               "de/phone-ai/redirect-in-sip-de"
