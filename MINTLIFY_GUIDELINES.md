@@ -43,6 +43,31 @@ sidebarTitle: "Shorter Title"  # If different from title
 ---
 ```
 
+### Important: No Duplicate Titles or Descriptions
+**DO NOT** add content that duplicates the frontmatter title or description. Mintlify automatically displays both the frontmatter title and description.
+
+❌ **WRONG** - Creates duplicate titles and descriptions:
+```mdx
+---
+title: "WhatsApp Setup Guide"
+description: "How to configure WhatsApp for your hotel"
+---
+
+# WhatsApp Setup Guide  <!-- Duplicates title -->
+Learn how to configure WhatsApp for your hotel.  <!-- Duplicates description -->
+```
+
+✅ **CORRECT** - Let frontmatter handle title and description:
+```mdx
+---
+title: "WhatsApp Setup Guide"
+description: "How to configure WhatsApp for your hotel"
+---
+
+## Step 1: Initial Setup
+Start directly with content sections...
+```
+
 ## Available Mintlify Components
 
 ### 1. Note/Warning/Info Blocks
