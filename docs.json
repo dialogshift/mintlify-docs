@@ -78,6 +78,7 @@
           {
             "group": "Technischer Setup",
             "pages": [
+              "de/technischer-setup/hns-integration",
               "de/technischer-setup/tracking-pixel",
               "de/technischer-setup/url-parameter-tracking",
               "de/technischer-setup/snippet-einbindung-pruefen"
