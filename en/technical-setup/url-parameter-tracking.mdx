@@ -1,0 +1,106 @@
+---
+title: 'Tracking with URL Parameters'
+description: 'Track chatbot traffic in booking engines and Google Analytics'
+---
+
+# Tracking with URL Parameters
+
+DialogShift marks redirected traffic to track bookings from the chatbot in your booking engine and analytics.
+
+<Warning>
+**Important Note (May 2024):** Google has changed the evaluation of UTM parameters. Reliable e-commerce tracking via chatbot UTM parameters is no longer possible. Use the `ref` parameter instead.
+</Warning>
+
+## Tracking Methods
+
+### 1. URL Parameter
+
+DialogShift automatically adds the following parameter:
+
+```
+&ref=dialogshift
+```
+
+### 2. Referrer Domain
+
+As an alternative, the referrer domain can be used:
+- Domain: `dialogshift.com`
+- Limitation: Qualitative compromises possible
+
+## Booking Engine Statistics
+
+<Steps>
+  <Step title="Open statistics">
+    Open the statistics of your Web Booking Engine (WBE)
+  </Step>
+  <Step title="Check traffic source">
+    Look for breakdown by traffic source
+  </Step>
+  <Step title="Identify chatbot traffic">
+    Filter by `ref=dialogshift` or referrer `dialogshift.com`
+  </Step>
+</Steps>
+
+### Available Metrics
+
+<CardGroup cols={4}>
+  <Card title="Nights" icon="bed">
+    Booked overnight stays
+  </Card>
+  <Card title="Revenue" icon="euro-sign">
+    Generated income
+  </Card>
+  <Card title="Conversion" icon="chart-line">
+    Booking rate
+  </Card>
+  <Card title="Source" icon="location-dot">
+    Traffic source
+  </Card>
+</CardGroup>
+
+## Google Analytics Integration
+
+### Create Custom Report
+
+<Tabs>
+  <Tab title="Universal Analytics">
+    1. Create a Custom Report
+    2. Filter e-commerce revenue
+    3. Condition: URL contains `ref=dialogshift`
+  </Tab>
+  <Tab title="GA4">
+    1. Open Explorative Data Analysis
+    2. Create a filter for Page Path
+    3. Condition: contains `ref=dialogshift`
+  </Tab>
+</Tabs>
+
+<Note>
+The exact implementation depends on your e-commerce tracking setup. Speak with your analytics service provider.
+</Note>
+
+## Channel Limitations
+
+<Info>
+For technical reasons, URL parameter tracking does not work with:
+- Instagram
+- Facebook Messenger
+- Google's Business Messages
+- WhatsApp
+
+Use the tracking pixel for these channels for indicative numbers.
+</Info>
+
+## Best Practices
+
+<AccordionGroup>
+  <Accordion title="Contact WBE provider">
+    Speak with your booking engine provider about integrating the `ref=dialogshift` parameter into their statistics.
+  </Accordion>
+  <Accordion title="Combined tracking">
+    Use both URL parameters and tracking pixel for maximum coverage.
+  </Accordion>
+  <Accordion title="Regular review">
+    Check monthly that tracking is working correctly.
+  </Accordion>
+</AccordionGroup> 

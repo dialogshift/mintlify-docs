@@ -88,35 +88,85 @@
         ]
       },
       {
-        "tab": "Englisch",
+        "tab": "English",
         "groups": [
           {
-            "group": "API Documentation",
+            "group": "Basic Settings",
             "pages": [
-              "old/api-reference/introduction",
-              "index",
-              "quickstart",
-              "development"
+              "en/basics/create-user",
+              "en/basics/password-reset",
+              "en/basics/invite-new-user",
+              "en/basics/notification-options"
             ]
           },
           {
-            "group": "Endpoint Examples",
+            "group": "Chat AI",
             "pages": [
-              "old/api-reference/endpoint/get",
-              "old/api-reference/endpoint/create",
-              "old/api-reference/endpoint/delete",
-              "old/api-reference/endpoint/webhook"
+              {
+                "group": "Live Chat",
+                "icon": "comments",
+                "pages": [
+                  "en/chat-ai/live-chat/live-chat-modes",
+                  "en/chat-ai/live-chat/answer-live-chats"
+                ]
+              },
+              {
+                "group": "WhatsApp",
+                "icon": "whatsapp",
+                "pages": [
+                  "en/chat-ai/whatsapp/business-api-basics",
+                  "en/chat-ai/whatsapp/phone-number-selection",
+                  "en/chat-ai/whatsapp/disconnect-number",
+                  "en/chat-ai/whatsapp/partner-migration",
+                  "en/chat-ai/whatsapp/application-process",
+                  "en/chat-ai/whatsapp/meta-business-verification",
+                  "en/chat-ai/whatsapp/integration-display"
+                ]
+              },
+              {
+                "group": "Integrations",
+                "icon": "plug",
+                "pages": [
+                  "en/chat-ai/integrations/betterspace-integration"
+                ]
+              }
             ]
           },
           {
-            "group": "Essentials",
+            "group": "Phone AI",
             "pages": [
-              "old/essentials/markdown",
-              "old/essentials/code",
-              "old/essentials/images",
-              "old/essentials/settings",
-              "old/essentials/navigation",
-              "old/essentials/reusable-snippets"
+              "en/phone-ai/voice-selection",
+              "en/phone-ai/sip-integration",
+              "en/phone-ai/call-forwarding-integration",
+              "en/phone-ai/pbx-configuration"
+            ]
+          },
+          {
+            "group": "Email AI",
+            "pages": [
+              "en/email-ai/firefox-browser-plugin"
+            ]
+          },
+          {
+            "group": "Compliance",
+            "pages": [
+              "en/compliance/accessibility-statement"
+            ]
+          },
+          {
+            "group": "Platform",
+            "pages": [
+              "en/platform/new-faq",
+              "en/platform/add-urls-pdfs-knowledge"
+            ]
+          },
+          {
+            "group": "Technical Setup",
+            "pages": [
+              "en/technical-setup/hns-integration",
+              "en/technical-setup/tracking-pixel",
+              "en/technical-setup/url-parameter-tracking",
+              "en/technical-setup/snippet-integration-check"
             ]
           }
         ]

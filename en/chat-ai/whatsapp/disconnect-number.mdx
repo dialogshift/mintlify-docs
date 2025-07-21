@@ -1,0 +1,147 @@
+---
+title: 'Disconnect WhatsApp Number'
+description: 'How to disconnect a phone number from an existing WhatsApp account'
+---
+
+# Disconnect WhatsApp Number
+
+Before you can use a phone number for WhatsApp Business API, it must be disconnected from all existing WhatsApp accounts.
+
+<Warning>
+**⚠️ IMPORTANT NOTE:**  
+When disconnecting, ALL data on the original device will be permanently deleted:
+- All chat histories
+- Saved media
+- Contacts and groups
+- Backup data
+
+**Nothing changes for your contacts** - they keep their chat history with your number.
+</Warning>
+
+## Preparations
+
+<Steps>
+  <Step title="Create backup">
+    Secure important chats and media if needed
+  </Step>
+  <Step title="Inform contacts">
+    Inform important contacts about the changeover
+  </Step>
+  <Step title="Prepare alternative">
+    Set up an alternative WhatsApp number if necessary
+  </Step>
+</Steps>
+
+## Disconnect Number - by App Type
+
+<Tabs>
+  <Tab title="WhatsApp Business App">
+    ### Option 1: Via Facebook Business Manager (recommended)
+    
+    <Steps>
+      <Step title="Open Business Manager">
+        Go to [business.facebook.com](https://business.facebook.com)
+      </Step>
+      <Step title="Navigation">
+        Settings → Business Settings → WhatsApp Accounts → WhatsApp Manager
+      </Step>
+      <Step title="Phone Numbers">
+        Click "Phone numbers" in the left sidebar
+      </Step>
+      <Step title="Delete number">
+        Click the trash icon next to the number to be deleted
+      </Step>
+      <Step title="Confirm">
+        Confirm the deletion in the dialog
+      </Step>
+    </Steps>
+    
+    ### Option 2: In the app itself
+    
+    <Steps>
+      <Step title="Open app">
+        Open WhatsApp Business on your phone
+      </Step>
+      <Step title="Settings">
+        Menu → Settings → Account
+      </Step>
+      <Step title="Delete account">
+        Select "Delete my account"
+      </Step>
+      <Step title="Enter number">
+        Enter your phone number for confirmation
+      </Step>
+      <Step title="Confirm deletion">
+        Tap "DELETE MY ACCOUNT"
+      </Step>
+    </Steps>
+    
+    <Card title="Official Guide" icon="book" href="https://developers.facebook.com/docs/whatsapp/phone-numbers#migrate">
+      Facebook Developer Documentation
+    </Card>
+  </Tab>
+  
+  <Tab title="WhatsApp (Consumer)">
+    <Steps>
+      <Step title="Open WhatsApp">
+        Open the regular WhatsApp app
+      </Step>
+      <Step title="Settings">
+        Menu → Settings → Account
+      </Step>
+      <Step title="Delete account">
+        Select "Delete my account"
+      </Step>
+      <Step title="Select reason">
+        Optionally select a reason for deletion
+      </Step>
+      <Step title="Confirm number">
+        Enter your phone number in full format
+      </Step>
+      <Step title="Delete">
+        Tap "DELETE MY ACCOUNT"
+      </Step>
+    </Steps>
+    
+    <Card title="WhatsApp FAQ" icon="question" href="https://faq.whatsapp.com/605464643328528">
+      Official WhatsApp Help
+    </Card>
+  </Tab>
+</Tabs>
+
+## After Disconnection
+
+<Info>
+**What happens next?**
+- The number is immediately available for WhatsApp Business API
+- Your contacts still see your name and previous chat
+- You can communicate with all contacts again via the API
+- New features like chatbot and multi-agent become available
+</Info>
+
+## Common Problems
+
+<AccordionGroup>
+  <Accordion title="Number shows as 'already in use'">
+    - Wait 5-10 minutes after deletion
+    - Make sure the number has been disconnected from ALL devices
+    - Also check linked devices (WhatsApp Web, Desktop)
+  </Accordion>
+  
+  <Accordion title="Cannot delete my old number">
+    - Make sure you have internet access
+    - The entered number must match exactly
+    - With 2-factor authentication: have PIN ready
+  </Accordion>
+  
+  <Accordion title="What about my contacts?">
+    Your contacts:
+    - Keep their chat history with you
+    - Can still message you
+    - See no difference (except possibly business features)
+  </Accordion>
+</AccordionGroup>
+
+<Tip>
+**Tip:** Plan the disconnection outside your main business hours to minimize interruptions.
+</Tip> 

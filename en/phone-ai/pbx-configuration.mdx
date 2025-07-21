@@ -1,0 +1,203 @@
+---
+title: "PBX Configuration"
+description: "Technical documentation: Configuration of the DialogShift trunk in the hotel PBX"
+---
+
+For the DialogShift Phone AI to successfully forward calls to internal extensions within the hotel PBX, some specific configurations are required.
+
+<Note>
+  Prerequisite: DialogShift Phone AI is successfully registered in the PBX.
+</Note>
+
+To forward an incoming call to an internal extension, the Phone AI initiates a new SIP call within the PBX. As soon as the connection to the target extension is established, the originally received call is connected to the new conversation partner. Technically, this corresponds to a classic "Attended Transfer".
+
+**Below is an example of a SIP INVITE sent by the Phone AI to the PBX to start a transfer:**
+
+```log
+
+<--- Transmitting SIP request (1262 bytes) to UDP:100.200.300.400:5060 --->
+INVITE sip:11@xxx.yyy-cloud.com:5060 SIP/2.0
+Via: SIP/2.0/UDP 1.2.3.4:5071;rport;branch=z9hG4cvc70b977ae-2263-4456-8119-29c9ef4fa01c
+From: <sip:DialogShift@xxx.yyy-cloud.com>;tag=1e5d8c21-fee0-4c9c-b0c1-9fcc589fdfcd
+To: <sip:11@xxx.yyy-cloud.com>
+Contact: <sip:DialogShift@1.2.3.4:5071>
+Call-ID: 0bb7622b-7946-46ec-aed9-8f398638c611
+CSeq: 19950 INVITE
+Allow: OPTIONS, REGISTER, SUBSCRIBE, NOTIFY, PUBLISH, INVITE, ACK, BYE, CANCEL, UPDATE, MESSAGE, INFO, REFER
+Supported: replaces, norefersub, histinfo
+P-Asserted-Identity: "493057710060" <sip:493057710060@xxx.yyy-cloud.com>
+Remote-Party-ID: "493057710060" <sip:493057710060@xxx.yyy-cloud.com>
+Max-Forwards: 70
+User-Agent: DialogShift Phone AI Node 1
+Authorization: Digest username="DialogShift", realm="STARFACE", nonce="0df98eb4", uri="sip:11@xxx.yyy-cloud.com:5060", response="5826fa8a1ccd7aa58025cc2f0e71626a", algorithm=MD5
+Content-Type: application/sdp
+Content-Length:   237
+
+v=0  
+o=- 2016235558 2016235558 IN IP4 1.2.3.4  
+s=VoIP  
+c=IN IP4 1.2.3.4  
+t=0 0  
+m=audio 17504 RTP/AVP 107 9 97 8 0 112 3 101 109  
+a=rtpmap:107 opus/48000/2  
+a=fmtp:107 maxplaybackrate=8000;maxaveragebitrate=50000;useinbandfec=1  
+a=rtpmap:9 G722/8000  
+a=rtpmap:97 iLBC/8000  
+a=fmtp:97 mode=20  
+a=rtpmap:8 PCMA/8000  
+a=rtpmap:0 PCMU/8000  
+a=rtpmap:112 G726-32/8000  
+a=rtpmap:3 GSM/8000  
+a=rtpmap:101 telephone-event/48000  
+a=fmtp:101 0-16  
+a=rtpmap:109 telephone-event/8000  
+a=fmtp:109 0-16  
+a=ptime:20  
+a=maxptime:20  
+a=sendrecv
+```
+
+<Check>
+  For the receiving extension to display the calling guest's number, the trunk from DialogShift must be equipped with the appropriate "Trust".
+</Check>
+
+## Checklist for PBX Configuration
+
+#### **1. Activate trust status for P-Asserted-Identity (PAI)**
+
+The phone system must be configured to trust the SIP headers sent by our trunk. Only if the trunk is considered a trusted source will the system use the P-Asserted-Identity (PAI) contained therein for further call signaling.
+
+- **Setting to check:** Look for options in the trunk settings such as:
+  - Trust PAI / Trust PAI
+  - Trust RPID/PAI
+  - Trusted Identity
+  - Connected Line ID / Accept PAI
+- **Action:** Activate this setting for the DialogShift SIP trunk.
+
+#### **2. Check call forwarding rules**
+
+The phone system decides which number is signaled during a transfer. This logic is often configurable per extension or globally.
+
+- **Setting to check:** Review the call handling or forwarding rules. Often there's a choice here:
+  - Show original caller (or "Original Caller") <-- **This is the desired behavior.**
+  - Show forwarding party (or "Forwarding Party") <-- This is probably the current setting.
+- **Action:** Ensure the rule provides for displaying the original caller.
+
+#### **3. Ensure caller ID passthrough**
+
+Some systems have a global setting that allows taking over the incoming caller ID for outgoing calls (as in a transfer).
+
+- **Setting to check:** Look for terms like:
+  - Passthrough Caller ID
+  - Caller ID passthrough on transfer
+  - Use origin caller ID
+- **Action:** Activate this function if available.
+
+#### **4. Check outgoing call route configuration**
+
+A forwarded call uses an outgoing route of the phone system. If a fixed number (Outbound CallerID) is configured on this route, it overrides all other information.
+
+- **Setting to check:** Review the outgoing route used for forwarding.
+- **Action:** Ensure the "Outbound CallerID" field on this route is **empty** or explicitly set to take the caller ID from the calling channel and not enforce a fixed number.
+
+## Specific Instructions for PBX Systems
+
+Here you'll find instructions for some of the most common phone systems.
+
+<AccordionGroup>
+  <Accordion title="STARFACE">
+    In STARFACE, the DialogShift trunk must be classified as "trusted" for the correct number to be signaled.
+
+    1.  **Classify trunk as trusted:**
+        -   Log in as administrator to the STARFACE web interface.
+        -   Go to `Admin` -> `Lines` and select the DialogShift SIP trunk.
+        -   Look for an option like **"Trust P-Asserted-Identity"** or **"Trust PAI"** in the line settings. This is often found in the advanced settings. Activate this option.
+    2.  **Activate CLIP No Screening:**
+        -   Ensure that **"CLIP no screening"** function is activated for the trunk. This allows the trunk to signal any caller ID.
+    3.  **Caller ID display on transfer:**
+        -   Check the forwarding settings of the respective users or groups. Often you can set here whether the caller ID of the original caller or the forwarding party is displayed. Choose "original caller".
+  </Accordion>
+  <Accordion title="3CX">
+    In 3CX, the caller ID signaling for the SIP trunk must be configured to read the `P-Asserted-Identity` from the SIP header.
+
+    1.  **Adjust incoming parameters:**
+        -   Navigate to `SIP Trunks` in the 3CX management console.
+        -   Select the DialogShift SIP trunk and click `Edit`.
+        -   Go to the `Incoming Parameters` tab.
+    2.  **Configure caller identification:**
+        -   Find the **"Call Source Identification"** section.
+        -   Set the fields for **"Calling Number"** and **"Caller Name"** to use the values from the `P-Asserted-Identity: User Part` and `P-Asserted-Identity: Display Name` of the SIP header.
+  </Accordion>
+  <Accordion title="Avaya (IP Office / Aura)">
+    In Avaya systems, the SIP trunk must be configured to accept and trust the `P-Asserted-Identity` (PAI) as the source for caller ID.
+
+    1.  **SIP Line Configuration:**
+        -   Open the **IP Office Manager** and navigate to the configuration of the SIP line used for DialogShift.
+        -   Go to the **"Call Details"** tab.
+    2.  **Activate header trust:**
+        -   Ensure the checkbox for **`P Asserted ID`** is activated.
+        -   Switch to the **"SIP Advanced"** tab.
+    3.  **Check identity settings:**
+        -   In the **"Identity"** section, activate the option **"Use PAI for Privacy"**.
+        -   To ensure PAI is preferred over the `From` specification, make sure the option **"Caller ID from From header"** is **disabled** if PAI should be prioritized.
+  </Accordion>
+  <Accordion title="Cisco (CUCM)">
+    In Cisco Unified Communications Manager (CUCM), caller ID handling is controlled via profiles assigned to the SIP trunk.
+
+    1.  **Configure SIP profile:**
+        -   Navigate in **Cisco Unified CM Administration** to `Device` > `Device Settings` > `SIP Profile`.
+        -   Create or edit the SIP profile assigned to the DialogShift trunk.
+        -   Look for options for handling identity headers. Ensure **"Asserted-Identity"** is considered trusted. Often there's an option like **"Calling Party Identity Source"** that should be set to **"P-Asserted-Identity"**.
+    2.  **SIP trunk security profile:**
+        -   Go to `System` > `Security` > `SIP Trunk Security Profile`.
+        -   Ensure the profile assigned to the trunk accepts incoming `P-Asserted-Identity` headers. Activate options like **"Accept unsolicited notification"** and **"Accept replaces header"** if necessary.
+    3.  **Trunk configuration:**
+        -   Under `Device` > `Trunk`, assign the configured profiles to the DialogShift trunk.
+  </Accordion>
+  <Accordion title="Mitel (MiVoice / 3300 ICP)">
+    In Mitel systems, the trust relationship for SIP headers is configured in the SIP Peer Profile.
+
+    1.  **Create/edit SIP Peer Profile:**
+        -   Log into the **System Administration Tool**.
+        -   Navigate to `SIP Peer Profile` and select the profile for the DialogShift trunk.
+    2.  **Adjust signaling and headers:**
+        -   Go to the **"Signaling and Header manipulation"** tab.
+        -   Look for options that control trust in incoming headers. Activate options like **"Trust P-Asserted-Identity"**.
+    3.  **Check SDP options:**
+        -   In the **"SDP Options"** tab, ensure the option **"Prevent the Use of IP Address 0.0.0.0 in SDP Messages"** is set to **"Yes"** as this is crucial for compatibility.
+        -   The option **"Renegotiate SDP on all In-coming Calls"** should also be activated to avoid codec conflicts.
+  </Accordion>
+  <Accordion title="Deutsche Telekom (Cloud PBX / CompanyFlex)">
+    For a Telekom-operated cloud phone system to display the correct caller ID from an external SIP trunk (like DialogShift's), the system must be configured to trust the transmitted SIP headers.
+
+    Configuration usually takes place in the **Phone System Manager** of the Telekom Cloud PBX.
+
+    1.  **Create/edit SIP trunk for DialogShift:**
+        -   Log into the Phone System Manager of your Telekom Cloud PBX.
+        -   Navigate to the menu item for managing SIP trunks (often under "Telephony Settings" -> "Lines" or "Trunks").
+        -   Create a new trunk for DialogShift or edit the existing one.
+    2.  **Configure caller ID display (CLIP):**
+        -   Look for options for **"Caller ID transmission"** or **"Caller identification"** in the trunk settings.
+        -   Ensure the phone system uses the caller ID from the **`P-Asserted-Identity` (PAI)** header. The exact option name may vary, look for terms like:
+            -   "Trust PAI header"
+            -   "Caller ID source: P-Asserted-Identity"
+            -   "Identity from P-Header"
+        -   This is the crucial step for the original caller number sent by DialogShift to take precedence over the trunk's main number.
+    3.  **Check outgoing rules:**
+        -   Unlikely for incoming calls, but ensure no global rules override the incoming caller ID.
+  </Accordion>
+  <Accordion title="Asterisk / FreePBX">
+    In Asterisk-based systems, configuration depends on whether the older `chan_sip` or the modern `pjsip` driver is used.
+
+    **For `pjsip` (recommended):**
+    1.  **Endpoint configuration (`pjsip.conf`):**
+        -   Edit the `endpoint` responsible for the DialogShift trunk.
+        -   Add the option `trust_id_inbound = yes`. This instructs Asterisk to trust the caller ID from the `P-Asserted-Identity` or `Remote-Party-ID` headers.
+        -   Optionally, you can force the use of the PAI header with `caller_id_from_pai = yes`.
+
+    **For `chan_sip` (deprecated):**
+    1.  **Peer configuration (`sip.conf`):**
+        -   Edit the peer entry (`[dialogshift-trunk]`) for your trunk.
+        -   Add the option `trustrpid = yes`. Although the name suggests "RPID", this option is usually also used for trusting PAI headers.
+  </Accordion>
+</AccordionGroup> 

@@ -1,0 +1,55 @@
+---
+title: "Answer Live Chats"
+description: "How to handle incoming Live Chat requests in DialogShift"
+---
+
+# Answer Live Chats
+
+When the Live Chat option is activated, you can receive direct messages from guests.
+
+<Info>
+  Live Chats are created when:
+
+  - The chatbot cannot find a suitable answer
+  - A visitor manually selects Live Chat
+  - The Phone AI has recorded a callback request from a guest
+</Info>
+
+## Access Live Chats
+
+Left navigation bar: >> **Live Chat**
+
+## Understanding Chat Status
+
+<CardGroup cols={3}>
+  <Card title="Open" icon="inbox">
+    Messages waiting for response
+  </Card>
+  <Card title="Parked" icon="pause">
+    The hotel has responded to the guest's chat request and parks the chat until the guest responds.
+  </Card>
+  <Card title="Closed" icon="check">
+    Chat closed, chatbot takes over again
+  </Card>
+</CardGroup>
+
+<Warning>
+  **Parked chats** are still in Live Chat mode:
+
+  - With new message → automatically **Open** again
+  - After 24h inactivity → automatically **Closed**
+</Warning>
+
+## Understanding "Park Chat"
+
+After the hotel team has responded to a guest's Live Chat request, we recommend parking the chat. In a parked chat, two things can happen:
+
+1. The guest responds, for example with a follow-up question, and a notification to the hotel team is triggered again.
+2. The guest reads the message and their information need is satisfied. They don't respond anymore. Here the system automatically closes the chat after 24 hours.
+
+In both cases, the system manages the future state of the chat and allows systematic processing of open requests.
+
+## Additional Functions
+
+- **Assignments:** Chats can be assigned to specific inboxes or people (upper chat window)
+- **Text blocks:** Create pre-made responses via the three dots in the lower chat window 

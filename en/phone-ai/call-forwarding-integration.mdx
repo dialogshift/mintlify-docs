@@ -1,0 +1,76 @@
+---
+title: "Phone AI Call Forwarding"
+description: "Setting up Phone AI via call forwarding for locations in Germany"
+---
+
+# Set up Phone AI via Call Forwarding
+
+<Warning>
+  This integration method is **only available for locations within Germany**.
+</Warning>
+
+Integration is done by forwarding incoming calls to a phone number provided by DialogShift.
+
+![Redirect Jp](/redirect.jpg)
+
+## Technical Configuration
+
+The forwarding must be configured as **"Blind Transfer with CLI (Caller Line Identification) - no screening"**:
+
+- **Blind Transfer**: Direct forwarding without inquiry
+- **CLI Pass-Through**: Original caller ID is maintained (absolutely required!)
+- **No Screening**: No verification before forwarding
+
+<Note>
+  The exact designation may vary depending on the phone system. Important is that the original caller ID is preserved.
+</Note>
+
+## What we need from you
+
+<Steps>
+  <Step title="Request Phone AI number">
+    Contact us for your dedicated Phone AI number
+  </Step>
+  <Step title="Set up call forwarding">
+    Configure forwarding with CLI pass-through
+  </Step>
+  <Step title="Provide separate extension">
+    For transfers to employees (prevents endless loop)
+  </Step>
+</Steps>
+
+## Flexible Activation
+
+We recommend completing the technical setup of call forwarding entirely during the setup phase. However, the actual activation of forwarding should only occur when the hotel wants to actively use Phone AI.
+
+This approach enables flexible control tailored to the hotel's specific needs. Common scenarios are:
+
+- **Time-controlled activation:** Only at night or during certain peak hours.
+- **Overflow scenario:** Only when reception is unreachable or all lines are busy.
+- **Permanent activation:** For 24/7 phone service through Phone AI.
+
+<Note>
+  As a technical contact, it's important to test all functionalities during setup. Later activation can then be done in consultation with the hotel at desired times.
+</Note>
+
+## Important Requirements
+
+### Separate Employee Extension
+
+<Warning>
+  Without a separate extension, endless loops can occur between Phone AI and the main number.
+</Warning>
+
+You need:
+
+- Separate phone number or
+- Special extension or
+- Direct extension
+
+This number must **not** redirect back to Phone AI!
+
+## Next Steps
+
+<Card title="Request Phone AI number" icon="phone" href="mailto:support@dialogshift.com">
+  Contact [support@dialogshift.com](mailto:support@dialogshift.com)
+</Card> 

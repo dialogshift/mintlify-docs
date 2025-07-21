@@ -1,0 +1,71 @@
+---
+title: 'Invite a New User'
+description: 'How to add new team members to your DialogShift organization and manage their permissions.'
+---
+
+In this article, you'll learn how to invite new users to your DialogShift app and define their access rights (roles).
+
+## Inviting a User
+
+Follow these steps to send an invitation:
+
+<Steps>
+  <Step title="Navigate to User Management">
+    1. Click on `Organization settings` in the left navigation bar.
+    2. Select `User management` from the submenu that appears.
+  </Step>
+
+  <Step title="Enter Invitation Details">
+    On the "User management" page, you'll find the "Invite new users" section. Fill out the following fields:
+
+    1. **Enter email:** Enter the email address of the person you want to invite (e.g., `tester@dialogshift.com`).
+    2. **Role:** Select the appropriate user role from the dropdown menu. Each role has different permissions. A detailed explanation of roles can be found below.
+    3. **Organization name:** Please ignore this field. It is not needed for the invitation.
+  </Step>
+
+  <Step title="Assign Permissions">
+    Depending on the selected role, you need to specify which areas the new user should have access to:
+
+    * **For roles `Member`, `Editor`, and `Hotel admin`:**
+      Select the specific inboxes (e.g., hotels or locations) in the `Main Inboxes` field that the user should have access to.
+    * **For the `Brand admin` role:**
+      Select the brand for which the user should receive admin rights.
+    * **For the `Admin` role:**
+      This field is disabled since an admin automatically has access to all areas of the organization.
+  </Step>
+
+  <Step title="Send Invitation">
+    Click the `Invite` button. The invited user will now receive an email with a link for registration.
+  </Step>
+</Steps>
+
+## User Role Explanations
+
+Each role has specific permissions to ensure the security and management of your organization.
+
+<AccordionGroup>
+  <Accordion title="Member">
+    Members can only respond to live chats. They have no access to chatbot configuration or other settings.
+  </Accordion>
+  <Accordion title="Editor">
+    Editors can respond to live chats and also edit chatbot content (e.g., adjusting FAQ entries).
+  </Accordion>
+  <Accordion title="Hotel admin">
+    A Hotel admin has extended administrative rights for one or more specifically assigned hotels (inboxes).
+  </Accordion>
+  <Accordion title="Brand admin">
+    A Brand admin has administrative rights for all hotels belonging to a specific brand.
+  </Accordion>
+  <Accordion title="Admin">
+    Admins have unrestricted administrative access to all hotels and settings of the entire organization.
+  </Accordion>
+</AccordionGroup>
+
+## Managing Sent Invitations
+
+Below the invitation form, you'll find the list of `Invited users`. Here you can see all pending invitations and manage them.
+
+For each invitation, you have two options:
+
+-   **Delete**: Deletes the invitation. The link becomes invalid.
+-   **Copy link**: Copies the invitation link to your clipboard. This is useful if the email didn't arrive and you want to send the link manually through another channel (e.g., messenger). 
