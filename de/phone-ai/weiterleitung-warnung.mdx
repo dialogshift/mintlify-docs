@@ -1,0 +1,57 @@
+---
+title: "Warnung bei möglicherweise falsch konfigurierter Weiterleitung zur Phone AI"
+description: "Lösung für Probleme mit der Anrufweiterleitung zur Phone AI, wenn Gastnummern nicht korrekt übertragen werden"
+---
+
+<Info>
+Siehe auch den [englischen Artikel](https://dialogshift.helpscoutdocs.com/article/171-warning-for-possibly-incorrectly-configured-forwarding-to-phone-ai) 🇬🇧
+</Info>
+
+## Was bedeutet diese Warnung?
+
+Über 20 % der Anrufe bei der Phone-AI stammen von derselben Nummer – ein Hinweis darauf, dass die Weiterleitung der Anrufe zur Phone AI **nicht die Nummer des Gastes mitliefert**.
+
+## Hintergrund der Warnung
+
+Damit die Phone AI die Nummer des anrufenden Gastes erkennen kann, muss die eingerichtete Weiterleitung zur Phone AI die Nummer des Gastes mitliefern. Die notwendige Konfiguration dazu lautet: 
+
+<Note>
+**Blind Transfer with CLI (Caller Line Identification) - no screening**
+</Note>
+
+## Was ist zu tun?
+
+### 1. Überprüfe, welche Nummern bei Deinen Anrufen angezeigt werden
+
+In der DialogShift App öffne die Live Chat Ansicht:
+
+![DialogShift Live Chat Ansicht](https://s3.amazonaws.com/helpscout.net/docs/assets/60c74eabb899954cddd470ce/images/681bc2ca44b3a84c1aacd8db/file-uHdr8yVZvd.png)
+
+![Telefonnummern in Konversationen](https://s3.amazonaws.com/helpscout.net/docs/assets/60c74eabb899954cddd470ce/images/681c4c686e5d0e3e66f7bd01/file-ydB1rwS6pE.gif)
+
+In den Telefonnummern der Konversationen sollten die Nummern der anrufenden Gäste stehen.
+
+<Warning>
+Wenn Du hier die Nummer Deines Hotels siehst, ist vermutlich die Weiterleitung nicht richtig konfiguriert oder es gibt ein Problem mit der Telefongesellschaft.
+</Warning>
+
+## Lösungsmöglichkeiten
+
+Es gibt zwei Möglichkeiten, das Problem zu lösen:
+
+### Option 1: Telefon-Dienstleister kontaktieren
+
+Kontaktiere Deinen Telefon-Diensteister und vergewissere Dich, dass **Blind Transfer with CLI (Caller Line Identification) - no screening** aktiv ist.
+
+### Option 2: SIP-Integration nutzen (verfügbar ab 15. Mai 2025)
+
+Nutze die neue Fähigkeit der DialogShift Phone AI, sich als SIP-Telefon direkt in die Telefonanlage des Hotels anzumelden.
+
+Dies sind dann die Voraussetzungen, die Du mit dem Telefon-Dienstleister abklären müsstest:
+
+- Die Phone AI benötigt einen zusätzlichen SIP-Zugang in Deiner Telefonanlage – also einen eigenen „Telefonanschluss". Das ist im Prinzip dasselbe wie ein weiteres Telefon im Haus.
+- Dieser SIP Zugang muss über das Internet erreichbar sein
+
+<Info>
+Weitere Details zur SIP-Integration findest Du in unserem [SIP-Integration Artikel](/de/phone-ai/sip-integration).
+</Info> 
