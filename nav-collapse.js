@@ -7,13 +7,18 @@
   // Wait for DOM to be ready
   function initNavCollapse() {
     // Find all navigation group labels
-    // Mintlify typically uses specific class names - we'll target common patterns
+    // Updated selectors based on actual Mintlify DOM structure
     const selectors = [
+      '.sidebar-group-header h5[id="sidebar-title"]', // Main Mintlify structure
+      '.sidebar-group-header h5', // Alternative without ID
+      'h5[id="sidebar-title"]', // Direct h5 titles
+      '.sidebar-group-header', // The header container itself
+      '.sidebar-group-header .font-semibold', // Font-semibold titles
+      // Fallback selectors
       '.nav-group > .group-label',
       '.sidebar-group > .group-title', 
       '.navigation-group > .group-header',
       '[data-group] > .group-title',
-      // Fallback: look for any clickable group headers in navigation
       '.sidebar .group-title',
       '.navigation .group-title'
     ];
@@ -31,21 +36,60 @@
     
     // If no groups found with standard selectors, try a more generic approach
     if (groupLabels.length === 0) {
-      // Look for navigation structures in common Mintlify layouts
-      const navContainers = document.querySelectorAll('.sidebar, .navigation, [role="navigation"]');
-      navContainers.forEach(nav => {
-        const potentialGroups = nav.querySelectorAll('div[class*="group"], section[class*="group"]');
-        potentialGroups.forEach(group => {
-          const header = group.querySelector('h2, h3, .title, .header, .label');
-          if (header && group.children.length > 1) {
-            groupLabels = [...groupLabels, header];
+      // Look for Mintlify-specific structures first
+      const mintlifyHeaders = document.querySelectorAll('.sidebar-group-header');
+      if (mintlifyHeaders.length > 0) {
+        console.log(`[NavCollapse] Found ${mintlifyHeaders.length} Mintlify group headers`);
+        mintlifyHeaders.forEach(header => {
+          // Look for h5 within the header, or use the header itself
+          const h5 = header.querySelector('h5');
+          groupLabels.push(h5 || header);
+        });
+      } else {
+        // Fallback: Look for navigation structures in common layouts
+        const navContainers = document.querySelectorAll('.sidebar, .navigation, [role="navigation"]');
+        navContainers.forEach(nav => {
+          // Look for h5 elements that might be section headers
+          const h5Elements = nav.querySelectorAll('h5[id*="sidebar"], h5[class*="title"]');
+          if (h5Elements.length > 0) {
+            h5Elements.forEach(h5 => groupLabels.push(h5));
+          } else {
+            // More generic approach
+            const potentialGroups = nav.querySelectorAll('div[class*="group"], section[class*="group"]');
+            potentialGroups.forEach(group => {
+              const header = group.querySelector('h2, h3, h4, h5, .title, .header, .label');
+              if (header && group.children.length > 1) {
+                groupLabels.push(header);
+              }
+            });
           }
         });
-      });
+      }
     }
     
     if (groupLabels.length === 0) {
       console.warn('[NavCollapse] No navigation groups found. The sidebar structure might be different than expected.');
+      
+      // Debug: Show what we can find in the sidebar
+      const sidebar = document.querySelector('.sidebar, [role="navigation"]');
+      if (sidebar) {
+        console.log('[NavCollapse] Debug: Sidebar found, analyzing structure...');
+        console.log('[NavCollapse] Sidebar classes:', sidebar.className);
+        
+        // Look for any potential group structures
+        const allHeaders = sidebar.querySelectorAll('h1, h2, h3, h4, h5, h6');
+        console.log(`[NavCollapse] Found ${allHeaders.length} header elements:`, 
+          [...allHeaders].map(h => ({ tag: h.tagName, id: h.id, class: h.className, text: h.textContent.trim().substring(0, 30) }))
+        );
+        
+        const groupLikeElements = sidebar.querySelectorAll('[class*="group"], [class*="header"], [class*="title"]');
+        console.log(`[NavCollapse] Found ${groupLikeElements.length} group-like elements:`,
+          [...groupLikeElements].map(el => ({ tag: el.tagName, class: el.className, text: el.textContent.trim().substring(0, 30) }))
+        );
+      } else {
+        console.log('[NavCollapse] Debug: No sidebar found with common selectors');
+      }
+      
       return;
     }
     
@@ -73,10 +117,32 @@
       // Find the content panel (next sibling or specific child)
       let panel = label.nextElementSibling;
       
-      // If no next sibling, look for common navigation list patterns
+      // For Mintlify structure: if label is h5, look for parent's next sibling
+      if (!panel && label.tagName === 'H5') {
+        const headerContainer = label.closest('.sidebar-group-header');
+        if (headerContainer) {
+          panel = headerContainer.nextElementSibling;
+        }
+      }
+      
+      // If still no panel, look for common navigation list patterns
       if (!panel) {
         const parent = label.parentElement;
         panel = parent.querySelector('ul, ol, .nav-links, .group-links, .links');
+        
+        // For Mintlify: look for the next sibling of the header container
+        if (!panel && parent.classList.contains('sidebar-group-header')) {
+          panel = parent.nextElementSibling;
+        }
+      }
+      
+      // Alternative: look for ul elements after the current group
+      if (!panel) {
+        const container = label.closest('div');
+        if (container) {
+          panel = container.querySelector('ul[id="sidebar-group"]') || 
+                  container.nextElementSibling;
+        }
       }
       
       if (!panel) {
