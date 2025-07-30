@@ -1,0 +1,492 @@
+---
+title: "Team Configuration for Social Media"
+description: "Optimal collaboration between chat and social media teams"
+icon: "users"
+---
+
+## Overview
+
+Managing Facebook and Instagram for hotels often requires coordination between different teams. This guide helps you establish optimal division of labor between chat team and social media team.
+
+<Note>
+The goal is to separate transactional chat messages from community management and brand building without compromising customer experience.
+</Note>
+
+## Understanding Team Structures
+
+### Typical Hotel Organizations
+
+<CardGroup cols={2}>
+  <Card title="Single-Team Approach" icon="user">
+    **For smaller hotels:**
+    
+    - One team manages chat and social media
+    - Reception team handles all messages
+    - DialogShift automates standard inquiries
+    - Simple structure, minimal coordination needed
+  </Card>
+  
+  <Card title="Multi-Team Approach" icon="users">
+    **For larger hotels/chains:**
+    
+    - Specialized chat agents for bookings
+    - Social media managers for community
+    - Marketing team for content strategy
+    - Technical team for tool management
+  </Card>
+</CardGroup>
+
+## Defining Responsibilities
+
+### Chat Team Tasks
+
+<Steps>
+  <Step title="Primary Responsibility">
+    **Handle direct customer inquiries:**
+    
+    - Booking requests and modifications
+    - Check-in/check-out questions
+    - Hotel service inquiries (WiFi, breakfast, etc.)
+    - Complaints and problem resolution
+    - Technical support questions
+  </Step>
+  
+  <Step title="Working Hours">
+    **Typical chat team hours:**
+    
+    - Main hours: 08:00 - 22:00 (reception hours)
+    - Extended: 07:00 - 23:00 (for international guests)
+    - Emergency availability: 24/7 for hotel guests
+    - Weekends: Reduced staffing possible
+  </Step>
+  
+  <Step title="Tools and Access">
+    **DialogShift Live Chat App:**
+    
+    - Full access to all chat channels
+    - PMS integration for booking data
+    - Escalation functions
+    - Performance monitoring
+  </Step>
+</Steps>
+
+### Social Media Team Tasks
+
+<Steps>
+  <Step title="Community Management">
+    **Brand building and engagement:**
+    
+    - Story interactions and replies
+    - Responding to comments on posts
+    - Community building and follower engagement
+    - Emotional/personal messages
+    - Influencer communication
+  </Step>
+  
+  <Step title="Content Strategy">
+    **Planning and creation:**
+    
+    - Manage social media calendar
+    - Plan posts and stories
+    - Coordinate campaigns
+    - Ensure brand communication
+    - Trend monitoring
+  </Step>
+  
+  <Step title="Working Hours">
+    **Social media prime time:**
+    
+    - Main hours: 09:00 - 18:00 (content creation)
+    - Interaction: 18:00 - 21:00 (community engagement)
+    - Weekends: Increased activity
+    - Holidays: Event-specific coverage
+  </Step>
+</Steps>
+
+## DialogShift Configuration for Teams
+
+### Basic Settings for Separate Teams
+
+<Tabs>
+  <Tab title="Chat Team Setup">
+    **DialogShift Configuration:**
+    
+    ```
+    Hotel Settings > Chatbot Settings > Advanced Settings
+    ```
+    
+    **Recommended Activations:**
+    - ✅ Handle direct messages completely
+    - ✅ Prioritize booking inquiries
+    - ✅ Automatic escalation for complaints
+    - ✅ Enable PMS integration
+    
+    **Deactivations for Social Media:**
+    - ❌ Turn off story replies
+    - ❌ Ignore story mentions
+    - ❌ Forward emoji-only messages
+  </Tab>
+  
+  <Tab title="Hybrid Configuration">
+    **For transition phases:**
+    
+    **Time-based separation:**
+    - Business hours: Chat team via DialogShift
+    - Outside hours: Social media team via native tools
+    - Weekends: Shared responsibility
+    
+    **Content-based separation:**
+    - Questions with "?" → Chat team
+    - Emotional messages → Social media team
+    - Booking-related → Chat team
+    - Community-related → Social media team
+  </Tab>
+</Tabs>
+
+### Advanced Filter Rules
+
+<AccordionGroup>
+  <Accordion title="Facebook-specific Rules">
+    **Automatic forwarding to social media team:**
+    
+    - Messages with only emojis (❤️, 👍, 😍)
+    - Post comments ("Great photo!", "Love it")
+    - Event-related messages
+    - Tags and mentions
+    
+    **Chatbot Settings:**
+    ```
+    Facebook > Advanced Settings:
+    - "Doesn't respond to media uploads" ✅
+    - "If chatbot doesn't understand input → no reaction" ✅
+    - "Handover only via buttons" ✅
+    ```
+  </Accordion>
+  
+  <Accordion title="Instagram-specific Rules">
+    **Automatic forwarding:**
+    
+    - All story replies
+    - Story mentions (@hotelname)
+    - Media-only messages (photos without text)
+    - DMs with hashtags
+    
+    **DialogShift Configuration:**
+    ```
+    Instagram > Advanced Settings:
+    - "Ignore story replies" ✅
+    - "Ignore story mentions" ✅
+    - "Media uploads → Live Chat" ✅
+    ```
+  </Accordion>
+</AccordionGroup>
+
+## Workflow Implementation
+
+### Daily Operations
+
+<Steps>
+  <Step title="Morning Routine (09:00)">
+    **Chat Team:**
+    - Open DialogShift Live Chat app
+    - Check overnight messages
+    - Set priorities for the day
+    - Document shift handover
+    
+    **Social Media Team:**
+    - Open native apps (Facebook Creator Studio, Instagram Business)
+    - Check overnight community interactions
+    - Finalize content plan for the day
+  </Step>
+  
+  <Step title="Ongoing Operations">
+    **Message Type Recognition:**
+    
+    | Message Type | Responsibility | Tool |
+    |---|---|---|
+    | "Do you have a room available?" | Chat Team | DialogShift |
+    | "Great hotel! 😍" | Social Media | Native App |
+    | "Where is parking?" | Chat Team | DialogShift |
+    | Story reply | Social Media | Native App |
+    | Complaints | Chat Team | DialogShift |
+  </Step>
+  
+  <Step title="Escalation Protocol">
+    **When social media team receives booking inquiries:**
+    
+    1. Take screenshot of message
+    2. Forward to DialogShift team chat
+    3. Inform guest: "We're connecting you with our booking experts"
+    4. DialogShift team takes over within 15 minutes
+    
+    **When chat team receives community messages:**
+    
+    1. Respond friendly: "Thank you for your feedback!"
+    2. Inform social media team via internal chat
+    3. If needed: Follow-up by social media team
+  </Step>
+</Steps>
+
+### Weekly Coordination
+
+<Accordion title="Team Meeting Agenda">
+  **Every Monday, 15 minutes:**
+  
+  1. **Discuss last week's numbers**
+     - Chat volume and response times
+     - Social media engagement rates
+     - Conversion numbers (chat → booking)
+  
+  2. **Share trends and topics**
+     - Frequent chat questions → Content ideas for social media
+     - Social media feedback → FAQ updates for chatbot
+     - Complaint patterns → Preventive measures
+  
+  3. **Plan upcoming week**
+     - Coordinate events and campaigns
+     - Coordinate staffing
+     - Anticipate special challenges
+  
+  4. **Tool updates and improvements**
+     - Discuss DialogShift updates
+     - Evaluate new social media features
+     - Implement workflow optimizations
+</Accordion>
+
+## Optimizing Team Performance
+
+### KPIs for Chat Team
+
+<CardGroup cols={2}>
+  <Card title="Response Metrics" icon="clock">
+    - **Average Response Time:** < 5 minutes
+    - **First Response:** < 2 minutes
+    - **Resolution Time:** < 30 minutes
+    - **24h Availability:** > 95%
+  </Card>
+  
+  <Card title="Quality Metrics" icon="star">
+    - **Customer Satisfaction:** > 4.5/5
+    - **Conversion Rate:** > 15%
+    - **Forwarding to Social Media:** < 5%
+    - **Repeat Inquiries:** < 10%
+  </Card>
+</CardGroup>
+
+### KPIs for Social Media Team
+
+<CardGroup cols={2}>
+  <Card title="Engagement Metrics" icon="heart">
+    - **Story Response Rate:** > 80%
+    - **Comment Response Time:** < 2 hours
+    - **Community Growth:** 5% monthly
+    - **Engagement Rate:** > 3%
+  </Card>
+  
+  <Card title="Quality Metrics" icon="trophy">
+    - **Brand Consistency:** 100%
+    - **Crisis Response Time:** < 30 minutes
+    - **Content Performance:** Rising trends
+    - **Influencer Collaborations:** Planned number
+  </Card>
+</CardGroup>
+
+## Crisis Management
+
+### Escalation Matrix
+
+<Tabs>
+  <Tab title="Level 1: Standard">
+    **Normal operating situations**
+    
+    - Each team works in their area
+    - Occasional forwarding between teams
+    - Weekly coordination sufficient
+    
+    **Examples:** Normal chat inquiries, standard social media posts
+  </Tab>
+  
+  <Tab title="Level 2: Elevated">
+    **Increased volume or special events**
+    
+    - Daily coordination between teams
+    - Extended working hours for both teams
+    - Additional DialogShift configuration
+    
+    **Examples:** Holidays, hotel events, campaigns
+  </Tab>
+  
+  <Tab title="Level 3: Crisis">
+    **Reputation-critical situations**
+    
+    - Immediate team coordination
+    - Management involvement
+    - All messages handled manually
+    - Temporary chatbot deactivation possible
+    
+    **Examples:** Negative press, technical issues, natural disasters
+  </Tab>
+</Tabs>
+
+### Emergency Protocol
+
+<AccordionGroup>
+  <Accordion title="Complaints and negative reviews">
+    **Immediate measures (< 30 minutes):**
+    
+    1. **First reaction:** Show apology and understanding
+    2. **Escalation:** Inform management and both teams
+    3. **Coordination:** Chat team for direct solution, social media for public response
+    4. **Follow-up:** Personal follow-up within 24h
+  </Accordion>
+  
+  <Accordion title="Technical outages">
+    **Backup strategies:**
+    
+    - **DialogShift outage:** Social media team temporarily takes over all messages
+    - **Facebook/Instagram outage:** Chat team informs via website and email
+    - **Hotel system outage:** Predefined messages across all channels
+  </Accordion>
+  
+  <Accordion title="Staff shortage">
+    **Coverage arrangements:**
+    
+    - **Chat team shortage:** Social media team with DialogShift quick training
+    - **Social media shortage:** Chat team takes over with simplified responses
+    - **Both teams:** Management with external service provider backup
+  </Accordion>
+</AccordionGroup>
+
+## Training and Development
+
+### Onboarding New Team Members
+
+<Steps>
+  <Step title="Week 1: Fundamentals">
+    **All new employees:**
+    - Hotel basics and services
+    - Brand tone and communication style
+    - Basic functions of respective tools
+    - Team structures and responsibilities
+  </Step>
+  
+  <Step title="Week 2: Specialization">
+    **Chat Team:**
+    - DialogShift Live Chat app intensive training
+    - PMS integration and booking processes
+    - Escalation procedures
+    - Understanding performance metrics
+    
+    **Social Media Team:**
+    - Native platform tools (Creator Studio, etc.)
+    - Content strategy and planning
+    - Community management best practices
+    - Crisis communication
+  </Step>
+  
+  <Step title="Week 3-4: Integration">
+    - Cross-training: Each team learns basics of the other
+    - Shadowing: Experienced employees accompany
+    - First independent handling under supervision
+    - Feedback and adjustments
+  </Step>
+</Steps>
+
+### Continuous Education
+
+<Accordion title="Monthly Training">
+  **Topic rotation:**
+  
+  - **Month 1:** New DialogShift features and updates
+  - **Month 2:** Social media trends and platform updates
+  - **Month 3:** Communication skills and de-escalation
+  - **Month 4:** Team coordination and workflow optimization
+</Accordion>
+
+## Tools and Integration
+
+### Recommended Tool Stack
+
+<CardGroup cols={2}>
+  <Card title="Chat Team Tools" icon="comments">
+    **Primary:**
+    - DialogShift Live Chat App
+    - Hotel PMS (Apaleo, Mews, etc.)
+    - WhatsApp Business (if available)
+    
+    **Secondary:**
+    - Team chat (Slack, Microsoft Teams)
+    - Knowledge base (internal)
+    - CRM system
+  </Card>
+  
+  <Card title="Social Media Team Tools" icon="share">
+    **Primary:**
+    - Facebook Creator Studio
+    - Instagram Business App
+    - Native platform apps
+    
+    **Secondary:**
+    - Content planning (Later, Buffer)
+    - Design tools (Canva, Photoshop)
+    - Analytics (native + external tools)
+  </Card>
+</CardGroup>
+
+### Integration Between Tools
+
+<AccordionGroup>
+  <Accordion title="Data Synchronization">
+    **Important connections:**
+    
+    - DialogShift ↔ PMS: Automatic booking data
+    - Social Media ↔ Website: Traffic tracking
+    - Both teams ↔ CRM: Unified customer data
+    - Team chat ↔ All tools: Notifications and updates
+  </Accordion>
+  
+  <Accordion title="Report Consolidation">
+    **Weekly reports:**
+    
+    - Chat metrics from DialogShift
+    - Social media insights from native tools
+    - Combined conversion analysis
+    - Team performance dashboard
+  </Accordion>
+</AccordionGroup>
+
+## Measuring and Optimizing Success
+
+### Dashboard Setup
+
+Create a central dashboard that both teams can use:
+
+<Tabs>
+  <Tab title="Real-Time Metrics">
+    **Live overview:**
+    - Current chat queue
+    - Real-time social media mentions
+    - Response time tracker
+    - Team availability status
+  </Tab>
+  
+  <Tab title="Daily KPIs">
+    **Daily performance:**
+    - Message volume per channel
+    - Average response times
+    - Conversion numbers
+    - Customer satisfaction scores
+  </Tab>
+  
+  <Tab title="Trend Analysis">
+    **Weekly/monthly trends:**
+    - Volume development
+    - Performance improvements
+    - Team efficiency
+    - ROI development
+  </Tab>
+</Tabs>
+
+<Tip>
+Conduct monthly analysis of which optimizations have the greatest impact. Often small workflow adjustments make the biggest difference.
+</Tip> 

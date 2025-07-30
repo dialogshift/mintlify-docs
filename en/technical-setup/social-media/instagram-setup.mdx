@@ -1,0 +1,205 @@
+---
+title: "Instagram Setup and Integration"
+description: "Complete guide to setting up Instagram Messenger for DialogShift"
+icon: "instagram"
+---
+
+## Overview
+
+This guide shows you how to connect Instagram Messenger with DialogShift so your chatbot can automatically respond to Instagram direct messages.
+
+## Prerequisites
+
+Instagram chatbots only work with specific settings and connections:
+
+<Note>
+A professional Instagram business account is mandatory. Personal Instagram accounts are not supported.
+</Note>
+
+### What you need:
+- An Instagram Business account (not a personal account)
+- A Facebook page linked to the Instagram account
+- Admin rights on both Instagram and the Facebook page
+
+## Step 1: Set up Instagram Business Account
+
+### Check Account Type
+
+<Steps>
+  <Step title="Check current account type">
+    1. Open Instagram on your smartphone
+    2. Go to **"Settings"**
+    3. Look for the **"Business"** section
+    
+    <Info>
+    If you see the "Business" section in settings, you already have a business account.
+    </Info>
+  </Step>
+  
+  <Step title="Switch to Business Account" condition="If not yet a business account">
+    1. Go to **"Settings" >> "Account"**
+    2. Tap **"Switch to professional account"**
+    3. Choose an appropriate category for your business
+    4. Select **"Business"**
+    5. Complete your profile with business information
+  </Step>
+</Steps>
+
+### Why a Business Account?
+
+<Accordion title="Technical Background">
+  Meta (the parent company of Instagram and Facebook) uses the same messenger infrastructure for both platforms. To integrate chatbots in Instagram, business accounts with extended API access are required.
+</Accordion>
+
+## Step 2: Connect Instagram to Facebook Page
+
+<Warning>
+This is a mandatory requirement from Meta. Each Instagram account must be assigned to exactly one Facebook page (1-to-1 connection).
+</Warning>
+
+### Create Connection
+
+<Steps>
+  <Step title="Prepare Facebook Page">
+    Make sure you have a Facebook page for your hotel and possess admin rights.
+  </Step>
+  
+  <Step title="Link Instagram">
+    1. Go to your Facebook page
+    2. Navigate to page settings
+    3. Select **"Instagram"** in the menu
+    4. Click **"Connect Account"**
+    5. Log in with your Instagram business account
+    6. Confirm the connection
+    
+    <Tip>
+    Detailed instructions can be found in the [official Facebook guide](https://www.facebook.com/business/help/898752960195806).
+    </Tip>
+  </Step>
+</Steps>
+
+## Step 3: Enable Message Access
+
+### Instagram Message Settings
+
+<Steps>
+  <Step title="Allow message access">
+    1. Open Instagram
+    2. Go to **"Settings"**
+    3. Select **"Privacy"**
+    4. Select **"Messages"**
+    5. Enable **"Allow access to messages"**
+  </Step>
+</Steps>
+
+<Info>
+This setting allows external apps like DialogShift to access and respond to Instagram messages.
+</Info>
+
+## Step 4: DialogShift Integration
+
+### Set up Integration
+
+<Steps>
+  <Step title="Open DialogShift App">
+    Go to **"Settings" >> "Integrations"** in the DialogShift Live Chat app.
+  </Step>
+  
+  <Step title="Facebook/Instagram Login">
+    1. Click **"Login"** or **"Renew Login"**
+    2. Log in with your Facebook account (that has admin rights)
+    3. Select both the Facebook page and the Instagram account
+    4. Enable all requested permissions
+  </Step>
+  
+  <Step title="Save Integration">
+    1. Back in DialogShift, select the Facebook page
+    2. Select the linked Instagram account
+    3. Click **"Save"**
+  </Step>
+</Steps>
+
+## Advanced Configuration
+
+### Instagram-Specific Settings
+
+<Tabs>
+  <Tab title="Chatbot Modes">
+    - **Fully Automatic:** Chatbot answers all messages
+    - **Hybrid:** Combination of chatbot and live chat
+    - **Live Chat Only:** All messages go directly to human agents
+  </Tab>
+  
+  <Tab title="Story Interactions">
+    Configure how the chatbot responds to various Instagram features:
+    - Story replies (recommended: disabled for social media teams)
+    - Story mentions (recommended: disabled)
+    - Media uploads (video, photo, audio)
+  </Tab>
+  
+  <Tab title="Social Media Team Setup">
+    For better separation between chatbot and social media team:
+    - Disable chatbot reactions to stories
+    - Configure direct live chat handover for media uploads
+    - Use only button-based handovers
+  </Tab>
+</Tabs>
+
+## Troubleshooting
+
+### Common Issues
+
+<AccordionGroup>
+  <Accordion title="Instagram account cannot be linked">
+    **Possible causes:**
+    - Not a business account (personal accounts are not supported)
+    - Missing admin rights on the Facebook page
+    - Instagram account already linked to another Facebook page
+    
+    **Solution:** Check account type and permissions, disconnect previous connections if necessary.
+  </Accordion>
+  
+  <Accordion title="Chatbot doesn't respond on Instagram">
+    **Check the following points:**
+    - Message access enabled in Instagram settings
+    - DialogShift integration properly set up
+    - Chatbot enabled for Instagram channel
+    
+    **Tip:** Test with a direct message from another Instagram account.
+  </Accordion>
+  
+  <Accordion title="Login issues during integration">
+    **Solutions:**
+    - Clear browser cache and cookies
+    - Use a different browser
+    - Renew Facebook login in separate tab
+    - Disable VPN if active
+  </Accordion>
+</AccordionGroup>
+
+## Instagram Specifics
+
+### What works differently than other channels:
+
+<Note>
+Instagram has special restrictions compared to other messaging channels.
+</Note>
+
+- **Story Features:** Limited chatbot support for story interactions
+- **Media Handling:** More complex processing of images and videos
+- **User Initiation:** Chatbots can only respond to user-initiated conversations
+
+## Support and Further Help
+
+### Documentation and Guides
+- [Set up Instagram Business Account](https://help.instagram.com/502981923235522?helpref=hc_fnav) (Official)
+- [Facebook-Instagram Connection](https://www.facebook.com/business/help/898752960195806) (Official)
+
+### DialogShift Support
+- Email: [support@dialogshift.com](mailto:support@dialogshift.com)
+- Live chat in the DialogShift app
+- Support documentation
+
+<Warning>
+For issues with the Facebook-Instagram connection, contact Facebook Business Support directly, as this is outside DialogShift's control.
+</Warning> 

@@ -89,7 +89,17 @@
               "de/technischer-setup/hns-integration",
               "de/technischer-setup/tracking-pixel",
               "de/technischer-setup/url-parameter-tracking",
-              "de/technischer-setup/snippet-einbindung-pruefen"
+              "de/technischer-setup/snippet-einbindung-pruefen",
+              {
+                "group": "Social Media",
+                "icon": "share-nodes",
+                "pages": [
+                  "de/technischer-setup/social-media/facebook-setup",
+                  "de/technischer-setup/social-media/instagram-setup",
+                  "de/technischer-setup/social-media/social-media-integration",
+                  "de/technischer-setup/social-media/team-konfiguration"
+                ]
+              }
             ]
           }
         ]
@@ -180,7 +190,17 @@
               "en/technical-setup/hns-integration",
               "en/technical-setup/tracking-pixel",
               "en/technical-setup/url-parameter-tracking",
-              "en/technical-setup/snippet-integration-check"
+              "en/technical-setup/snippet-integration-check",
+              {
+                "group": "Social Media",
+                "icon": "share-nodes",
+                "pages": [
+                  "en/technical-setup/social-media/facebook-setup",
+                  "en/technical-setup/social-media/instagram-setup",
+                  "en/technical-setup/social-media/social-media-integration",
+                  "en/technical-setup/social-media/team-configuration"
+                ]
+              }
             ]
           }
         ]

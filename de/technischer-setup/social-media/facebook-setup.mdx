@@ -1,0 +1,128 @@
+---
+title: "Facebook Setup und Integration"
+description: "Komplette Anleitung zur Einrichtung von Facebook Messenger für DialogShift"
+icon: "facebook"
+---
+
+## Überblick
+
+Diese Anleitung zeigt Dir, wie Du Facebook Messenger mit DialogShift verbindest, damit Dein Chatbot automatisch auf Facebook-Nachrichten antworten kann.
+
+## Voraussetzungen
+
+<Note>
+Du benötigst Admin-Rechte auf der Facebook-Seite Deines Hotels, um die Integration einzurichten.
+</Note>
+
+### Was Du brauchst:
+- Eine Facebook-Seite für Dein Hotel
+- Ein Facebook-Benutzer mit **Admin-Rechten** auf dieser Seite
+- Zugang zur DialogShift Live Chat App
+
+## Schritt-für-Schritt Anleitung
+
+<Steps>
+  <Step title="Facebook-Seite vorbereiten">
+    Stelle sicher, dass Du eine professionelle Facebook-Seite für Dein Hotel hast und Admin-Rechte besitzt.
+  </Step>
+  
+  <Step title="Automatische Begrüßungen deaktivieren">
+    Deaktiviere automatische Begrüßungen und FAQs in der Facebook-Postbox, damit der DialogShift-Chatbot diese übernehmen kann:
+    
+    1. Gehe zu [Facebook Business Inbox](https://business.facebook.com/latest/inbox/automated_responses)
+    2. Deaktiviere automatische Antworten
+    3. Deaktiviere FAQ-Funktionen
+  </Step>
+  
+  <Step title="Integration in DialogShift einrichten">
+    1. Öffne die DialogShift Live Chat App
+    2. Navigiere zu **"Einstellungen" >> "Integrationen"**
+    3. Klicke auf **"Login"** oder **"Login erneuern"** bei Facebook
+    4. Logge Dich mit Deinem Facebook-Account ein (der Admin-Rechte hat)
+    5. Wähle Deine Facebook-Seite aus
+    6. Aktiviere alle angefragten Rechte
+    7. Klicke auf **"Speichern"**
+  </Step>
+</Steps>
+
+## Facebook Login-Erneuerung
+
+<Warning>
+Facebook fordert alle 3 Monate eine Erneuerung des Logins. Du erhältst rechtzeitig eine E-Mail-Erinnerung von uns.
+</Warning>
+
+### So erneuerst Du den Login:
+1. Gehe zu **"Einstellungen" >> "Integrationen"** in der DialogShift App
+2. Klicke bei Facebook auf **"Login erneuern"**
+3. Bestätige die Verbindung erneut
+
+## Setup für Hotelketten
+
+Wenn Du Facebook-Seiten nur auf Markenebene (nicht für einzelne Hotels) hast:
+
+<Accordion title="Setup für Marken-Facebook-Seiten">
+  **Empfohlenes Vorgehen:**
+  
+  1. Verbinde die Marken-Facebook-Seite mit einem beliebigen Hotel oder Landing-Chatbot
+  2. Öffne **"Einstellungen" >> "Kanaleinstellungen"**
+  3. Deaktiviere den Chatbot für Facebook ("Chatbot active")
+  4. Aktiviere eine kanalspezifische Begrüßung
+  5. Kontaktiere support@dialogshift.com für die Einrichtung einer eigenen Inbox
+  
+  **Ergebnis:** Alle Facebook-Chats werden in einer zentralen Mailbox gesammelt, die von allen Hotels bearbeitet werden kann.
+</Accordion>
+
+## Chatbot-Konfiguration
+
+Nach der Integration kannst Du weitere Einstellungen vornehmen:
+
+### Kanalspezifische Einstellungen
+- **Chatbot-Modus:** Vollautomatisch, Hybrid oder nur Live Chat
+- **Begrüßungsnachrichten:** Anpassung der ersten Nachricht
+- **Übergabe-Regeln:** Wann soll an Live Chat übergeben werden
+
+### Erweiterte Konfiguration für Social Media Teams
+
+<Tabs>
+  <Tab title="Story-Interaktionen">
+    - Chatbot reagiert nicht auf Story-Antworten
+    - Chatbot reagiert nicht auf Story-Erwähnungen  
+    - Bessere Trennung zwischen Chatbot und Social Media Team
+  </Tab>
+  
+  <Tab title="Media-Uploads">
+    - Chatbot reagiert nicht auf Media-Uploads (Video, Foto, Audio)
+    - Direkte Weiterleitung an Live Chat bei unverstandenen Eingaben
+    - Nur Button-basierte Übergabe möglich
+  </Tab>
+</Tabs>
+
+## Fehlerbehebung
+
+### Häufige Probleme
+
+<AccordionGroup>
+  <Accordion title="Chatbot antwortet nicht auf Facebook">
+    - Überprüfe Admin-Rechte auf der Facebook-Seite
+    - Stelle sicher, dass automatische Antworten deaktiviert sind
+    - Erneuere den Facebook-Login falls nötig
+  </Accordion>
+  
+  <Accordion title="Integration kann nicht hergestellt werden">
+    - Überprüfe Internetverbindung
+    - Lösche Browser-Cache und Cookies
+    - Versuche eine andere Browser-Session
+  </Accordion>
+  
+  <Accordion title="Login muss zu oft erneuert werden">
+    - Dies ist eine Facebook-Anforderung alle 3 Monate
+    - Nutze die E-Mail-Erinnerungen für rechtzeitige Erneuerung
+  </Accordion>
+</AccordionGroup>
+
+## Support
+
+Bei Fragen oder Problemen:
+- E-Mail: [support@dialogshift.com](mailto:support@dialogshift.com)
+- Die DialogShift-Support-Dokumente
+- Live Chat in der DialogShift App 

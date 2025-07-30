@@ -1,0 +1,492 @@
+---
+title: "Team-Konfiguration für Social Media"
+description: "Optimale Zusammenarbeit zwischen Chat- und Social Media-Teams"
+icon: "users"
+---
+
+## Überblick
+
+Die Verwaltung von Facebook und Instagram für Hotels erfordert oft die Koordination zwischen verschiedenen Teams. Diese Anleitung hilft Dir dabei, eine optimale Arbeitsteilung zwischen Chat-Team und Social Media-Team zu etablieren.
+
+<Note>
+Ziel ist es, transaktionale Chat-Nachrichten von Community-Management und Markenbindung zu trennen, ohne die Kundenerfahrung zu beeinträchtigen.
+</Note>
+
+## Team-Strukturen verstehen
+
+### Typische Hotel-Organisationen
+
+<CardGroup cols={2}>
+  <Card title="Ein-Team-Ansatz" icon="user">
+    **Für kleinere Hotels:**
+    
+    - Ein Team verwaltet Chat und Social Media
+    - Rezeptionsteam übernimmt alle Nachrichten
+    - DialogShift automatisiert Standardanfragen
+    - Einfache Struktur, wenig Koordination nötig
+  </Card>
+  
+  <Card title="Multi-Team-Ansatz" icon="users">
+    **Für größere Hotels/Ketten:**
+    
+    - Spezialisierte Chat-Agenten für Buchungen
+    - Social Media-Manager für Community
+    - Marketing-Team für Content-Strategie
+    - Technisches Team für Tool-Management
+  </Card>
+</CardGroup>
+
+## Verantwortlichkeiten definieren
+
+### Chat-Team Aufgaben
+
+<Steps>
+  <Step title="Primäre Verantwortung">
+    **Direkte Kundenanfragen bearbeiten:**
+    
+    - Buchungsanfragen und -änderungen
+    - Check-in/Check-out Fragen
+    - Hotelservice-Anfragen (WLAN, Frühstück, etc.)
+    - Beschwerden und Problemlösungen
+    - Technische Support-Fragen
+  </Step>
+  
+  <Step title="Arbeitszeiten">
+    **Typische Chat-Team Zeiten:**
+    
+    - Hauptzeiten: 08:00 - 22:00 (Rezeptionszeiten)
+    - Erweitert: 07:00 - 23:00 (für internationale Gäste)
+    - Notfall-Erreichbarkeit: 24/7 für Hotelgäste
+    - Wochenenden: Reduzierte Besetzung möglich
+  </Step>
+  
+  <Step title="Tools und Zugriff">
+    **DialogShift Live Chat App:**
+    
+    - Vollzugriff auf alle Chat-Kanäle
+    - PMS-Integration für Buchungsdaten
+    - Eskalations-Funktionen
+    - Performance-Monitoring
+  </Step>
+</Steps>
+
+### Social Media-Team Aufgaben
+
+<Steps>
+  <Step title="Community Management">
+    **Markenaufbau und Engagement:**
+    
+    - Story-Interaktionen und -Antworten
+    - Comments auf Posts beantworten
+    - Community-Building und Follower-Engagement
+    - Emotionale/persönliche Nachrichten
+    - Influencer-Kommunikation
+  </Step>
+  
+  <Step title="Content-Strategie">
+    **Planung und Erstellung:**
+    
+    - Social Media-Kalender verwalten
+    - Posts und Stories planen
+    - Kampagnen koordinieren
+    - Brand-Kommunikation sicherstellen
+    - Trend-Monitoring
+  </Step>
+  
+  <Step title="Arbeitszeiten">
+    **Social Media Prime Time:**
+    
+    - Hauptzeiten: 09:00 - 18:00 (Content-Erstellung)
+    - Interaktion: 18:00 - 21:00 (Community-Engagement)
+    - Wochenenden: Erhöhte Aktivität
+    - Feiertage: Event-spezifische Betreuung
+  </Step>
+</Steps>
+
+## DialogShift-Konfiguration für Teams
+
+### Grundeinstellungen für getrennte Teams
+
+<Tabs>
+  <Tab title="Chat-Team Setup">
+    **DialogShift-Konfiguration:**
+    
+    ```
+    Hoteleinstellungen > Chatbot-Einstellungen > Erweiterte Einstellungen
+    ```
+    
+    **Empfohlene Aktivierungen:**
+    - ✅ Direktnachrichten vollständig bearbeiten
+    - ✅ Buchungsanfragen priorisieren
+    - ✅ Automatische Eskalation bei Beschwerden
+    - ✅ PMS-Integration aktivieren
+    
+    **Deaktivierungen für Social Media:**
+    - ❌ Story-Antworten abschalten
+    - ❌ Story-Erwähnungen ignorieren
+    - ❌ Reine Emoji-Nachrichten weiterleiten
+  </Tab>
+  
+  <Tab title="Hybrid-Konfiguration">
+    **Für Übergangsphasen:**
+    
+    **Zeitbasierte Trennung:**
+    - Geschäftszeiten: Chat-Team via DialogShift
+    - Außerhalb: Social Media-Team via native Tools
+    - Wochenenden: Geteilte Verantwortung
+    
+    **Inhaltsbasierte Trennung:**
+    - Fragen mit "?" → Chat-Team
+    - Emotionale Nachrichten → Social Media-Team
+    - Buchungsbezogen → Chat-Team
+    - Community-bezogen → Social Media-Team
+  </Tab>
+</Tabs>
+
+### Erweiterte Filterregeln
+
+<AccordionGroup>
+  <Accordion title="Facebook-spezifische Regeln">
+    **Automatische Weiterleitung an Social Media-Team:**
+    
+    - Nachrichten mit nur Emojis (❤️, 👍, 😍)
+    - Posts-Comments ("Tolles Foto!", "Gefällt mir")
+    - Event-Bezogene Nachrichten
+    - Markierungen und Erwähnungen
+    
+    **Chatbot-Einstellungen:**
+    ```
+    Facebook > Erweiterte Einstellungen:
+    - "Reagiert nicht auf Media-Uploads" ✅
+    - "Versteht Chatbot Eingabe nicht → keine Reaktion" ✅
+    - "Übergabe nur über Buttons" ✅
+    ```
+  </Accordion>
+  
+  <Accordion title="Instagram-spezifische Regeln">
+    **Automatische Weiterleitung:**
+    
+    - Alle Story-Antworten
+    - Story-Erwähnungen (@hotelname)
+    - Reine Media-Nachrichten (Fotos ohne Text)
+    - DMs mit Hashtags
+    
+    **DialogShift-Konfiguration:**
+    ```
+    Instagram > Erweiterte Einstellungen:
+    - "Story-Antworten ignorieren" ✅
+    - "Story-Erwähnungen ignorieren" ✅
+    - "Media-Uploads → Live Chat" ✅
+    ```
+  </Accordion>
+</AccordionGroup>
+
+## Workflow-Implementierung
+
+### Tägliche Arbeitsabläufe
+
+<Steps>
+  <Step title="Morgen-Routine (09:00)">
+    **Chat-Team:**
+    - DialogShift Live Chat App öffnen
+    - Overnight-Nachrichten prüfen
+    - Prioritäten für den Tag setzen
+    - Schichtübergabe dokumentieren
+    
+    **Social Media-Team:**
+    - Native Apps öffnen (Facebook Creator Studio, Instagram Business)
+    - Community-Interaktionen der Nacht prüfen
+    - Content-Plan für den Tag final abstimmen
+  </Step>
+  
+  <Step title="Laufender Betrieb">
+    **Nachrichtentyp-Erkennung:**
+    
+    | Nachrichtentyp | Zuständigkeit | Tool |
+    |---|---|---|
+    | "Haben Sie ein Zimmer frei?" | Chat-Team | DialogShift |
+    | "Tolles Hotel! 😍" | Social Media | Native App |
+    | "Wo ist der Parkplatz?" | Chat-Team | DialogShift |
+    | Story-Antwort | Social Media | Native App |
+    | Beschwerden | Chat-Team | DialogShift |
+  </Step>
+  
+  <Step title="Eskalations-Protokoll">
+    **Wenn Social Media-Team Buchungsanfragen erhält:**
+    
+    1. Screenshot der Nachricht machen
+    2. In DialogShift-Team-Chat weiterleiten
+    3. Gast informieren: "Wir leiten Sie an unsere Buchungsexperten weiter"
+    4. DialogShift-Team übernimmt innerhalb 15 Minuten
+    
+    **Wenn Chat-Team Community-Nachrichten erhält:**
+    
+    1. Freundlich antworten: "Vielen Dank für Ihr Feedback!"
+    2. Social Media-Team per internem Chat informieren
+    3. Bei Bedarf: Follow-up durch Social Media-Team
+  </Step>
+</Steps>
+
+### Wöchentliche Koordination
+
+<Accordion title="Team-Meeting Agenda">
+  **Jeden Montag, 15 Minuten:**
+  
+  1. **Zahlen der Vorwoche besprechen**
+     - Chat-Volumen und Response-Zeiten
+     - Social Media-Engagement Rates
+     - Conversion-Zahlen (Chat → Buchung)
+  
+  2. **Trends und Themen teilen**
+     - Häufige Chat-Fragen → Content-Ideen für Social Media
+     - Social Media-Feedback → FAQ-Updates für Chatbot
+     - Beschwerden-Muster → Präventive Maßnahmen
+  
+  3. **Kommende Woche planen**
+     - Events und Kampagnen abstimmen
+     - Personalplanung koordinieren
+     - Besondere Herausforderungen antizipieren
+  
+  4. **Tool-Updates und Verbesserungen**
+     - DialogShift-Updates besprechen
+     - Neue Social Media-Features evaluieren
+     - Workflow-Optimierungen implementieren
+</Accordion>
+
+## Team-Performance optimieren
+
+### KPIs für Chat-Team
+
+<CardGroup cols={2}>
+  <Card title="Response-Metriken" icon="clock">
+    - **Durchschnittliche Antwortzeit:** < 5 Minuten
+    - **Erste Antwort:** < 2 Minuten
+    - **Resolution Time:** < 30 Minuten
+    - **24h-Verfügbarkeit:** > 95%
+  </Card>
+  
+  <Card title="Qualitäts-Metriken" icon="star">
+    - **Kundenzufriedenheit:** > 4.5/5
+    - **Conversion Rate:** > 15%
+    - **Weiterleitung zu Social Media:** < 5%
+    - **Wiederholung-Anfragen:** < 10%
+  </Card>
+</CardGroup>
+
+### KPIs für Social Media-Team
+
+<CardGroup cols={2}>
+  <Card title="Engagement-Metriken" icon="heart">
+    - **Story-Antwortrate:** > 80%
+    - **Comment-Response-Zeit:** < 2 Stunden
+    - **Community-Wachstum:** 5% monatlich
+    - **Engagement-Rate:** > 3%
+  </Card>
+  
+  <Card title="Quality-Metriken" icon="trophy">
+    - **Marken-Konsistenz:** 100%
+    - **Crisis-Response-Zeit:** < 30 Minuten
+    - **Content-Performance:** Steigende Trends
+    - **Influencer-Kooperationen:** Geplante Anzahl
+  </Card>
+</CardGroup>
+
+## Krisenmanagement
+
+### Eskalations-Matrix
+
+<Tabs>
+  <Tab title="Stufe 1: Standard">
+    **Normale Betriebssituationen**
+    
+    - Jedes Team arbeitet in seinem Bereich
+    - Gelegentliche Weiterleitung zwischen Teams
+    - Wöchentliche Abstimmung ausreichend
+    
+    **Beispiele:** Normale Chat-Anfragen, Standard Social Media-Posts
+  </Tab>
+  
+  <Tab title="Stufe 2: Erhöht">
+    **Verstärktes Volumen oder spezielle Events**
+    
+    - Tägliche Abstimmung zwischen Teams
+    - Erweiterte Arbeitszeiten für beide Teams
+    - Zusätzliche DialogShift-Konfiguration
+    
+    **Beispiele:** Feiertage, Hotel-Events, Kampagnen
+  </Tab>
+  
+  <Tab title="Stufe 3: Krise">
+    **Reputation-kritische Situationen**
+    
+    - Sofortige Team-Koordination
+    - Management-Einbindung
+    - Alle Nachrichten werden manuell bearbeitet
+    - Temporäre Chatbot-Deaktivierung möglich
+    
+    **Beispiele:** Negative Presse, technische Probleme, Naturkatastrophen
+  </Tab>
+</Tabs>
+
+### Notfall-Protokoll
+
+<AccordionGroup>
+  <Accordion title="Beschwerden und negative Reviews">
+    **Sofort-Maßnahmen (< 30 Minuten):**
+    
+    1. **Erste Reaktion:** Entschuldigung und Verständnis zeigen
+    2. **Eskalation:** Management und beide Teams informieren
+    3. **Koordination:** Chat-Team für direkte Lösung, Social Media für öffentliche Antwort
+    4. **Follow-up:** Binnen 24h persönliche Nachfrage
+  </Accordion>
+  
+  <Accordion title="Technische Ausfälle">
+    **Backup-Strategien:**
+    
+    - **DialogShift-Ausfall:** Social Media-Team übernimmt temporär alle Nachrichten
+    - **Facebook/Instagram-Ausfall:** Chat-Team informiert über Website und E-Mail
+    - **Hotel-System-Ausfall:** Vordefinierte Nachrichten über alle Kanäle
+  </Accordion>
+  
+  <Accordion title="Personalausfall">
+    **Vertretungs-Regelungen:**
+    
+    - **Chat-Team-Ausfall:** Social Media-Team mit DialogShift-Schnellschulung
+    - **Social Media-Ausfall:** Chat-Team übernimmt mit vereinfachten Antworten
+    - **Beide Teams:** Management mit extern Dienstleister-Backup
+  </Accordion>
+</AccordionGroup>
+
+## Schulung und Entwicklung
+
+### Onboarding neuer Teammitglieder
+
+<Steps>
+  <Step title="Woche 1: Grundlagen">
+    **Alle neuen Mitarbeiter:**
+    - Hotel-Grundlagen und Services
+    - Markenton und Kommunikationsstil
+    - Grundfunktionen der jeweiligen Tools
+    - Team-Strukturen und Verantwortlichkeiten
+  </Step>
+  
+  <Step title="Woche 2: Spezialisierung">
+    **Chat-Team:**
+    - DialogShift Live Chat App intensive Schulung
+    - PMS-Integration und Buchungsprozesse
+    - Eskalations-Verfahren
+    - Performance-Metriken verstehen
+    
+    **Social Media-Team:**
+    - Native Platform-Tools (Creator Studio, etc.)
+    - Content-Strategie und -Planung
+    - Community-Management Best Practices
+    - Crisis Communication
+  </Step>
+  
+  <Step title="Woche 3-4: Integration">
+    - Cross-Training: Jedes Team lernt Grundlagen des anderen
+    - Shadowing: Erfahrene Mitarbeiter begleiten
+    - Erste eigenständige Bearbeitung unter Supervision
+    - Feedback und Anpassungen
+  </Step>
+</Steps>
+
+### Kontinuierliche Weiterbildung
+
+<Accordion title="Monatliche Trainings">
+  **Themen-Rotation:**
+  
+  - **Monat 1:** Neue DialogShift-Features und Updates
+  - **Monat 2:** Social Media-Trends und Platform-Updates  
+  - **Monat 3:** Kommunikations-Skills und Deeskalation
+  - **Monat 4:** Team-Koordination und Workflow-Optimierung
+</Accordion>
+
+## Tools und Integration
+
+### Empfohlene Tool-Stack
+
+<CardGroup cols={2}>
+  <Card title="Chat-Team Tools" icon="comments">
+    **Primär:**
+    - DialogShift Live Chat App
+    - Hotel-PMS (Apaleo, Mews, etc.)
+    - WhatsApp Business (falls verfügbar)
+    
+    **Sekundär:**
+    - Team-Chat (Slack, Microsoft Teams)
+    - Knowledge-Base (intern)
+    - CRM-System
+  </Card>
+  
+  <Card title="Social Media-Team Tools" icon="share">
+    **Primär:**
+    - Facebook Creator Studio
+    - Instagram Business App
+    - Native Platform-Apps
+    
+    **Sekundär:**
+    - Content-Planung (Later, Buffer)
+    - Design-Tools (Canva, Photoshop)
+    - Analytics (native + externe Tools)
+  </Card>
+</CardGroup>
+
+### Integration zwischen Tools
+
+<AccordionGroup>
+  <Accordion title="Daten-Synchronisation">
+    **Wichtige Verbindungen:**
+    
+    - DialogShift ↔ PMS: Automatische Buchungsdaten
+    - Social Media ↔ Website: Traffic-Tracking
+    - Beide Teams ↔ CRM: Einheitliche Kundendaten
+    - Team-Chat ↔ Alle Tools: Benachrichtigungen und Updates
+  </Accordion>
+  
+  <Accordion title="Berichts-Konsolidierung">
+    **Wöchentliche Reports:**
+    
+    - Chat-Metriken aus DialogShift
+    - Social Media-Insights aus nativen Tools
+    - Kombinierte Conversion-Analyse
+    - Team-Performance Dashboard
+  </Accordion>
+</AccordionGroup>
+
+## Erfolg messen und optimieren
+
+### Dashboard-Setup
+
+Erstelle ein zentrales Dashboard, das beide Teams nutzen können:
+
+<Tabs>
+  <Tab title="Real-Time Metriken">
+    **Live-Übersicht:**
+    - Aktuelle Chat-Warteschlange
+    - Social Media-Mentions in Echtzeit
+    - Response-Zeit-Tracker
+    - Team-Verfügbarkeit Status
+  </Tab>
+  
+  <Tab title="Tägliche KPIs">
+    **Tages-Performance:**
+    - Nachrichtenvolumen pro Kanal
+    - Durchschnittliche Response-Zeiten
+    - Conversion-Zahlen
+    - Kundenzufriedenheits-Scores
+  </Tab>
+  
+  <Tab title="Trend-Analyse">
+    **Wochen/Monats-Trends:**
+    - Volumen-Entwicklung
+    - Performance-Verbesserungen
+    - Team-Effizienz
+    - ROI-Entwicklung
+  </Tab>
+</Tabs>
+
+<Tip>
+Führe monatlich eine Analyse durch, welche Optimierungen die größte Wirkung haben. Oft sind es kleine Workflow-Anpassungen, die den größten Unterschied machen.
+</Tip> 
