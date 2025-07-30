@@ -238,5 +238,11 @@
       "github": "https://github.com/dialogshift",
       "linkedin": "https://linkedin.com/company/dialogshift"
     }
-  }
+  },
+  "customScripts": [
+    "nav-collapse.js"
+  ],
+  "customCSS": [
+    "nav-collapse.css"
+  ]
 }

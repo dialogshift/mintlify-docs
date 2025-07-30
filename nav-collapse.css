@@ -1,0 +1,92 @@
+/* nav-collapse.css - Styles for collapsible navigation groups */
+
+/* Hide collapsed navigation sections */
+.nav-hidden {
+  display: none !important;
+}
+
+/* Smooth transitions for collapse icons */
+.collapse-icon {
+  display: inline-block;
+  margin-left: 8px;
+  transition: transform 0.2s ease-in-out;
+  font-size: 0.8em;
+  opacity: 0.7;
+  user-select: none;
+}
+
+/* Hover effect for collapsible group labels */
+.sidebar [style*="cursor: pointer"]:hover {
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+/* Alternative: if you want a more subtle visual cue */
+.sidebar [style*="cursor: pointer"] {
+  transition: all 0.2s ease;
+}
+
+.sidebar [style*="cursor: pointer"]:hover .collapse-icon {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Ensure proper spacing for groups with icons */
+.sidebar .group-title,
+.sidebar .group-label,
+.sidebar .group-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Optional: Add a subtle background change on hover for group headers */
+.sidebar [style*="cursor: pointer"]:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  padding: 2px 4px;
+  margin: -2px -4px;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .sidebar [style*="cursor: pointer"]:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+}
+
+/* Animation for collapsing/expanding (optional smooth transition) */
+.nav-collapsible {
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.nav-collapsible.nav-hidden {
+  max-height: 0;
+  display: block !important; /* Override the display: none for smooth animation */
+}
+
+.nav-collapsible:not(.nav-hidden) {
+  max-height: 1000px; /* Large enough value to accommodate content */
+}
+
+/* Ensure icons are aligned properly */
+.collapse-icon {
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+/* Style adjustments for different Mintlify themes */
+.mintlify-sidebar .group-title .collapse-icon,
+.sidebar-content .group-title .collapse-icon {
+  margin-left: 8px;
+  font-size: 12px;
+}
+
+/* Responsive considerations */
+@media (max-width: 768px) {
+  .collapse-icon {
+    font-size: 0.7em;
+    margin-left: 6px;
+  }
+} 
