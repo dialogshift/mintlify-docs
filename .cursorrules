@@ -1,133 +1,304 @@
-# Cursor Rules for Mintlify Documentation
+# Mintlify Documentation Guidelines for AI Models
 
-This repository contains documentation for DialogShift built with Mintlify. These rules help maintain consistency and quality when working with the codebase.
+## Overview
+This repository uses Mintlify, a modern documentation platform that uses MDX (Markdown + JSX) for content creation. This guide helps AI models understand how to properly create and maintain documentation in this system.
 
-## Project Overview
+## What is Mintlify?
+Mintlify is a documentation platform that:
+- Uses MDX files for content (`.mdx` extension)
+- Supports React/JSX components within Markdown
+- Has a specific configuration structure (`docs.json`)
+- Provides built-in components for enhanced documentation
+- Supports dark/light mode, syntax highlighting, and API documentation
 
-- **Framework**: Mintlify documentation platform
-- **Languages**: German (primary) and English
-- **Structure**: Multi-language documentation with organized feature sections
-- **Purpose**: User documentation for DialogShift platform features
+## File Structure
 
-## File Structure Guidelines
+### Key Files
+- `docs.json` - Main configuration file that controls navigation, theme, and settings
+- `*.mdx` files - Content files using MDX format
+- `/images/` - Store images here
+- `/logo/` - Logo files for light/dark modes
+- `/snippets/` - Reusable content snippets
+- `/de` - Path for german articles
+- `/en` - Path for english articles
 
-### Content Organization
-- `/de/` - German language documentation (primary)
-- `/Deutscher-Support/` - Legacy German support documentation
-- Root level files: Core documentation and configuration
-- Images stored in `/images/` and `/logo/` directories
+## MDX File Format
 
-### File Naming Conventions
-- Use kebab-case for file names: `new-faq-de.mdx`
-- Include language suffix when appropriate: `-de.mdx`
-- Keep names descriptive and concise
-- Use `.mdx` extension for all documentation files
-
-## Content Guidelines
-
-### Writing Standards
-- **Primary Language**: German - maintain consistency in terminology
-- **Tone**: Professional, helpful, and clear, uses the informal "Du" 
-- **Target Audience**: End users of DialogShift platform
-- **Format**: Step-by-step guides with clear headings
-
-### MDX Best Practices
-- Use proper frontmatter for each document
-- Include descriptive titles and descriptions
-- Use consistent heading hierarchy (H1 for titles, H2 for main sections)
-- Include code examples in appropriate language blocks
-- Use callouts and admonitions for important information
-
-### Image Guidelines
-- Store images in `/images/` directory
-- Use descriptive file names
-- Optimize images for web (reasonable file sizes)
-- Include alt text for accessibility
-
-## Technical Guidelines
-
-### Mintlify Configuration
-- Main config in `docs.json`
-- Follow Mintlify's documentation structure
-- Test navigation and linking after changes
-- Ensure proper sidebar organization
-
-### File Management
-- Keep documentation up-to-date with product changes
-- Remove outdated content from `/old/` directory when confirmed obsolete
-- Maintain consistent cross-references between documents
-- Update related documents when making changes
-
-### Development Workflow
-- Test documentation locally before committing
-- Check for broken links and references
-- Validate MDX syntax
-- Review navigation structure in sidebar
-
-## Content Types
-
-### Feature Documentation
-- **Chat-AI**: Live chat, WhatsApp integration, chatbot features
-- **Email-AI**: Email integration and automation
-- **Phone-AI**: Phone integration and call handling
-- **Platform**: Core platform features and settings
-- **Compliance**: Legal and accessibility requirements
-- **Technical Setup**: Integration guides and technical configuration
-
-### Document Templates
-- Use existing documents as templates for consistency
-- Follow established patterns for step-by-step guides
-- Include prerequisites, steps, and verification sections
-- Add troubleshooting information where relevant
-
-### Accessibility
-- Use descriptive headings
-- Include alt text for images
-- Ensure proper contrast
-- Follow WCAG guidelines
-- Test with screen readers when possible
-
-## Common Patterns
-
-### Frontmatter Structure
-```yaml
+### Required Frontmatter
+Every MDX file MUST start with frontmatter:
+```mdx
 ---
-title: "Descriptive Title"
-description: "Clear description of the content"
+title: "Page Title"
+description: "Brief description of the page"
+---
+```
+Important: title and description will be shown on the page to the user. So no need to duplicate it again in the section below.
+
+### Optional Frontmatter Fields
+```mdx
+---
+title: "Page Title"
+description: "Description"
+icon: "icon-name"  # FontAwesome icon
+sidebarTitle: "Shorter Title"  # If different from title
+"og:title": "Open Graph Title"
+"og:description": "Open Graph Description"
 ---
 ```
 
-### Code Blocks
-- Use appropriate language identifiers
-- Include comments for clarity
-- Show complete, working examples
-- Highlight important lines when helpful
+### Important: No Duplicate Titles or Descriptions
+**DO NOT** add content that duplicates the frontmatter title or description. Mintlify automatically displays both the frontmatter title and description.
 
-### Cross-References
-- Use relative paths for internal links
-- Maintain consistency in link text
-- Update references when moving or renaming files
-- Check for broken links regularly
+❌ **WRONG** - Creates duplicate titles and descriptions:
+```mdx
+---
+title: "WhatsApp Setup Guide"
+description: "How to configure WhatsApp for your hotel"
+---
 
-## Maintenance
+# WhatsApp Setup Guide  <!-- Duplicates title -->
+Learn how to configure WhatsApp for your hotel.  <!-- Duplicates description -->
+```
 
-### Regular Tasks
-- Review and update outdated content
-- Check for broken links
-- Update screenshots and images
-- Sync with product feature updates
-- Monitor user feedback and update accordingly
+✅ **CORRECT** - Let frontmatter handle title and description:
+```mdx
+---
+title: "WhatsApp Setup Guide"
+description: "How to configure WhatsApp for your hotel"
+---
 
-### Legacy Content
-- `/Deutscher-Support/` contains legacy documentation
-- Gradually migrate relevant content to new structure
-- Archive or remove truly obsolete content
-- Maintain redirects for moved content when possible
+## Step 1: Initial Setup
+Start directly with content sections...
+```
 
-## Notes
+## Available Mintlify Components
 
-- This is a documentation-focused repository
-- Changes should improve user experience and clarity
-- Maintain consistency with existing content style
-- Test thoroughly in Mintlify environment
-- Consider translation needs for any new English content 
+### 1. Note/Warning/Info Blocks
+```mdx
+<Note>
+  This is a note with helpful information.
+</Note>
+
+<Warning>
+  This is a warning message.
+</Warning>
+
+<Info>
+  This is an info block.
+</Info>
+
+<Tip>
+  This is a helpful tip.
+</Tip>
+```
+
+### 2. Card Components
+```mdx
+<Card
+  title="Card Title"
+  icon="icon-name"
+  href="/path/to/page"
+>
+  Card description text
+</Card>
+
+<CardGroup cols={2}>
+  <Card title="Card 1" icon="icon1" href="/page1">
+    Description 1
+  </Card>
+  <Card title="Card 2" icon="icon2" href="/page2">
+    Description 2
+  </Card>
+</CardGroup>
+```
+
+### 3. Steps Component
+```mdx
+<Steps>
+  <Step title="First Step">
+    Description of the first step
+  </Step>
+  <Step title="Second Step">
+    Description of the second step
+  </Step>
+</Steps>
+```
+
+### 4. Code Blocks
+```mdx
+```javascript
+// Use triple backticks with language identifier
+const example = "code";
+```
+
+```json filename="example.json"
+{
+  "key": "value"
+}
+```
+```
+
+### 5. Tabs Component
+```mdx
+<Tabs>
+  <Tab title="Tab 1">
+    Content for tab 1
+  </Tab>
+  <Tab title="Tab 2">
+    Content for tab 2
+  </Tab>
+</Tabs>
+```
+
+### 6. Accordions
+```mdx
+<AccordionGroup>
+  <Accordion title="First Question">
+    Answer to the first question
+  </Accordion>
+  <Accordion title="Second Question">
+    Answer to the second question
+  </Accordion>
+</AccordionGroup>
+```
+
+### 7. Frame Component (for images/videos)
+```mdx
+<Frame>
+  <img src="/images/example.png" alt="Description" />
+</Frame>
+```
+
+## Adding Pages to Navigation
+
+### Understanding docs.json Structure
+The navigation is defined in `docs.json`:
+```json
+{
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Tab Name",
+        "groups": [
+          {
+            "group": "Group Name",
+            "pages": [
+              "path/to/page1",
+              "path/to/page2"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+### Rules for Navigation
+1. Page paths in `docs.json` are relative to the root and WITHOUT the `.mdx` extension
+2. The order in the `pages` array determines the sidebar order
+3. Groups can be nested within tabs
+4. Use forward slashes for paths (e.g., `"de/user-erstellen"`)
+
+## Best Practices
+
+### 1. File Naming
+- Use kebab-case for file names: `user-guide.mdx`, not `userGuide.mdx`
+- Be descriptive but concise
+- For localized content, use folders: `/de/`, `/en/`, etc.
+
+### 2. Images
+- Store in `/images/` directory
+- Use descriptive names
+- Always include alt text
+- For theme-specific images:
+```mdx
+<img
+  className="block dark:hidden"
+  src="/images/hero-light.png"
+  alt="Hero Light"
+/>
+<img
+  className="hidden dark:block"
+  src="/images/hero-dark.png"
+  alt="Hero Dark"
+/>
+```
+
+### 3. Links
+- Internal links: Use relative paths without `.mdx`: `[Link Text](/path/to/page)`
+- External links: `[Link Text](https://example.com)`
+- Email links: `[Email](mailto:email@example.com)`
+
+### 4. Styling
+- Use `className` instead of `class` (React convention)
+- Tailwind CSS classes are available
+- Dark mode is handled automatically with `dark:` prefix
+
+### 5. API Documentation
+- OpenAPI specs go in `/api-reference/openapi.json`
+- Mintlify automatically generates API documentation from OpenAPI specs
+
+## Common Tasks
+
+### Adding a New Page
+1. Create the `.mdx` file with proper frontmatter
+2. Add the page path to `docs.json` in the appropriate group
+3. Ensure the path in `docs.json` matches the file location (without `.mdx`)
+
+### Creating a New Section
+1. Create a new folder for organization
+2. Add MDX files to the folder
+3. Update `docs.json` to include a new group or tab
+
+### Adding Interactive Elements
+- Use Mintlify components for interactivity
+- Avoid custom JavaScript unless necessary
+- Leverage built-in components before creating custom ones
+
+## Example: Creating a Support Page
+
+1. Create file: `support/faq.mdx`
+```mdx
+---
+title: "Frequently Asked Questions"
+description: "Common questions and answers about our product"
+---
+
+# Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="How do I get started?">
+    Follow our [quickstart guide](/quickstart) to begin.
+  </Accordion>
+  <Accordion title="What are the system requirements?">
+    - Modern web browser
+    - Internet connection
+    - Valid account
+  </Accordion>
+</AccordionGroup>
+```
+
+2. Update `docs.json`:
+```json
+{
+  "group": "Support",
+  "pages": [
+    "support/faq"
+  ]
+}
+```
+
+## Debugging Tips
+1. Check frontmatter syntax - YAML errors are common
+2. Ensure component names are capitalized
+3. Verify file paths in `docs.json` match actual file locations
+4. Use the Mintlify development server to preview changes
+5. Check for unclosed JSX tags
+
+## Resources
+- [Mintlify Documentation](https://mintlify.com/docs)
+- [MDX Documentation](https://mdxjs.com/)
+- Component examples are in `/essentials/` folder of this repo
+
+Remember: When in doubt, check existing files in this repository for examples of proper syntax and structure. 
