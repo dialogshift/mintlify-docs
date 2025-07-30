@@ -29,75 +29,81 @@
             ]
           },
           {
-            "group": "Chat AI",
+            "group": "DialogShift Services",
+            "icon": "grid-3x3",
             "pages": [
               {
-                "group": "Live Chat",
-                "icon": "comments",
+                "group": "Chat AI",
                 "pages": [
-                  "de/chat-ai/live-chat/live-chat-modi",
-                  "de/chat-ai/live-chat/live-chats-beantworten"
+                  {
+                    "group": "Live Chat",
+                    "icon": "comments",
+                    "pages": [
+                      "de/chat-ai/live-chat/live-chat-modi",
+                      "de/chat-ai/live-chat/live-chats-beantworten"
+                    ]
+                  },
+                  {
+                    "group": "WhatsApp",
+                    "icon": "whatsapp",
+                    "pages": [
+                      "de/chat-ai/whatsapp/business-api-grundlagen",
+                      "de/chat-ai/whatsapp/telefonnummer-auswahl",
+                      "de/chat-ai/whatsapp/nummer-trennen",
+                      "de/chat-ai/whatsapp/partner-wechsel",
+                      "de/chat-ai/whatsapp/beantragungsprozess",
+                      "de/chat-ai/whatsapp/meta-unternehmensverifizierung",
+                      "de/chat-ai/whatsapp/einbindung-darstellung"
+                    ]
+                  }
                 ]
               },
               {
-                "group": "WhatsApp",
-                "icon": "whatsapp",
+                "group": "Phone AI",
                 "pages": [
-                  "de/chat-ai/whatsapp/business-api-grundlagen",
-                  "de/chat-ai/whatsapp/telefonnummer-auswahl",
-                  "de/chat-ai/whatsapp/nummer-trennen",
-                  "de/chat-ai/whatsapp/partner-wechsel",
-                  "de/chat-ai/whatsapp/beantragungsprozess",
-                  "de/chat-ai/whatsapp/meta-unternehmensverifizierung",
-                  "de/chat-ai/whatsapp/einbindung-darstellung"
+                  "de/phone-ai/stimmen-auswahl",
+                  "de/phone-ai/sip-integration",
+                  "de/phone-ai/anrufweiterleitung-integration",
+                  "de/phone-ai/redirect-in-sip-de",
+                  "de/phone-ai/weiterleitung-warnung"
                 ]
-              }
-            ]
-          },
-          {
-            "group": "Phone AI",
-            "pages": [
-              "de/phone-ai/stimmen-auswahl",
-              "de/phone-ai/sip-integration",
-              "de/phone-ai/anrufweiterleitung-integration",
-              "de/phone-ai/redirect-in-sip-de",
-              "de/phone-ai/weiterleitung-warnung"
-            ]
-          },
-          {
-            "group": "Email AI",
-            "pages": [
-              "de/email-ai/firefox-browser-plugin"
-            ]
-          },
-          {
-            "group": "Compliance",
-            "pages": [
-              "de/compliance/barrierefreiheitserklarung"
-            ]
-          },
-          {
-            "group": "Plattform",
-            "pages": [
-              "de/platform/new-faq-de",
-              "de/platform/urls-pdfs-wissen-hinzufugen"
-            ]
-          },
-          {
-            "group": "Technischer Setup",
-            "pages": [
-              "de/technischer-setup/hns-integration",
-              "de/technischer-setup/tracking-pixel",
-              "de/technischer-setup/url-parameter-tracking",
-              "de/technischer-setup/snippet-einbindung-pruefen",
+              },
               {
-                "group": "Social Media",
-                "icon": "share-nodes",
+                "group": "Email AI",
                 "pages": [
-                  "de/technischer-setup/social-media/facebook-setup",
-                  "de/technischer-setup/social-media/instagram-setup",
-                  "de/technischer-setup/social-media/social-media-integration",
-                  "de/technischer-setup/social-media/team-konfiguration"
+                  "de/email-ai/firefox-browser-plugin"
+                ]
+              },
+              {
+                "group": "Compliance",
+                "pages": [
+                  "de/compliance/barrierefreiheitserklarung"
+                ]
+              },
+              {
+                "group": "Plattform",
+                "pages": [
+                  "de/platform/new-faq-de",
+                  "de/platform/urls-pdfs-wissen-hinzufugen"
+                ]
+              },
+              {
+                "group": "Technischer Setup",
+                "pages": [
+                  "de/technischer-setup/hns-integration",
+                  "de/technischer-setup/tracking-pixel",
+                  "de/technischer-setup/url-parameter-tracking",
+                  "de/technischer-setup/snippet-einbindung-pruefen",
+                  {
+                    "group": "Social Media",
+                    "icon": "share-nodes",
+                    "pages": [
+                      "de/technischer-setup/social-media/facebook-setup",
+                      "de/technischer-setup/social-media/instagram-setup",
+                      "de/technischer-setup/social-media/social-media-integration",
+                      "de/technischer-setup/social-media/team-konfiguration"
+                    ]
+                  }
                 ]
               }
             ]
@@ -123,82 +129,88 @@
             ]
           },
           {
-            "group": "Chat AI",
+            "group": "DialogShift Services",
+            "icon": "grid-3x3",
             "pages": [
               {
-                "group": "Live Chat",
-                "icon": "comments",
+                "group": "Chat AI",
                 "pages": [
-                  "en/chat-ai/live-chat/live-chat-modes",
-                  "en/chat-ai/live-chat/answer-live-chats"
+                  {
+                    "group": "Live Chat",
+                    "icon": "comments",
+                    "pages": [
+                      "en/chat-ai/live-chat/live-chat-modes",
+                      "en/chat-ai/live-chat/answer-live-chats"
+                    ]
+                  },
+                  {
+                    "group": "WhatsApp",
+                    "icon": "whatsapp",
+                    "pages": [
+                      "en/chat-ai/whatsapp/business-api-basics",
+                      "en/chat-ai/whatsapp/phone-number-selection",
+                      "en/chat-ai/whatsapp/disconnect-number",
+                      "en/chat-ai/whatsapp/partner-migration",
+                      "en/chat-ai/whatsapp/application-process",
+                      "en/chat-ai/whatsapp/meta-business-verification",
+                      "en/chat-ai/whatsapp/integration-display"
+                    ]
+                  },
+                  {
+                    "group": "Integrations",
+                    "icon": "plug",
+                    "pages": [
+                      "en/chat-ai/integrations/betterspace-integration"
+                    ]
+                  }
                 ]
               },
               {
-                "group": "WhatsApp",
-                "icon": "whatsapp",
+                "group": "Phone AI",
                 "pages": [
-                  "en/chat-ai/whatsapp/business-api-basics",
-                  "en/chat-ai/whatsapp/phone-number-selection",
-                  "en/chat-ai/whatsapp/disconnect-number",
-                  "en/chat-ai/whatsapp/partner-migration",
-                  "en/chat-ai/whatsapp/application-process",
-                  "en/chat-ai/whatsapp/meta-business-verification",
-                  "en/chat-ai/whatsapp/integration-display"
+                  "en/phone-ai/voice-selection",
+                  "en/phone-ai/sip-integration",
+                  "en/phone-ai/call-forwarding-integration",
+                  "en/phone-ai/pbx-configuration",
+                  "en/phone-ai/forwarding-warning"
                 ]
               },
               {
-                "group": "Integrations",
-                "icon": "plug",
+                "group": "Email AI",
                 "pages": [
-                  "en/chat-ai/integrations/betterspace-integration"
+                  "en/email-ai/firefox-browser-plugin"
                 ]
-              }
-            ]
-          },
-          {
-            "group": "Phone AI",
-            "pages": [
-              "en/phone-ai/voice-selection",
-              "en/phone-ai/sip-integration",
-              "en/phone-ai/call-forwarding-integration",
-              "en/phone-ai/pbx-configuration",
-              "en/phone-ai/forwarding-warning"
-            ]
-          },
-          {
-            "group": "Email AI",
-            "pages": [
-              "en/email-ai/firefox-browser-plugin"
-            ]
-          },
-          {
-            "group": "Compliance",
-            "pages": [
-              "en/compliance/accessibility-statement"
-            ]
-          },
-          {
-            "group": "Platform",
-            "pages": [
-              "en/platform/new-faq",
-              "en/platform/add-urls-pdfs-knowledge"
-            ]
-          },
-          {
-            "group": "Technical Setup",
-            "pages": [
-              "en/technical-setup/hns-integration",
-              "en/technical-setup/tracking-pixel",
-              "en/technical-setup/url-parameter-tracking",
-              "en/technical-setup/snippet-integration-check",
+              },
               {
-                "group": "Social Media",
-                "icon": "share-nodes",
+                "group": "Compliance",
                 "pages": [
-                  "en/technical-setup/social-media/facebook-setup",
-                  "en/technical-setup/social-media/instagram-setup",
-                  "en/technical-setup/social-media/social-media-integration",
-                  "en/technical-setup/social-media/team-configuration"
+                  "en/compliance/accessibility-statement"
+                ]
+              },
+              {
+                "group": "Platform",
+                "pages": [
+                  "en/platform/new-faq",
+                  "en/platform/add-urls-pdfs-knowledge"
+                ]
+              },
+              {
+                "group": "Technical Setup",
+                "pages": [
+                  "en/technical-setup/hns-integration",
+                  "en/technical-setup/tracking-pixel",
+                  "en/technical-setup/url-parameter-tracking",
+                  "en/technical-setup/snippet-integration-check",
+                  {
+                    "group": "Social Media",
+                    "icon": "share-nodes",
+                    "pages": [
+                      "en/technical-setup/social-media/facebook-setup",
+                      "en/technical-setup/social-media/instagram-setup",
+                      "en/technical-setup/social-media/social-media-integration",
+                      "en/technical-setup/social-media/team-configuration"
+                    ]
+                  }
                 ]
               }
             ]
