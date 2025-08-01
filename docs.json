@@ -61,6 +61,7 @@
               {
                 "group": "Phone AI",
                 "pages": [
+                  "de/phone-ai/konfiguration",
                   "de/phone-ai/stimmen-auswahl",
                   "de/phone-ai/sip-integration",
                   "de/phone-ai/anrufweiterleitung-integration",
@@ -168,6 +169,7 @@
               {
                 "group": "Phone AI",
                 "pages": [
+                  "en/phone-ai/configuration",
                   "en/phone-ai/voice-selection",
                   "en/phone-ai/sip-integration",
                   "en/phone-ai/call-forwarding-integration",
