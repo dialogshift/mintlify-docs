@@ -72,6 +72,7 @@
               {
                 "group": "Email AI",
                 "pages": [
+                  "de/email-ai/microsoft-outlook-plugin",
                   "de/email-ai/firefox-browser-plugin"
                 ]
               },
@@ -180,6 +181,7 @@
               {
                 "group": "Email AI",
                 "pages": [
+                  "en/email-ai/microsoft-outlook-plugin",
                   "en/email-ai/firefox-browser-plugin"
                 ]
               },
