@@ -80,7 +80,8 @@
                 "group": "Journey Messaging",
                 "icon": "route",
                 "pages": [
-                  "de/journey-messaging/uebersicht"
+                  "de/journey-messaging/uebersicht",
+                  "de/journey-messaging/template-erstellen"
                 ]
               },
               {
@@ -196,7 +197,8 @@
                 "group": "Journey Messaging",
                 "icon": "route",
                 "pages": [
-                  "en/journey-messaging/overview"
+                  "en/journey-messaging/overview",
+                  "en/journey-messaging/create-template"
                 ]
               },
               {
