@@ -1,0 +1,90 @@
+---
+title: "Journey Messaging: Erste Schritte"
+description: "Konfiguration und erste Schritte mit dem DialogShift Journey Messaging"
+---
+
+## Konfiguration
+
+1. Aktiviere das Journey Messaging beim DialogShift Customer Success Team ([support@dialogshift.com](mailto:support@dialogshift.com))
+2. Navigiere zu Einstellungen \>\> Journey Messaging
+
+![Screenshot2025 08 04at18 35 00 Pn](/images/Screenshot2025-08-04at18.35.00.png)
+
+### Arbeitsmodus
+
+Der Arbeitsmodus kennt drei Einstellungen:
+
+- Aktiv - Das ist die Einstellung für den späteren Betrieb. Alle Nachrichten werden an die Gäste gesendet.
+- Nachrichten umleiten - Man kann jetzt eine eigene E-Mail Adresse eintragen. Alle Nachrichten, die normalerweise an die Gäste versendet würden, werden nun an diese eingetragene E-Mail Adresse umgeleitet. Man sieht in einem Postfach, wie die Nachrichten ausehen würden.
+- Keine Nachrichten senden - Es werden keine Nachrichten gesendet. Das ist der Aus-Schalter.
+
+### Absendername
+
+Hier sollte der Klartext Absendername des Hotels stehen. Die Absenderadresse ist immer noreply@dialogshift.
+
+### Antwort-Adresse
+
+Hier sollte die E-Mail Adresse des Hotels eingetragen werden. klickt der Gast auf "Antworten" in seinem E-Mail Programm, wird an diese Adresse gesendet.
+
+Erste Schritte
+
+<Steps>
+  <Step title="Erstelle eine Design-Vorlage">
+    Navigiere zu Journey Messaging \>\> Nachrichtenvorlagen
+
+    Erstelle Deine erste Vorlage, indem Du eine leere Vorlage wählst oder eine der DialogShift Designvorlagen auswählst.
+
+    **Eine Vorlage entspricht der Botschaft zu einem Thema, also zum Beispiel zu einer Buchungsbestätigung, einer Check-in-Aufforderung oder des Versendens des Türöffnungslinks.**
+
+    Beim erstellen wählst Du eine erste Variante für einen Kanal und eine erste Sprache aus. Keine Sorge, du kannst weitere Varianten danach erstellen.
+
+    Erstelle weitere Vorlagen, indem Du Deine erste Vorlage duplizierst und so Dein Design von einer Vorlage zur nächsten kopierst.
+  </Step>
+  <Step title="Erstelle Sprach-Varianten für weitere Sprachen">
+    Wenn Du mit der ersten Variante fertig bist, kannst Du weitere Sprach-Varianten erstellen. Es empfiehlt sich zunächst alle weiteren Sprachen Deines Hotel abzudecken.
+
+    Klicke dazu auf das "Variante duplizieren" Icon.
+
+    ![Screenshot2025 08 04at18 51 07 Pn](/images/Screenshot2025-08-04at18.51.07.png)
+  </Step>
+  <Step title="Erstelle Kanal-Varianten des Templates">
+    Wenn du deine Gäste auf mehr als einem Kanal erreichen möchtest, solltest du nun weitere Varianten für andere Kanäle erstellen. Kanäle sind E-Mail, WhatsApp und SMS.
+
+    ![Screenshot2025 08 04at18 53 19 Pn](/images/Screenshot2025-08-04at18.53.19.png)
+  </Step>
+  <Step title="Erstelle weitere Templates zu anderen Themen">
+    Wenn du eine Vorlage zu einem komplett neuen Thema erstellen willst, musst du nicht bei 0 anfangen.
+
+    Klicke hier, um eine bereits bestehende Vorlage mit allen Varianten zu duplizieren, so dass du anfangen kannst, diese Vorlage zu modifizieren, für ein neues Thema.
+
+    ![Screenshot2025 08 04at18 46 11 Pn](/images/Screenshot2025-08-04at18.46.11.png)
+  </Step>
+  <Step title="Erstelle einen Flow basierend auf einem Event">
+    Navigiere zu Journey Messaging \>\> Journey Flows
+
+    Erstelle hier einen Namen und wähle dann das auslösende Event aus. 
+
+    Möchtest du zum Beispiel eine Buchungsbestätigung aussenden, dann ist das auslösende Event die "Reservierung im PMS". Mit dem \+ Zeichen kannst du nun verschiedene Aktionen dem Flow hinzufügen. Die Hauptaktion ist natürlich das Senden eines Templates, das Du zuvor angelegt hast. Du kannst aber auch Verzögerungen einbauen, wenn du basierend auf dem gleichen Event verschiedene Templates senden möchtest.
+
+    **Beispiel für einen Flow: **
+
+    1. Gast bucht Zimmer (-\> Ereignis "PMS: Reservierung")
+    2. Sofort wird Template "Buchungsbestätigung" gesendet (Präferenz WhatsApp, Email als Fallback)
+    3. Dann wartet das Journey Messaging 1 Tag
+    4. nach einem Tag wir das Template "Upsell" gesendet (Präferenz WhatsApp, Email als Fallback)
+  </Step>
+  <Step title="Teste den Flow">
+    Stelle sicher, dass das Journey Messaging sich im Modus "Nachrichten umleiten" befindet. 
+
+    Einstellungen \>\> Journey Messaging
+
+    Warte nun ab, wie Buchungen Deiner Gäste von System abgearbeitet werden. Die Nachrichten erhälst nur Du in der von Dir angegebenen E-Mail Box.
+  </Step>
+  <Step title="Setze das System Live">
+    Wenn Du mit dem Ergebnis Deiner Konfiguratin zufrieden bist, schalte den Modus auf "Aktiv" 
+
+    Einstellungen \>\> Journey Messaging
+
+    Deine Gäste erhalten die Nachrichten ab jetzt.
+  </Step>
+</Steps>
