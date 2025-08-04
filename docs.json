@@ -81,7 +81,8 @@
                 "icon": "route",
                 "pages": [
                   "de/journey-messaging/uebersicht",
-                  "de/journey-messaging/template-erstellen"
+                  "de/journey-messaging/template-erstellen",
+                  "de/journey-messaging/chat-button-whatsapp"
                 ]
               },
               {
@@ -198,7 +199,8 @@
                 "icon": "route",
                 "pages": [
                   "en/journey-messaging/overview",
-                  "en/journey-messaging/create-template"
+                  "en/journey-messaging/create-template",
+                  "en/journey-messaging/chat-button-whatsapp"
                 ]
               },
               {
