@@ -77,6 +77,13 @@
                 ]
               },
               {
+                "group": "Journey Messaging",
+                "icon": "route",
+                "pages": [
+                  "de/journey-messaging/uebersicht"
+                ]
+              },
+              {
                 "group": "Compliance",
                 "pages": [
                   "de/compliance/barrierefreiheitserklarung"
@@ -183,6 +190,13 @@
                 "pages": [
                   "en/email-ai/microsoft-outlook-plugin",
                   "en/email-ai/firefox-browser-plugin"
+                ]
+              },
+              {
+                "group": "Journey Messaging",
+                "icon": "route",
+                "pages": [
+                  "en/journey-messaging/overview"
                 ]
               },
               {
