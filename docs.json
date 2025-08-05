@@ -81,6 +81,7 @@
                 "icon": "route",
                 "pages": [
                   "de/journey-messaging/uebersicht",
+                  "de/journey-messaging/journey-quickstart",
                   "de/journey-messaging/template-erstellen",
                   "de/journey-messaging/chat-button-whatsapp"
                 ]
@@ -95,7 +96,8 @@
                 "group": "Plattform",
                 "pages": [
                   "de/platform/new-faq-de",
-                  "de/platform/urls-pdfs-wissen-hinzufugen"
+                  "de/platform/urls-pdfs-wissen-hinzufugen",
+                  "de/platform/chatbot-fur-hotelmitarbeitende"
                 ]
               },
               {
@@ -199,6 +201,7 @@
                 "icon": "route",
                 "pages": [
                   "en/journey-messaging/overview",
+                  "en/journey-messaging/journey-quickstart",
                   "en/journey-messaging/create-template",
                   "en/journey-messaging/chat-button-whatsapp"
                 ]
@@ -213,7 +216,8 @@
                 "group": "Platform",
                 "pages": [
                   "en/platform/new-faq",
-                  "en/platform/add-urls-pdfs-knowledge"
+                  "en/platform/add-urls-pdfs-knowledge",
+                  "en/platform/chatbot-for-hotel-staff"
                 ]
               },
               {
