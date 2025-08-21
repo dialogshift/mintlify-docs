@@ -29,23 +29,23 @@ This SMS and WhatsApp template is used when callers with a mobile number express
 
 Upon customer request or in case of technical problems with the Phone AI, callers are automatically forwarded to this number.
 
-## Forwarding to Different Internal Teams or Numbers
+## Forwarding targets
 
-You can set up topic-specific forwarding to different numbers. Since this also involves AI training, this configuration is set up by our Customer Success team (support@dialogshift.com).
-
-<Info>
-For example, you can set up forwarding to departments like Reservations, Reception, Pool, and Spa.
-</Info>
+You can provide either a single internal target number (extension or group) or up to four department-specific target numbers (e.g., Reservations, Reception, Spa, Restaurant). The Phone AI decides contextually during the conversation which of the stored targets to forward to. This configuration is set up by our Customer Success team (support@dialogshift.com).
 
 ## Time Management for Phone AI
 
 When configuring the Phone AI, you have three different options available to control how the AI should handle call forwarding or callback requests:
 
+<Info>
+  Important: At any given time, only one behavior is active — either forwarding to the target number <em>or</em> taking a callback request / no forwarding.
+</Info>
+
 <Steps>
   <Step title="Always allow AI to forward to a human">
     When this option is activated:
     - The Phone AI forwards the caller to the configured forwarding number upon request
-    - Alternatively, forwarding can be done to predefined departments
+    - Alternatively, it forwards based on the topic to one of up to four configured departments
   </Step>
   
   <Step title="AI may not forward to a human">

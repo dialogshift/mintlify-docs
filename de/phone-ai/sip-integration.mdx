@@ -35,8 +35,8 @@ Die Phone AI wird als SIP-Endgerät in Ihre bestehende Telefonanlage integriert.
   <Step title="Zugangsdaten bereitstellen">
     Vollständige SIP-Zugangsdaten (siehe unten)
   </Step>
-  <Step title="Interne Kurzwahlen">
-    Mindestens eine Nummer ist erforderlich. Weiterleitungen an weitere Abteilungen oder Teams sind optional.
+  <Step title="Weiterleitungsziele">
+    Entweder eine einzelne interne Zielnummer (Nebenstelle oder Gruppe) oder bis zu vier abteilungsbezogene Zielnummern, an die je nach Anliegen weitergeleitet werden kann.
   </Step>
 </Steps>
 
@@ -60,7 +60,7 @@ Die Phone AI wird als SIP-Endgerät in Ihre bestehende Telefonanlage integriert.
 Sie benötigen **eine** der folgenden Optionen:
 
 - **Feste IP-Adresse** (IPv4 oder IPv6)
-- **Dynamic DNS** (wegen möglicher Unterbrechungen beim IP-Wechsel)
+- **Dynamic DNS** (hierbei kann es zu kurzen Unterbrechungen beim IP-Wechsel kommen)
 
 <Info>
   Cloud-Telefonanlagen sind bereits über das Internet erreichbar.
@@ -68,11 +68,13 @@ Sie benötigen **eine** der folgenden Optionen:
 
 ### Interne Weiterleitungen
 
-Bitte teilen Sie uns mit:
+Bitte teilen Sie uns die interne Zielnummer (Nebenstelle oder Gruppe) mit. Alternativ können bis zu vier abteilungsbezogene Zielnummern hinterlegt werden. Die Phone AI entscheidet kontextbasiert, an welche Zielnummer weitergeleitet wird.
 
-- Kurzwahlen für Abteilungen
-- Spezielle Durchwahlen (Notfälle, VIP)
-- Zeitbasierte Weiterleitungsregeln
+<Info>
+  Wichtig: Zu jedem Zeitpunkt ist nur eine der folgenden Verhaltensweisen aktiv – entweder Weiterleitung an die Zielnummer <em>oder</em> Rückrufbitte aufnehmen bzw. keine Weiterleitung. Eine Kombination ist nicht möglich.
+</Info>
+
+Optional kann eine zeitbasierte Aktivierung der Weiterleitung über den Zeitplan in der Konfiguration erfolgen.
 
 ## Nächste Schritte
 

@@ -35,8 +35,8 @@ The Phone AI is integrated into your existing phone system as a SIP endpoint.
   <Step title="Provide access data">
     Complete SIP access data (see below)
   </Step>
-  <Step title="Internal speed dials">
-    At least one number is required. Transfers to additional departments or teams are optional.
+  <Step title="Forwarding targets">
+    Either a single internal target number (extension or group) or up to four department-specific targets to which calls can be forwarded based on the topic.
   </Step>
 </Steps>
 
@@ -60,19 +60,21 @@ The Phone AI is integrated into your existing phone system as a SIP endpoint.
 You need **one** of the following options:
 
 - **Fixed IP address** (IPv4 or IPv6)
-- **Dynamic DNS** (due to possible interruptions during IP changes)
+- **Dynamic DNS** (there may be brief interruptions during IP changes)
 
 <Info>
   Cloud phone systems are already accessible via the internet.
 </Info>
 
-### Internal Transfers
+### Internal transfers
 
-Please provide us with:
+Please provide the internal target number (extension or group). Alternatively, you can provide up to four department-specific target numbers. The Phone AI decides contextually which target to transfer to.
 
-- Speed dials for departments
-- Special extensions (emergencies, VIP)
-- Time-based transfer rules
+<Info>
+  Important: At any given time, only one behavior is active — either forwarding to the target number <em>or</em> taking a callback request / no forwarding. A combination is not possible.
+</Info>
+
+Optionally, time-based activation of forwarding can be configured via the schedule in the settings.
 
 ## Next Steps
 
