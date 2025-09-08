@@ -1,0 +1,43 @@
+---
+title: "Integration with the hotel's booking website"
+description: "Information we need to connect DialogShift to your Web Booking Engine"
+---
+
+<Note>
+The connection to your booking website (Web Booking Engine, WBE) is typically implemented by the DialogShift technical team as part of the chatbot setup.
+</Note>
+
+## Required information
+
+Please provide the following so we can prefill the booking mask correctly:
+
+- **Booking engine base URL**: The URL where your booking widget is accessible
+- **Supported URL parameters for pre-filling**:
+  - Check-in date (e.g., `checkin`)
+  - Check-out date (e.g., `checkout`)
+  - Number of adults (e.g., `adults`)
+  - Number and age of children (e.g., `children`, `child_age`)
+
+<Tip>
+If needed, ask your WBE provider for a list of supported parameters and the expected date and number formats.
+</Tip>
+
+## Example URL
+
+Below is a schematic example of what a parameterized link might look like. Actual parameter names and formats vary by provider.
+
+```text
+https://booking.example-hotel.com/booking?
+  checkin=2025-09-15&
+  checkout=2025-09-17&
+  adults=2&
+  children=1&
+  child_age=5
+```
+
+<Info>
+If your booking engine supports additional parameters (e.g., offer/rate codes, promo codes, room categories), please share those as well.
+</Info>
+
+
+

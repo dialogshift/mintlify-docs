@@ -15,12 +15,14 @@
         "groups": [
           {
             "group": "Übersicht",
+            "icon": "house",
             "pages": [
               "de/index"
             ]
           },
           {
             "group": "Basiseinstellungen",
+            "icon": "sliders",
             "pages": [
               "de/basis/user-erstellen",
               "de/basis/passwort-vergessen-de",
@@ -34,6 +36,7 @@
             "pages": [
               {
                 "group": "Chat AI",
+                "icon": "robot",
                 "pages": [
                   {
                     "group": "Live Chat",
@@ -60,6 +63,7 @@
               },
               {
                 "group": "Phone AI",
+                "icon": "phone",
                 "pages": [
                   "de/phone-ai/konfiguration",
                   "de/phone-ai/stimmen-auswahl",
@@ -71,6 +75,7 @@
               },
               {
                 "group": "Email AI",
+                "icon": "envelope",
                 "pages": [
                   "de/email-ai/microsoft-outlook-plugin",
                   "de/email-ai/firefox-browser-plugin"
@@ -88,12 +93,14 @@
               },
               {
                 "group": "Compliance",
+                "icon": "shield",
                 "pages": [
                   "de/compliance/barrierefreiheitserklarung"
                 ]
               },
               {
                 "group": "Plattform",
+                "icon": "layer-group",
                 "pages": [
                   "de/platform/new-faq-de",
                   "de/platform/urls-pdfs-wissen-hinzufugen",
@@ -102,11 +109,13 @@
               },
               {
                 "group": "Technischer Setup",
+                "icon": "screwdriver-wrench",
                 "pages": [
                   "de/technischer-setup/hns-integration",
                   "de/technischer-setup/tracking-pixel",
                   "de/technischer-setup/url-parameter-tracking",
                   "de/technischer-setup/snippet-einbindung-pruefen",
+                  "de/technischer-setup/integration-mit-der-booking-website",
                   {
                     "group": "Social Media",
                     "icon": "share-nodes",
@@ -128,12 +137,14 @@
         "groups": [
           {
             "group": "Overview",
+            "icon": "house",
             "pages": [
               "en/index"
             ]
           },
           {
             "group": "Basic Settings",
+            "icon": "sliders",
             "pages": [
               "en/basics/create-user",
               "en/basics/password-reset",
@@ -147,6 +158,7 @@
             "pages": [
               {
                 "group": "Chat AI",
+                "icon": "robot",
                 "pages": [
                   {
                     "group": "Live Chat",
@@ -180,6 +192,7 @@
               },
               {
                 "group": "Phone AI",
+                "icon": "phone",
                 "pages": [
                   "en/phone-ai/configuration",
                   "en/phone-ai/voice-selection",
@@ -191,6 +204,7 @@
               },
               {
                 "group": "Email AI",
+                "icon": "envelope",
                 "pages": [
                   "en/email-ai/microsoft-outlook-plugin",
                   "en/email-ai/firefox-browser-plugin"
@@ -208,12 +222,14 @@
               },
               {
                 "group": "Compliance",
+                "icon": "shield",
                 "pages": [
                   "en/compliance/accessibility-statement"
                 ]
               },
               {
                 "group": "Platform",
+                "icon": "layer-group",
                 "pages": [
                   "en/platform/new-faq",
                   "en/platform/add-urls-pdfs-knowledge",
@@ -222,11 +238,13 @@
               },
               {
                 "group": "Technical Setup",
+                "icon": "screwdriver-wrench",
                 "pages": [
                   "en/technical-setup/hns-integration",
                   "en/technical-setup/tracking-pixel",
                   "en/technical-setup/url-parameter-tracking",
                   "en/technical-setup/snippet-integration-check",
+                  "en/technical-setup/booking-website-integration",
                   {
                     "group": "Social Media",
                     "icon": "share-nodes",
