@@ -95,7 +95,9 @@
                 "group": "Compliance",
                 "icon": "shield",
                 "pages": [
-                  "de/compliance/barrierefreiheitserklarung"
+                  "de/compliance/barrierefreiheitserklarung",
+                  "de/compliance/cookie-uebersicht-consent-manager",
+                  "de/compliance/cookie-uebersicht-managed-consent-modus"
                 ]
               },
               {
@@ -224,7 +226,9 @@
                 "group": "Compliance",
                 "icon": "shield",
                 "pages": [
-                  "en/compliance/accessibility-statement"
+                  "en/compliance/accessibility-statement",
+                  "en/compliance/cookie-overview-consent-manager",
+                  "en/compliance/cookie-overview-managed-consent-mode"
                 ]
               },
               {
